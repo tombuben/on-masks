@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bx6bte5gry2ul"]
+
+[ext_resource type="Script" uid="uid://crljrm3inplte" path="res://camera_move.gd" id="1_mexpn"]
+
+[node name="Node2D" type="Node2D" unique_id=424297317]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1956719944 node_paths=PackedStringArray("positions")]
+position_smoothing_enabled = true
+script = ExtResource("1_mexpn")
+positions = [NodePath("../Polygon2D"), NodePath("../Polygon2D2")]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=288398562]
+clip_children = 2
+polygon = PackedVector2Array(202, -226, 196, 222, -210, 217, -212, -224)
+
+[node name="Parallax2D" type="Parallax2D" parent="Polygon2D" unique_id=2076317656]
+scroll_scale = Vector2(0.95, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Polygon2D/Parallax2D" unique_id=628197296]
+offset_left = -179.0
+offset_top = -26.0
+offset_right = -139.0
+offset_bottom = 14.0
+color = Color(0, 1, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Polygon2D/Parallax2D" unique_id=19791801]
+offset_left = 136.0
+offset_top = -22.0
+offset_right = 176.0
+offset_bottom = 18.0
+color = Color(0, 1, 1, 1)
+
+[node name="Parallax2D2" type="Parallax2D" parent="Polygon2D" unique_id=1544790955]
+scroll_scale = Vector2(1.2, 1)
+scroll_offset = Vector2(3, 52)
+
+[node name="ColorRect" type="ColorRect" parent="Polygon2D/Parallax2D2" unique_id=423757381]
+offset_left = -31.0
+offset_top = 97.0
+offset_right = 9.0
+offset_bottom = 137.0
+color = Color(1, 0, 0, 1)
+
+[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1466842956]
+clip_children = 2
+position = Vector2(715, 0)
+polygon = PackedVector2Array(202, -226, 196, 222, -210, 217, -212, -224)
+
+[node name="Parallax2D" type="Parallax2D" parent="Polygon2D2" unique_id=1853703188]
+scroll_scale = Vector2(0.95, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Polygon2D2/Parallax2D" unique_id=1318936915]
+offset_left = 3.0
+offset_top = -12.0
+offset_right = 43.0
+offset_bottom = 28.0
+color = Color(0, 1, 1, 1)
+
+[node name="Parallax2D2" type="Parallax2D" parent="Polygon2D2" unique_id=127536594]
+scroll_scale = Vector2(1.2, 1)
+scroll_offset = Vector2(3, 52)
+
+[node name="ColorRect" type="ColorRect" parent="Polygon2D2/Parallax2D2" unique_id=776929827]
+offset_left = -56.0
+offset_top = 57.0
+offset_right = -16.0
+offset_bottom = 97.0
+color = Color(1, 0, 0, 1)
