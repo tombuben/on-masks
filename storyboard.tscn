@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://bx6bte5gry2ul"]
 
 [ext_resource type="Script" uid="uid://crljrm3inplte" path="res://camera_move.gd" id="1_mexpn"]
+[ext_resource type="Shader" uid="uid://dnsfwxxe1p04o" path="res://thoughtbubble.gdshader" id="2_p1o8h"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_36rgb"]
+noise_type = 2
+frequency = 0.0182
+fractal_type = 0
+cellular_distance_function = 2
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yfq1a"]
+noise = SubResource("FastNoiseLite_36rgb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_36rgb"]
+shader = ExtResource("2_p1o8h")
+shader_parameter/expansion = 0.99
+shader_parameter/noiseTexture = SubResource("NoiseTexture2D_yfq1a")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_p1o8h"]
+viewport_path = NodePath("ThoughtBubbleInside")
 
 [node name="Node2D" type="Node2D" unique_id=424297317]
 
@@ -16,29 +35,20 @@ polygon = PackedVector2Array(202, -226, 196, 222, -210, 217, -212, -224)
 [node name="Parallax2D" type="Parallax2D" parent="Polygon2D" unique_id=2076317656]
 scroll_scale = Vector2(0.95, 1)
 
-[node name="ColorRect" type="ColorRect" parent="Polygon2D/Parallax2D" unique_id=628197296]
-offset_left = -179.0
-offset_top = -26.0
-offset_right = -139.0
-offset_bottom = 14.0
-color = Color(0, 1, 1, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="Polygon2D/Parallax2D" unique_id=19791801]
-offset_left = 136.0
-offset_top = -22.0
-offset_right = 176.0
-offset_bottom = 18.0
-color = Color(0, 1, 1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Polygon2D/Parallax2D" unique_id=1564490849]
+material = SubResource("ShaderMaterial_36rgb")
+position = Vector2(-3, -17)
+texture = SubResource("ViewportTexture_p1o8h")
 
 [node name="Parallax2D2" type="Parallax2D" parent="Polygon2D" unique_id=1544790955]
 scroll_scale = Vector2(1.2, 1)
 scroll_offset = Vector2(3, 52)
 
 [node name="ColorRect" type="ColorRect" parent="Polygon2D/Parallax2D2" unique_id=423757381]
-offset_left = -31.0
-offset_top = 97.0
-offset_right = 9.0
-offset_bottom = 137.0
+offset_left = -23.0
+offset_top = -64.0
+offset_right = 17.0
+offset_bottom = -24.0
 color = Color(1, 0, 0, 1)
 
 [node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1466842956]
@@ -61,8 +71,21 @@ scroll_scale = Vector2(1.2, 1)
 scroll_offset = Vector2(3, 52)
 
 [node name="ColorRect" type="ColorRect" parent="Polygon2D2/Parallax2D2" unique_id=776929827]
-offset_left = -56.0
-offset_top = 57.0
-offset_right = -16.0
-offset_bottom = 97.0
+offset_left = -40.0
+offset_top = 52.0
+offset_bottom = 92.0
+color = Color(1, 0, 0, 1)
+
+[node name="ThoughtBubbleInside" type="SubViewport" parent="." unique_id=93314477]
+
+[node name="ColorRect3" type="ColorRect" parent="ThoughtBubbleInside" unique_id=1148491728]
+offset_right = 1000.0
+offset_bottom = 1000.0
+color = Color(0.47058824, 1, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ThoughtBubbleInside" unique_id=1321247013]
+offset_left = 97.0
+offset_top = 91.0
+offset_right = 137.0
+offset_bottom = 131.0
 color = Color(1, 0, 0, 1)
