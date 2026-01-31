@@ -15,7 +15,12 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("next"):
-		go_to_panel(current_index + 1)
+		if not positions[current_index].is_blocking:
+			go_to_panel(current_index + 1)
+		
+	if event.is_action_pressed("back"):
+		if positions[current_index].can_reverse:
+			go_to_panel(current_index - 1)
 
 func go_to_panel(panel_index):
 	await positions[current_index].exit_panel()

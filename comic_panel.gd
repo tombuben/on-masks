@@ -1,6 +1,7 @@
 class_name ComicPanel extends Node2D
 
 @export var is_blocking : bool = false
+@export var can_reverse : bool = false
 @onready var player = $AnimationPlayer
 
 var is_active : bool = false

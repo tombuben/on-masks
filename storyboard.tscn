@@ -4,8 +4,18 @@
 [ext_resource type="Shader" uid="uid://dnsfwxxe1p04o" path="res://thoughtbubble.gdshader" id="2_p1o8h"]
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://comic_panel.gd" id="2_yfq1a"]
 [ext_resource type="Script" uid="uid://cbbgbnrv0e3p6" path="res://expanding_bubble.gd" id="3_36rgb"]
-[ext_resource type="Texture2D" uid="uid://b3abidg37soql" path="res://Assets/Panels/Thinking/Character.png" id="5_54yue"]
-[ext_resource type="Texture2D" uid="uid://c8e1gucacf0ip" path="res://Assets/Panels/Thinking/Frame.png" id="6_4wkvg"]
+[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://sprite-cycle.gd" id="4_4wkvg"]
+[ext_resource type="Texture2D" uid="uid://b3abidg37soql" path="res://Assets/Panels/Thinking/Character-0.png" id="5_54yue"]
+[ext_resource type="Texture2D" uid="uid://hvyq888s756q" path="res://Assets/Panels/Thinking/Character-1.png" id="5_o3yx2"]
+[ext_resource type="Texture2D" uid="uid://c8e1gucacf0ip" path="res://Assets/Panels/Thinking/Frame-0.png" id="6_4wkvg"]
+[ext_resource type="Texture2D" uid="uid://d3bd27cqb4vxo" path="res://Assets/Panels/Drawer/DrawerBack.png" id="8_iwt2b"]
+[ext_resource type="Texture2D" uid="uid://bsacfmypj132" path="res://Assets/Panels/Thinking/Frame-1.png" id="9_37g3q"]
+[ext_resource type="Texture2D" uid="uid://c3kb0ld1kvrpc" path="res://Assets/Panels/Drawer/DrawerFront.png" id="9_baigs"]
+[ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://random_move_scale.gd" id="9_hal1o"]
+[ext_resource type="Texture2D" uid="uid://c5q2aubclj8du" path="res://Assets/Panels/Drawer/DrawerTop.png" id="10_o7hcg"]
+[ext_resource type="Texture2D" uid="uid://evgas13tiess" path="res://Assets/Panels/Drawer/Frame.png" id="11_d7l14"]
+[ext_resource type="Script" uid="uid://b77hgga5uo706" path="res://no_button.gd" id="12_baigs"]
+[ext_resource type="Script" uid="uid://m26fvbkrtb4u" path="res://yes_button.gd" id="13_d7l14"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_36rgb"]
 noise_type = 2
@@ -30,26 +40,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Parallax2D2/Character:position")
+tracks/0/path = NodePath("Parallax2D/Drawer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-126, 7)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Parallax2D2/Character:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.2, 0.2)]
+"values": [Vector2(136, -143)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
@@ -63,35 +61,11 @@ length = 0.5
 
 [sub_resource type="Animation" id="Animation_ym4ru"]
 resource_name = "Exit"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parallax2D2/Character:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-126, 7)]
-}
 
 [sub_resource type="Animation" id="Animation_54yue"]
 resource_name = "panel_1_idle"
 length = 2.0
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parallax2D2/Character:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.2, 0.2), Vector2(0.198, 0.198)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4wkvg"]
 _data = {
@@ -100,12 +74,125 @@ _data = {
 &"Idle": SubResource("Animation_54yue")
 }
 
+[sub_resource type="Animation" id="Animation_iwt2b"]
+resource_name = "Enter"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Drawer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.5743491, 0.076946534),
+"update": 0,
+"values": [Vector2(136, -143), Vector2(-18, -31)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3hehj"]
+_data = {
+&"Enter": SubResource("Animation_iwt2b")
+}
+
+[sub_resource type="Gradient" id="Gradient_o7hcg"]
+offsets = PackedFloat32Array(0.987013)
+colors = PackedColorArray(0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d7l14"]
+gradient = SubResource("Gradient_o7hcg")
+
+[sub_resource type="Gradient" id="Gradient_d7l14"]
+offsets = PackedFloat32Array(0.987013)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_37g3q"]
+gradient = SubResource("Gradient_d7l14")
+
+[sub_resource type="Animation" id="Animation_baigs"]
+resource_name = "NoRunAway"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("YesNoButtons/NoButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.12500001, 1),
+"update": 0,
+"values": [Vector2(89, 0), Vector2(178, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("YesNoButtons/NoButton:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.029908132, 0.062964484, 0.08972439, 0.11333608, 0.1290772),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292, 0.17453292519943295, -0.17453292, 0.17453292, -0.17453292]
+}
+
+[sub_resource type="Animation" id="Animation_d7l14"]
+resource_name = "YesRunAway"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("YesNoButtons/YesButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 0), Vector2(33, 102)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7hcg"]
+_data = {
+&"NoRunAway": SubResource("Animation_baigs"),
+&"YesRunAway": SubResource("Animation_d7l14")
+}
+
+[sub_resource type="Animation" id="Animation_37g3q"]
+length = 2.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Drawer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(136, -143), Vector2(72, 184)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gdypv"]
+_data = {
+&"Enter": SubResource("Animation_37g3q")
+}
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o3yx2"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o3yx2"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hal1o"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_m072n"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_md0wc"]
+
 [node name="Node2D" type="Node2D" unique_id=424297317]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1956719944 node_paths=PackedStringArray("positions")]
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../Panel1"), NodePath("../Panel2")]
+positions = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../Panel3"), NodePath("../Panel4")]
 
 [node name="Panel1" type="Node2D" parent="." unique_id=700949410]
 position = Vector2(2, 0)
@@ -113,7 +200,7 @@ script = ExtResource("2_yfq1a")
 
 [node name="Panel1_clip" type="Polygon2D" parent="Panel1" unique_id=288398562]
 clip_children = 2
-polygon = PackedVector2Array(194, -191, 192, 193, -229, 196, -230, -193)
+polygon = PackedVector2Array(197, -192, 192, 193, -229, 196, -230, -193)
 
 [node name="Parallax2D2" type="Parallax2D" parent="Panel1/Panel1_clip" unique_id=1544790955]
 scroll_scale = Vector2(0.97, 1)
@@ -123,6 +210,8 @@ scroll_offset = Vector2(3, 52)
 position = Vector2(-126, 7)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_54yue")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("5_54yue"), ExtResource("5_o3yx2")])
 
 [node name="Parallax2D" type="Parallax2D" parent="Panel1/Panel1_clip" unique_id=2076317656]
 scroll_scale = Vector2(0.95, 1)
@@ -140,39 +229,142 @@ ExpandedPosition = NodePath("../ExpandedPosition")
 [node name="Frame" type="Sprite2D" parent="Panel1" unique_id=198775965]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_4wkvg")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("6_4wkvg"), ExtResource("9_37g3q")])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel1" unique_id=1573949200]
 root_node = NodePath("../Panel1_clip")
 libraries/ = SubResource("AnimationLibrary_o3yx2")
 libraries/Panel1 = SubResource("AnimationLibrary_4wkvg")
 
-[node name="Panel2" type="Polygon2D" parent="." unique_id=1466842956]
-clip_children = 2
-position = Vector2(715, 0)
-polygon = PackedVector2Array(202, -226, 196, 222, -210, 217, -212, -224)
+[node name="Panel2" type="Node2D" parent="." unique_id=514552427]
+position = Vector2(586, -9)
 script = ExtResource("2_yfq1a")
 
-[node name="Parallax2D" type="Parallax2D" parent="Panel2" unique_id=1853703188]
+[node name="Panel2_clip" type="Polygon2D" parent="Panel2" unique_id=2012380897]
+clip_children = 2
+polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
+
+[node name="Parallax2D" type="Parallax2D" parent="Panel2/Panel2_clip" unique_id=887985046]
 scroll_scale = Vector2(0.95, 1)
+scroll_offset = Vector2(-24, 36)
 
-[node name="ColorRect" type="ColorRect" parent="Panel2/Parallax2D" unique_id=1318936915]
-offset_left = 3.0
-offset_top = -12.0
-offset_right = 43.0
-offset_bottom = 28.0
-color = Color(0, 1, 1, 1)
+[node name="Drawer" type="Node2D" parent="Panel2/Panel2_clip/Parallax2D" unique_id=766685208]
+position = Vector2(136, -143)
 
-[node name="Parallax2D2" type="Parallax2D" parent="Panel2" unique_id=127536594]
-scroll_scale = Vector2(1.2, 1)
+[node name="Back" type="Sprite2D" parent="Panel2/Panel2_clip/Parallax2D/Drawer" unique_id=1711089354]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_iwt2b")
+
+[node name="Contents" type="Node2D" parent="Panel2/Panel2_clip/Parallax2D/Drawer" unique_id=820115036]
+
+[node name="Front" type="Sprite2D" parent="Panel2/Panel2_clip/Parallax2D/Drawer" unique_id=1887069026]
+scale = Vector2(0.19999999, 0.19999999)
+texture = ExtResource("9_baigs")
+
+[node name="Top" type="Sprite2D" parent="Panel2/Panel2_clip/Parallax2D" unique_id=148184820]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_o7hcg")
+
+[node name="Frame" type="Sprite2D" parent="Panel2" unique_id=246892659]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_d7l14")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel2" unique_id=40589179]
+root_node = NodePath("../Panel2_clip")
+libraries/ = SubResource("AnimationLibrary_o3yx2")
+libraries/Panel2 = SubResource("AnimationLibrary_3hehj")
+
+[node name="Panel3" type="Node2D" parent="." unique_id=2115884526]
+position = Vector2(1203, 11)
+script = ExtResource("2_yfq1a")
+is_blocking = true
+
+[node name="Panel1_clip" type="Polygon2D" parent="Panel3" unique_id=799889533]
+clip_children = 2
+polygon = PackedVector2Array(197, -192, 192, 193, -229, 196, -230, -193)
+
+[node name="Parallax2D2" type="Parallax2D" parent="Panel3/Panel1_clip" unique_id=776808961]
+scroll_scale = Vector2(0.97, 1)
 scroll_offset = Vector2(3, 52)
 
-[node name="ColorRect" type="ColorRect" parent="Panel2/Parallax2D2" unique_id=776929827]
-offset_left = -40.0
-offset_top = 52.0
-offset_bottom = 92.0
-color = Color(1, 0, 0, 1)
+[node name="Character" type="Sprite2D" parent="Panel3/Panel1_clip/Parallax2D2" unique_id=704928473]
+position = Vector2(-126, 7)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_54yue")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("5_54yue")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel2" unique_id=2143228101]
+[node name="YesNoButtons" type="Node2D" parent="Panel3/Panel1_clip" unique_id=487038242]
+position = Vector2(53, 143)
+
+[node name="YesButton" type="Area2D" parent="Panel3/Panel1_clip/YesNoButtons" unique_id=486236710]
+position = Vector2(33, -1)
+script = ExtResource("13_d7l14")
+
+[node name="YesVisual" type="Sprite2D" parent="Panel3/Panel1_clip/YesNoButtons/YesButton" unique_id=1151397881]
+texture = SubResource("GradientTexture2D_d7l14")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Panel3/Panel1_clip/YesNoButtons/YesButton" unique_id=2143540767]
+polygon = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+
+[node name="NoButton" type="Area2D" parent="Panel3/Panel1_clip/YesNoButtons" unique_id=1569829682]
+position = Vector2(89, 0)
+scale = Vector2(0.36, 0.36)
+script = ExtResource("12_baigs")
+
+[node name="NoVisual" type="Sprite2D" parent="Panel3/Panel1_clip/YesNoButtons/NoButton" unique_id=1341491058]
+texture = SubResource("GradientTexture2D_37g3q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Panel3/Panel1_clip/YesNoButtons/NoButton" unique_id=1565838665]
+polygon = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+
+[node name="Frame" type="Sprite2D" parent="Panel3" unique_id=1715997848]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_4wkvg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel3" unique_id=202995176]
+root_node = NodePath("../Panel1_clip")
+libraries/ = SubResource("AnimationLibrary_o3yx2")
+libraries/Panel3 = SubResource("AnimationLibrary_o7hcg")
+
+[node name="Panel4" type="Node2D" parent="." unique_id=138539189]
+position = Vector2(1748, -17)
+script = ExtResource("2_yfq1a")
+
+[node name="Panel2_clip" type="Polygon2D" parent="Panel4" unique_id=2106205851]
+clip_children = 2
+polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
+
+[node name="Parallax2D" type="Parallax2D" parent="Panel4/Panel2_clip" unique_id=710667651]
+scroll_scale = Vector2(0.95, 1)
+scroll_offset = Vector2(-24, 36)
+
+[node name="Drawer" type="Node2D" parent="Panel4/Panel2_clip/Parallax2D" unique_id=1415863216]
+position = Vector2(136, -143)
+
+[node name="Back" type="Sprite2D" parent="Panel4/Panel2_clip/Parallax2D/Drawer" unique_id=1798923493]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_iwt2b")
+
+[node name="Contents" type="Node2D" parent="Panel4/Panel2_clip/Parallax2D/Drawer" unique_id=154712066]
+
+[node name="Front" type="Sprite2D" parent="Panel4/Panel2_clip/Parallax2D/Drawer" unique_id=1582641639]
+scale = Vector2(0.19999999, 0.19999999)
+texture = ExtResource("9_baigs")
+
+[node name="Top" type="Sprite2D" parent="Panel4/Panel2_clip/Parallax2D" unique_id=273059972]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_o7hcg")
+
+[node name="Frame" type="Sprite2D" parent="Panel4" unique_id=1361572627]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_d7l14")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel4" unique_id=1225967196]
+root_node = NodePath("../Panel2_clip")
+libraries/ = SubResource("AnimationLibrary_o3yx2")
+libraries/Panel4 = SubResource("AnimationLibrary_gdypv")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1266883461]
 offset_left = -1248.0
@@ -189,79 +381,38 @@ offset_right = 1000.0
 offset_bottom = 1000.0
 color = Color(0.47058824, 1, 1, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1321247013]
-offset_left = 97.0
-offset_top = 91.0
-offset_right = 137.0
-offset_bottom = 131.0
-color = Color(1, 0, 0, 1)
+[node name="Node2D" type="Node2D" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=98647919]
+position = Vector2(254, 225)
+script = ExtResource("9_hal1o")
+noise = SubResource("FastNoiseLite_o3yx2")
 
-[node name="ColorRect4" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1507885600]
-offset_left = 185.0
-offset_top = 114.0
-offset_right = 225.0
-offset_bottom = 154.0
-color = Color(1, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Node2D" unique_id=40196126]
+scale = Vector2(71.249985, 77.25)
+texture = SubResource("PlaceholderTexture2D_o3yx2")
 
-[node name="ColorRect5" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=176933668]
-offset_left = 137.0
-offset_top = 178.0
-offset_right = 177.0
-offset_bottom = 218.0
-color = Color(1, 0, 0, 1)
+[node name="Node2D2" type="Node2D" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1746218188]
+position = Vector2(351, 157)
+script = ExtResource("9_hal1o")
+noise = SubResource("FastNoiseLite_hal1o")
 
-[node name="ColorRect6" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=222128410]
-offset_left = 197.0
-offset_top = 228.0
-offset_right = 237.0
-offset_bottom = 268.0
-color = Color(1, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Node2D2" unique_id=427568669]
+scale = Vector2(71.249985, 77.25)
+texture = SubResource("PlaceholderTexture2D_o3yx2")
 
-[node name="ColorRect7" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1202999468]
-offset_left = 322.0
-offset_top = 169.0
-offset_right = 362.0
-offset_bottom = 209.0
-color = Color(1, 0, 0, 1)
+[node name="Node2D3" type="Node2D" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=527466124]
+position = Vector2(202, 128)
+script = ExtResource("9_hal1o")
+noise = SubResource("FastNoiseLite_m072n")
 
-[node name="ColorRect8" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=2007801877]
-offset_left = 294.0
-offset_top = 237.0
-offset_right = 334.0
-offset_bottom = 277.0
-color = Color(1, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Node2D3" unique_id=924670007]
+scale = Vector2(71.249985, 77.25)
+texture = SubResource("PlaceholderTexture2D_o3yx2")
 
-[node name="ColorRect9" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=443896729]
-offset_left = 256.0
-offset_top = 175.0
-offset_right = 296.0
-offset_bottom = 215.0
-color = Color(1, 0, 0, 1)
+[node name="Node2D4" type="Node2D" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=930859929]
+position = Vector2(345, 277)
+script = ExtResource("9_hal1o")
+noise = SubResource("FastNoiseLite_md0wc")
 
-[node name="ColorRect10" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=974242031]
-offset_left = 163.0
-offset_top = 313.0
-offset_right = 203.0
-offset_bottom = 353.0
-color = Color(1, 0, 0, 1)
-
-[node name="ColorRect11" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=267181324]
-offset_left = 240.0
-offset_top = 332.0
-offset_right = 280.0
-offset_bottom = 372.0
-color = Color(1, 0, 0, 1)
-
-[node name="ColorRect12" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=616173488]
-offset_left = 329.0
-offset_top = 315.0
-offset_right = 369.0
-offset_bottom = 355.0
-color = Color(1, 0, 0, 1)
-
-[node name="ColorRect13" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1778767187]
-offset_left = 329.0
-offset_top = 315.0
-offset_right = 369.0
-offset_bottom = 355.0
-color = Color(1, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Node2D4" unique_id=1594422526]
+scale = Vector2(71.249985, 77.25)
+texture = SubResource("PlaceholderTexture2D_o3yx2")
