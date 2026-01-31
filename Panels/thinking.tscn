@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dr2osrwtf22d6" path="res://Assets/Panels/Thinking/Items/ Writing-0.png" id="18_5dom3"]
 [ext_resource type="Texture2D" uid="uid://c0mqugwwam8y6" path="res://Assets/Panels/Thinking/Items/Box-0.png" id="19_evupk"]
 [ext_resource type="Texture2D" uid="uid://2wc0cwoelfre" path="res://Assets/Panels/Thinking/Items/Calendar-0.png" id="20_i365a"]
+[ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="28_bk0jk"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_0dxia"]
 noise_type = 2
@@ -91,28 +92,22 @@ shader = ExtResource("5_y0flw")
 shader_parameter/expansion = 0.4
 shader_parameter/noiseTexture = SubResource("NoiseTexture2D_yfq1a")
 
-[sub_resource type="Animation" id="Animation_ojmgi"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
-_data = {
-&"RESET": SubResource("Animation_ojmgi")
-}
-
-[sub_resource type="Animation" id="Animation_54yue"]
+[sub_resource type="Animation" id="Animation_bk0jk"]
 resource_name = "panel_1_idle"
 length = 2.0
 loop_mode = 1
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wkvg"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_odaf8"]
 _data = {
-&"Idle": SubResource("Animation_54yue")
+&"panel_1_idle": SubResource("Animation_bk0jk")
 }
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4mdua"]
 
-[node name="Thinking" type="Node2D" unique_id=847660758]
+[node name="Thinking" type="Node2D" unique_id=847660758 node_paths=PackedStringArray("arrow_next", "player")]
 script = ExtResource("1_r4ex8")
+arrow_next = NodePath("ArrowNext")
+player = NodePath("AnimationPlayer")
 
 [node name="Panel1_clip" type="Polygon2D" parent="." unique_id=247734468]
 clip_children = 2
@@ -165,8 +160,7 @@ textures = Array[Texture2D]([ExtResource("7_0yv4m"), ExtResource("8_f6r5q")])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=804920011]
 root_node = NodePath("../Panel1_clip")
-libraries/ = SubResource("AnimationLibrary_o3yx2")
-libraries/Thinking = SubResource("AnimationLibrary_4wkvg")
+libraries/ = SubResource("AnimationLibrary_odaf8")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=13182156]
 offset_left = -1284.0
@@ -343,3 +337,6 @@ noise = SubResource("FastNoiseLite_4mdua")
 [node name="CalendarSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Calendar" unique_id=90149715]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("20_i365a")
+
+[node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("28_bk0jk")]
+position = Vector2(247, 1)

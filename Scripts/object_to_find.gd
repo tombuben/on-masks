@@ -9,7 +9,7 @@ func _ready() -> void:
 		parent = parent.get_parent()
 	parent_panel = parent
 
-func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		visible = false
 		parent_panel.is_blocking = false

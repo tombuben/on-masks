@@ -12,7 +12,7 @@ func _ready() -> void:
 		parent = parent.get_parent()
 	list_counter = parent
 
-func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if not list_counter.parent_panel.is_active:
 		return
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5q2aubclj8du"
-path="res://.godot/imported/DrawerTop.png-e800506c8855826377b595113a615ce4.ctex"
+uid="uid://d3fvdoh1etp1x"
+path="res://.godot/imported/Arrow_1.png-2e46214db29e5fa790cfb6dbc48aebac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Panels/Drawer/DrawerTop.png"
-dest_files=["res://.godot/imported/DrawerTop.png-e800506c8855826377b595113a615ce4.ctex"]
+source_file="res://Assets/Arrow_1.png"
+dest_files=["res://.godot/imported/Arrow_1.png-2e46214db29e5fa790cfb6dbc48aebac.ctex"]
 
 [params]
 

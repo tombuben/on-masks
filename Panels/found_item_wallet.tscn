@@ -6,16 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://boigid6ilsfyx" path="res://Assets/Panels/FoundItems/Wherekeys_bubble_1.png" id="4_httnq"]
 [ext_resource type="Texture2D" uid="uid://1vco0rqiddhx" path="res://Assets/Panels/FoundItems/Wherekeys_question_1.png" id="5_xxqgf"]
 [ext_resource type="Texture2D" uid="uid://cyd2khihwui8s" path="res://Assets/Panels/FoundItems/Founditem_frame_1.png" id="6_el3kx"]
+[ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="7_jh2pd"]
 
-[sub_resource type="Animation" id="Animation_ojmgi"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
-_data = {
-&"RESET": SubResource("Animation_ojmgi")
-}
-
-[sub_resource type="Animation" id="Animation_1nhmj"]
+[sub_resource type="Animation" id="Animation_jh2pd"]
 resource_name = "RESET"
 length = 1.2
 tracks/0/type = "value"
@@ -55,13 +48,15 @@ tracks/2/keys = {
 "values": [false, true]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_n7rtf"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5u6cs"]
 _data = {
-&"Enter": SubResource("Animation_1nhmj")
+&"RESET": SubResource("Animation_jh2pd")
 }
 
-[node name="FoundItemWallet" type="Node2D" unique_id=2007034112]
+[node name="FoundItemWallet" type="Node2D" unique_id=2007034112 node_paths=PackedStringArray("arrow_next", "player")]
 script = ExtResource("1_pgcbk")
+arrow_next = NodePath("ArrowNext")
+player = NodePath("AnimationPlayer")
 
 [node name="FoundItemWallet_clip" type="Polygon2D" parent="." unique_id=328830910]
 clip_children = 2
@@ -95,7 +90,9 @@ texture = ExtResource("5_xxqgf")
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_el3kx")
 
+[node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("7_jh2pd")]
+position = Vector2(181, 0)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1507789509]
 root_node = NodePath("../FoundItemWallet_clip")
-libraries/ = SubResource("AnimationLibrary_o3yx2")
-libraries/FoundItemWallet = SubResource("AnimationLibrary_n7rtf")
+libraries/ = SubResource("AnimationLibrary_5u6cs")

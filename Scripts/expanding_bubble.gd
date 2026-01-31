@@ -23,7 +23,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if parent_panel.is_active and Input.is_mouse_button_pressed( 1 ): # Left click
+	if parent_panel.is_active and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT): # Left click
 		expansion += delta * 0.5
 	else:
 		expansion -= delta * 0.5

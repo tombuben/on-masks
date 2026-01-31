@@ -12,14 +12,14 @@ func _ready() -> void:
 		parent = parent.get_parent()
 	parent_panel = parent
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	position = original_position + Vector2(randf_range(-shake_amount, shake_amount), randf_range(-shake_amount, shake_amount))
 	pass
 	
 # Called when the node enters the scene tree for the first time.
-func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed:
-		parent_panel.player.play("Panel3/YesRunAway")
+		parent_panel.player.play("YesRunAway")
 		parent_panel.is_blocking = false
 		await parent_panel.player.animation_finished
 		queue_free()

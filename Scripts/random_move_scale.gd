@@ -9,7 +9,7 @@ extends Node2D
 @onready var random_seed = randi() % 10000
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var seconds = float(Time.get_ticks_msec()) / 50.0
 	var speed_sample = seconds * speed_move + random_seed
 	position.x = init_pos.x + noise.get_noise_1d(speed_sample) * 100.

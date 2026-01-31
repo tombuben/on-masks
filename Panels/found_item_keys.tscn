@@ -5,16 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dvaxtp5e7wyk0" path="res://Assets/Panels/FoundItems/foundkeys_hand_1.png" id="3_lmim8"]
 [ext_resource type="Texture2D" uid="uid://1vco0rqiddhx" path="res://Assets/Panels/FoundItems/Wherekeys_question_1.png" id="4_k71nv"]
 [ext_resource type="Texture2D" uid="uid://cyd2khihwui8s" path="res://Assets/Panels/FoundItems/Founditem_frame_1.png" id="5_0ure2"]
+[ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="6_dwsmy"]
 
-[sub_resource type="Animation" id="Animation_ojmgi"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
-_data = {
-&"RESET": SubResource("Animation_ojmgi")
-}
-
-[sub_resource type="Animation" id="Animation_n7rtf"]
+[sub_resource type="Animation" id="Animation_dwsmy"]
+resource_name = "Enter"
 length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,13 +35,15 @@ tracks/1/keys = {
 "values": [false, true]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7t3ax"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmim8"]
 _data = {
-&"Enter": SubResource("Animation_n7rtf")
+&"Enter": SubResource("Animation_dwsmy")
 }
 
-[node name="FoundItemKeys" type="Node2D" unique_id=1258029886]
+[node name="FoundItemKeys" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
 script = ExtResource("1_gwo17")
+arrow_next = NodePath("ArrowNext")
+player = NodePath("AnimationPlayer")
 
 [node name="FoundItemKeys_clip" type="Polygon2D" parent="." unique_id=83462876]
 clip_children = 2
@@ -62,10 +58,12 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_dwsmy")
 
 [node name="Founditem_hand" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=155463718]
+position = Vector2(0, 60)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_lmim8")
 
 [node name="Wherekeys_question_1" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=1140391720]
+visible = false
 position = Vector2(49.999996, -42.999996)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_k71nv")
@@ -74,7 +72,9 @@ texture = ExtResource("4_k71nv")
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_0ure2")
 
+[node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("6_dwsmy")]
+position = Vector2(197, 0)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
 root_node = NodePath("../FoundItemKeys_clip")
-libraries/ = SubResource("AnimationLibrary_o3yx2")
-libraries/FoundItemKeys = SubResource("AnimationLibrary_7t3ax")
+libraries/ = SubResource("AnimationLibrary_lmim8")

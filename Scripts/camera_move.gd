@@ -1,6 +1,10 @@
 extends Camera2D
 
 @export var positions : Array[ComicPanel]
+
+@export var next_button : Area2D
+@export var prev_button : Area2D
+
 var current_index = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -8,10 +12,6 @@ func _ready() -> void:
 	global_position = positions[current_index].global_position
 	await get_tree().process_frame
 	go_to_panel(current_index)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _input(event: InputEvent) -> void:
 	if not positions[current_index].is_active:
