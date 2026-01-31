@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://crljrm3inplte" path="res://camera_move.gd" id="1_mexpn"]
 [ext_resource type="Shader" uid="uid://dnsfwxxe1p04o" path="res://thoughtbubble.gdshader" id="2_p1o8h"]
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://comic_panel.gd" id="2_yfq1a"]
+[ext_resource type="Script" uid="uid://cbbgbnrv0e3p6" path="res://expanding_bubble.gd" id="3_36rgb"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_36rgb"]
 noise_type = 2
@@ -15,77 +17,243 @@ noise = SubResource("FastNoiseLite_36rgb")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_36rgb"]
 shader = ExtResource("2_p1o8h")
-shader_parameter/expansion = 0.99
+shader_parameter/expansion = 0.4
 shader_parameter/noiseTexture = SubResource("NoiseTexture2D_yfq1a")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_p1o8h"]
-viewport_path = NodePath("ThoughtBubbleInside")
+viewport_path = NodePath("SubViewportContainer/ThoughtBubbleInside")
+
+[sub_resource type="Animation" id="Animation_4wkvg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D2/ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
+_data = {
+&"RESET": SubResource("Animation_4wkvg")
+}
+
+[sub_resource type="Animation" id="Animation_yfq1a"]
+resource_name = "Enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D2/ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-16, -30), Vector2(94, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_ym4ru"]
+resource_name = "Exit"
+length = 3.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D2/ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.43, 3.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-23, -64), Vector2(-33, -197), Vector2(-45, 49)]
+}
+
+[sub_resource type="Animation" id="Animation_54yue"]
+resource_name = "panel_1_idle"
+length = 5.4666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D2/ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.93),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23, -64), Vector2(-148, 27)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wkvg"]
+_data = {
+&"Enter": SubResource("Animation_yfq1a"),
+&"Exit": SubResource("Animation_ym4ru"),
+&"Idle": SubResource("Animation_54yue")
+}
 
 [node name="Node2D" type="Node2D" unique_id=424297317]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1956719944 node_paths=PackedStringArray("positions")]
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../Polygon2D"), NodePath("../Polygon2D2")]
+positions = [NodePath("../Panel1"), NodePath("../Panel2")]
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=288398562]
+[node name="Panel1" type="Polygon2D" parent="." unique_id=288398562]
 clip_children = 2
 polygon = PackedVector2Array(202, -226, 196, 222, -210, 217, -212, -224)
+script = ExtResource("2_yfq1a")
 
-[node name="Parallax2D" type="Parallax2D" parent="Polygon2D" unique_id=2076317656]
+[node name="Parallax2D" type="Parallax2D" parent="Panel1" unique_id=2076317656]
 scroll_scale = Vector2(0.95, 1)
+scroll_offset = Vector2(-13, 6)
 
-[node name="Sprite2D" type="Sprite2D" parent="Polygon2D/Parallax2D" unique_id=1564490849]
+[node name="Sprite2D" type="Sprite2D" parent="Panel1/Parallax2D" unique_id=1564490849 node_paths=PackedStringArray("ExpandedPosition")]
 material = SubResource("ShaderMaterial_36rgb")
-position = Vector2(-3, -17)
+position = Vector2(132, -145)
 texture = SubResource("ViewportTexture_p1o8h")
+script = ExtResource("3_36rgb")
+ExpandedPosition = NodePath("../ExpandedPosition")
 
-[node name="Parallax2D2" type="Parallax2D" parent="Polygon2D" unique_id=1544790955]
+[node name="ExpandedPosition" type="Node2D" parent="Panel1/Parallax2D" unique_id=1051711503]
+
+[node name="Parallax2D2" type="Parallax2D" parent="Panel1" unique_id=1544790955]
 scroll_scale = Vector2(1.2, 1)
 scroll_offset = Vector2(3, 52)
 
-[node name="ColorRect" type="ColorRect" parent="Polygon2D/Parallax2D2" unique_id=423757381]
+[node name="ColorRect" type="ColorRect" parent="Panel1/Parallax2D2" unique_id=423757381]
 offset_left = -23.0
 offset_top = -64.0
 offset_right = 17.0
 offset_bottom = -24.0
 color = Color(1, 0, 0, 1)
 
-[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1466842956]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel1" unique_id=1573949200]
+libraries/ = SubResource("AnimationLibrary_o3yx2")
+libraries/Panel1 = SubResource("AnimationLibrary_4wkvg")
+
+[node name="Panel2" type="Polygon2D" parent="." unique_id=1466842956]
 clip_children = 2
 position = Vector2(715, 0)
 polygon = PackedVector2Array(202, -226, 196, 222, -210, 217, -212, -224)
+script = ExtResource("2_yfq1a")
 
-[node name="Parallax2D" type="Parallax2D" parent="Polygon2D2" unique_id=1853703188]
+[node name="Parallax2D" type="Parallax2D" parent="Panel2" unique_id=1853703188]
 scroll_scale = Vector2(0.95, 1)
 
-[node name="ColorRect" type="ColorRect" parent="Polygon2D2/Parallax2D" unique_id=1318936915]
+[node name="ColorRect" type="ColorRect" parent="Panel2/Parallax2D" unique_id=1318936915]
 offset_left = 3.0
 offset_top = -12.0
 offset_right = 43.0
 offset_bottom = 28.0
 color = Color(0, 1, 1, 1)
 
-[node name="Parallax2D2" type="Parallax2D" parent="Polygon2D2" unique_id=127536594]
+[node name="Parallax2D2" type="Parallax2D" parent="Panel2" unique_id=127536594]
 scroll_scale = Vector2(1.2, 1)
 scroll_offset = Vector2(3, 52)
 
-[node name="ColorRect" type="ColorRect" parent="Polygon2D2/Parallax2D2" unique_id=776929827]
+[node name="ColorRect" type="ColorRect" parent="Panel2/Parallax2D2" unique_id=776929827]
 offset_left = -40.0
 offset_top = 52.0
 offset_bottom = 92.0
 color = Color(1, 0, 0, 1)
 
-[node name="ThoughtBubbleInside" type="SubViewport" parent="." unique_id=93314477]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel2" unique_id=2143228101]
 
-[node name="ColorRect3" type="ColorRect" parent="ThoughtBubbleInside" unique_id=1148491728]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1266883461]
+offset_left = -1248.0
+offset_top = -237.0
+offset_right = -1208.0
+offset_bottom = -197.0
+
+[node name="ThoughtBubbleInside" type="SubViewport" parent="SubViewportContainer" unique_id=93314477]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="ColorRect3" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1148491728]
 offset_right = 1000.0
 offset_bottom = 1000.0
 color = Color(0.47058824, 1, 1, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="ThoughtBubbleInside" unique_id=1321247013]
+[node name="ColorRect2" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1321247013]
 offset_left = 97.0
 offset_top = 91.0
 offset_right = 137.0
 offset_bottom = 131.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1507885600]
+offset_left = 185.0
+offset_top = 114.0
+offset_right = 225.0
+offset_bottom = 154.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=176933668]
+offset_left = 137.0
+offset_top = 178.0
+offset_right = 177.0
+offset_bottom = 218.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=222128410]
+offset_left = 197.0
+offset_top = 228.0
+offset_right = 237.0
+offset_bottom = 268.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1202999468]
+offset_left = 322.0
+offset_top = 169.0
+offset_right = 362.0
+offset_bottom = 209.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=2007801877]
+offset_left = 294.0
+offset_top = 237.0
+offset_right = 334.0
+offset_bottom = 277.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=443896729]
+offset_left = 256.0
+offset_top = 175.0
+offset_right = 296.0
+offset_bottom = 215.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=974242031]
+offset_left = 163.0
+offset_top = 313.0
+offset_right = 203.0
+offset_bottom = 353.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=267181324]
+offset_left = 240.0
+offset_top = 332.0
+offset_right = 280.0
+offset_bottom = 372.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=616173488]
+offset_left = 329.0
+offset_top = 315.0
+offset_right = 369.0
+offset_bottom = 355.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1778767187]
+offset_left = 329.0
+offset_top = 315.0
+offset_right = 369.0
+offset_bottom = 355.0
 color = Color(1, 0, 0, 1)

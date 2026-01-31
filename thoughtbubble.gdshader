@@ -28,7 +28,7 @@ void fragment() {
     float r = expansion;//1.;//sin(TIME) * 0.5 + 0.5;
     
     // center circle
-    c = 1. - (length(uv) - (0.5 * r));
+    c = 1. - (length(uv) - (0.4 * r));
 
     // edge circles	
 	for (float i = 0.; i < NUM_BUBBLES; i++)
