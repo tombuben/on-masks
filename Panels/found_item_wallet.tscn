@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://y3xq87j4ki45"]
+
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_pgcbk"]
+[ext_resource type="Texture2D" uid="uid://dfqk8h2qtiedw" path="res://Assets/Panels/FoundItems/Founditem_1.png" id="2_jh2pd"]
+[ext_resource type="Texture2D" uid="uid://dpaapryoyncvh" path="res://Assets/Panels/FoundItems/foundwallet_hand_1.png" id="3_5u6cs"]
+[ext_resource type="Texture2D" uid="uid://boigid6ilsfyx" path="res://Assets/Panels/FoundItems/Wherekeys_bubble_1.png" id="4_httnq"]
+[ext_resource type="Texture2D" uid="uid://1vco0rqiddhx" path="res://Assets/Panels/FoundItems/Wherekeys_question_1.png" id="5_xxqgf"]
+[ext_resource type="Texture2D" uid="uid://cyd2khihwui8s" path="res://Assets/Panels/FoundItems/Founditem_frame_1.png" id="6_el3kx"]
+
+[sub_resource type="Animation" id="Animation_ojmgi"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
+_data = {
+&"RESET": SubResource("Animation_ojmgi")
+}
+
+[sub_resource type="Animation" id="Animation_1nhmj"]
+resource_name = "RESET"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Foundwallet_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 60), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Parallax2D/Wherekeys_bubble_1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Parallax2D/Wherekeys_question_1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n7rtf"]
+_data = {
+&"Enter": SubResource("Animation_1nhmj")
+}
+
+[node name="FoundItemWallet" type="Node2D" unique_id=2007034112]
+script = ExtResource("1_pgcbk")
+
+[node name="FoundItemWallet_clip" type="Polygon2D" parent="." unique_id=328830910]
+clip_children = 2
+polygon = PackedVector2Array(117, -211, 131, 218, -145, 203, -132, -200)
+
+[node name="Parallax2D" type="Parallax2D" parent="FoundItemWallet_clip" unique_id=2017223533]
+scroll_scale = Vector2(0.95, 1)
+scroll_offset = Vector2(-53, 44)
+
+[node name="Founditem" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=1542617607]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jh2pd")
+
+[node name="Foundwallet_hand" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=76382490]
+position = Vector2(0, 60)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_5u6cs")
+
+[node name="Wherekeys_bubble_1" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=293127961]
+visible = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_httnq")
+
+[node name="Wherekeys_question_1" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=987387295]
+visible = false
+position = Vector2(49.999996, -42.999996)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_xxqgf")
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=1442597594]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_el3kx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1507789509]
+root_node = NodePath("../FoundItemWallet_clip")
+libraries/ = SubResource("AnimationLibrary_o3yx2")
+libraries/FoundItemWallet = SubResource("AnimationLibrary_n7rtf")

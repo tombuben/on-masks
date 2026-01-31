@@ -12,12 +12,11 @@ func enter_panel():
 	if (player.has_animation(enter_animation)):
 		player.play(enter_animation)
 		await player.animation_finished
-		is_active = true
 		if (player.has_animation(idle_animation)):
 			player.queue(idle_animation)
 	elif (player.has_animation(idle_animation)):
-		is_active = true
-		player.play(idle_animation)
+		player.play(idle_animation)	
+	is_active = true
 
 func exit_panel():
 	is_active = false

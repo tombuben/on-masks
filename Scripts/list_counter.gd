@@ -2,6 +2,7 @@ class_name ListCounter extends Node2D
 
 @export var target_count : int = 4
 
+var number_correct_selected = 0
 var number_selected = 0
 var parent_panel : ComicPanel
 

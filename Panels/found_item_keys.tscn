@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://lr4146coji6n"]
+
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_gwo17"]
+[ext_resource type="Texture2D" uid="uid://dfqk8h2qtiedw" path="res://Assets/Panels/FoundItems/Founditem_1.png" id="2_dwsmy"]
+[ext_resource type="Texture2D" uid="uid://dvaxtp5e7wyk0" path="res://Assets/Panels/FoundItems/foundkeys_hand_1.png" id="3_lmim8"]
+[ext_resource type="Texture2D" uid="uid://1vco0rqiddhx" path="res://Assets/Panels/FoundItems/Wherekeys_question_1.png" id="4_k71nv"]
+[ext_resource type="Texture2D" uid="uid://cyd2khihwui8s" path="res://Assets/Panels/FoundItems/Founditem_frame_1.png" id="5_0ure2"]
+
+[sub_resource type="Animation" id="Animation_ojmgi"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
+_data = {
+&"RESET": SubResource("Animation_ojmgi")
+}
+
+[sub_resource type="Animation" id="Animation_n7rtf"]
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Founditem_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 60), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Parallax2D/Wherekeys_question_1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7t3ax"]
+_data = {
+&"Enter": SubResource("Animation_n7rtf")
+}
+
+[node name="FoundItemKeys" type="Node2D" unique_id=1258029886]
+script = ExtResource("1_gwo17")
+
+[node name="FoundItemKeys_clip" type="Polygon2D" parent="." unique_id=83462876]
+clip_children = 2
+polygon = PackedVector2Array(117, -211, 131, 218, -145, 203, -132, -200)
+
+[node name="Parallax2D" type="Parallax2D" parent="FoundItemKeys_clip" unique_id=2077772186]
+scroll_scale = Vector2(0.95, 1)
+scroll_offset = Vector2(-24, 36)
+
+[node name="Founditem" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=1045048857]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_dwsmy")
+
+[node name="Founditem_hand" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=155463718]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_lmim8")
+
+[node name="Wherekeys_question_1" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=1140391720]
+position = Vector2(49.999996, -42.999996)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_k71nv")
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=1716252841]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_0ure2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
+root_node = NodePath("../FoundItemKeys_clip")
+libraries/ = SubResource("AnimationLibrary_o3yx2")
+libraries/FoundItemKeys = SubResource("AnimationLibrary_7t3ax")
