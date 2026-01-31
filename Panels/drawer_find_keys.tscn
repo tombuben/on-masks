@@ -91,8 +91,7 @@ clip_children = 2
 polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
 
 [node name="Parallax2D" type="Parallax2D" parent="Drawer_clip" unique_id=2039166734]
-scroll_scale = Vector2(0.95, 1)
-scroll_offset = Vector2(-24, 36)
+scroll_scale = Vector2(0.98, 1)
 
 [node name="Drawer" type="Node2D" parent="Drawer_clip/Parallax2D" unique_id=536471016]
 position = Vector2(136, -143)
@@ -113,6 +112,7 @@ polygon = PackedVector2Array(-203, 53, -13, -92, 254, 22, 70, 168, -208, 57, -28
 
 [node name="KeysToFind" type="Area2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1996723199]
 position = Vector2(6, -24)
+collision_mask = 0
 script = ExtResource("5_8tub1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/KeysToFind" unique_id=688477364]

@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d4j17csdao8tg" path="res://Panels/to_do_panel.tscn" id="3_k2uku"]
 [ext_resource type="PackedScene" uid="uid://d0j2xdliwehg" path="res://Panels/before_drawer_panel.tscn" id="4_o7hcg"]
 [ext_resource type="PackedScene" uid="uid://lr4146coji6n" path="res://Panels/found_item_keys.tscn" id="5_kl5c6"]
-[ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
+[ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_keys.tscn" id="5_o7hcg"]
+[ext_resource type="PackedScene" uid="uid://byyuiu6inn06o" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
 [ext_resource type="PackedScene" uid="uid://y3xq87j4ki45" path="res://Panels/found_item_wallet.tscn" id="7_tue7c"]
 [ext_resource type="Texture2D" uid="uid://d3bd27cqb4vxo" path="res://Assets/Panels/Drawer/DrawerBack-0.png" id="8_iwt2b"]
 [ext_resource type="PackedScene" uid="uid://boopyvm3e7xie" path="res://Panels/people_pleaser.tscn" id="8_v8a7c"]
@@ -39,8 +40,8 @@ position = Vector2(602, 0)
 [node name="BeforeDrawerPanel" parent="." unique_id=1258029886 instance=ExtResource("4_o7hcg")]
 position = Vector2(1168, 4)
 
-[node name="DrawerFindKeys" parent="." unique_id=51193233 instance=ExtResource("6_xywil")]
-position = Vector2(1719, 21)
+[node name="DrawerFindKeys" parent="." unique_id=51193233 instance=ExtResource("5_o7hcg")]
+position = Vector2(1718, 12)
 
 [node name="FoundItemKeys" parent="." unique_id=143022061 instance=ExtResource("5_kl5c6")]
 position = Vector2(2183, 10)

@@ -47,10 +47,10 @@ void fragment() {
 		c = max(c, 1. - (dis - rad));
 	}
     
-	float c2 = smoothstep(1. - 0.1 * texture(noiseTexture, UV).x, 1., c);
-    c = smoothstep(0.98, 0.99, c);
+	float c2 = smoothstep(0.99, 0.991, c);
+    c = smoothstep(0.977, 0.978, c);
 	
-	float visibility = smoothstep(0.4,0.5,expansion);
+	float visibility = smoothstep(0.39,0.5,expansion);
 	vec3 insideColor = mix(vec3(1.), texture(TEXTURE, UV).xyz, visibility);
 	COLOR = vec4(vec3(c2) * insideColor, c);	
 }

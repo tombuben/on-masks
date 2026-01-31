@@ -63,7 +63,7 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5u6cs"]
 _data = {
-&"RESET": SubResource("Animation_jh2pd")
+&"Enter": SubResource("Animation_jh2pd")
 }
 
 [node name="FoundItemWallet" type="Node2D" unique_id=2007034112 node_paths=PackedStringArray("arrow_next", "player")]
@@ -76,7 +76,7 @@ clip_children = 2
 polygon = PackedVector2Array(117, -211, 131, 218, -145, 203, -132, -200)
 
 [node name="Parallax2D" type="Parallax2D" parent="FoundItemWallet_clip" unique_id=2017223533]
-scroll_scale = Vector2(0.95, 1)
+scroll_scale = Vector2(0.98, 1)
 
 [node name="Founditem" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=1542617607]
 scale = Vector2(0.2, 0.2)

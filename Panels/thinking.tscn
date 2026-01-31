@@ -143,12 +143,13 @@ texture = SubResource("ViewportTexture_p1o8h")
 
 [node name="Bubble" type="Sprite2D" parent="Panel1_clip/Parallax2D" unique_id=414095468 node_paths=PackedStringArray("ExpandedPosition")]
 material = SubResource("ShaderMaterial_36rgb")
-position = Vector2(85, -128)
+position = Vector2(68, -129)
 texture = SubResource("ViewportTexture_p1o8h")
 script = ExtResource("6_eit5n")
 ExpandedPosition = NodePath("../ExpandedPosition")
 
 [node name="ExpandedPosition" type="Node2D" parent="Panel1_clip/Parallax2D" unique_id=1695131193]
+position = Vector2(-21, 0)
 
 [node name="Frame" type="Sprite2D" parent="." unique_id=1023737370]
 scale = Vector2(0.2, 0.2)

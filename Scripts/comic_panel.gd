@@ -9,13 +9,8 @@ class_name ComicPanel extends Node2D
 var is_active : bool = false
 
 func enter_panel():
-	print("enter_panel")
 	var enter_animation = "Enter"
 	var idle_animation = "Idle"
-	
-	print(enter_animation)
-	print(player.has_animation(enter_animation))
-	
 	if (player.has_animation(enter_animation)):
 		player.play(enter_animation)
 		await player.animation_finished
