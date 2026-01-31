@@ -7,16 +7,23 @@ extends Sprite2D
 
 @onready var orig_position = global_position
 @onready var target_position = ExpandedPosition.global_position
+
+
 var tween : Tween
+var parent_panel : ComicPanel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var parent = get_parent()
+	while parent is not ComicPanel:
+		parent = parent.get_parent()
+	parent_panel = parent
+	
 	tween = get_tree().create_tween()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_mouse_button_pressed( 1 ): # Left click
+	if parent_panel.is_active and Input.is_mouse_button_pressed( 1 ): # Left click
 		expansion += delta * 0.5
 	else:
 		expansion -= delta * 0.5
