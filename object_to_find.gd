@@ -10,6 +10,7 @@ func _ready() -> void:
 	parent_panel = parent
 
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseMotion:
-		parent_panel.player.play("Panel3/NoRunAway")
+	if event is InputEventMouseButton:
+		visible = false
+		parent_panel.is_blocking = false
 	

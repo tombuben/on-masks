@@ -1,5 +1,8 @@
-extends RigidBody2D
+extends CharacterBody2D
 
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseMotion:
-		global_position += event.relative
+		velocity = event.screen_relative
+
+func _physics_process(delta: float) -> void:
+	move_and_slide()
