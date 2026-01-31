@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3kb0ld1kvrpc"
-path="res://.godot/imported/DrawerFront.png-d0ce116f8f4b451d58f12722bdc7d722.ctex"
+uid="uid://swcdgevm038g"
+path="res://.godot/imported/DrawerBack-1.png-b1b48cb9b2d5b50e94f0e224359c6c72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Panels/Drawer/DrawerFront.png"
-dest_files=["res://.godot/imported/DrawerFront.png-d0ce116f8f4b451d58f12722bdc7d722.ctex"]
+source_file="res://Assets/Panels/Drawer/DrawerBack-1.png"
+dest_files=["res://.godot/imported/DrawerBack-1.png-b1b48cb9b2d5b50e94f0e224359c6c72.ctex"]
 
 [params]
 

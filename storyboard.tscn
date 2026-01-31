@@ -1,21 +1,75 @@
 [gd_scene format=3 uid="uid://bx6bte5gry2ul"]
 
-[ext_resource type="Script" uid="uid://crljrm3inplte" path="res://camera_move.gd" id="1_mexpn"]
-[ext_resource type="Shader" uid="uid://dnsfwxxe1p04o" path="res://thoughtbubble.gdshader" id="2_p1o8h"]
-[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://comic_panel.gd" id="2_yfq1a"]
-[ext_resource type="Script" uid="uid://cbbgbnrv0e3p6" path="res://expanding_bubble.gd" id="3_36rgb"]
-[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://sprite-cycle.gd" id="4_4wkvg"]
+[ext_resource type="Script" uid="uid://crljrm3inplte" path="res://Scripts/camera_move.gd" id="1_mexpn"]
+[ext_resource type="Shader" uid="uid://dnsfwxxe1p04o" path="res://Scripts/thoughtbubble.gdshader" id="2_p1o8h"]
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="2_yfq1a"]
+[ext_resource type="Script" uid="uid://cbbgbnrv0e3p6" path="res://Scripts/expanding_bubble.gd" id="3_36rgb"]
+[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="4_4wkvg"]
 [ext_resource type="Texture2D" uid="uid://b3abidg37soql" path="res://Assets/Panels/Thinking/Character-0.png" id="5_54yue"]
-[ext_resource type="Texture2D" uid="uid://hvyq888s756q" path="res://Assets/Panels/Thinking/Character-1.png" id="5_o3yx2"]
+[ext_resource type="Texture2D" uid="uid://da6cjb4vc4w5o" path="res://Assets/Panels/Thinking/Character-1.png" id="5_o3yx2"]
 [ext_resource type="Texture2D" uid="uid://c8e1gucacf0ip" path="res://Assets/Panels/Thinking/Frame-0.png" id="6_4wkvg"]
-[ext_resource type="Texture2D" uid="uid://d3bd27cqb4vxo" path="res://Assets/Panels/Drawer/DrawerBack.png" id="8_iwt2b"]
+[ext_resource type="Texture2D" uid="uid://d3bd27cqb4vxo" path="res://Assets/Panels/Drawer/DrawerBack-0.png" id="8_iwt2b"]
 [ext_resource type="Texture2D" uid="uid://bsacfmypj132" path="res://Assets/Panels/Thinking/Frame-1.png" id="9_37g3q"]
-[ext_resource type="Texture2D" uid="uid://c3kb0ld1kvrpc" path="res://Assets/Panels/Drawer/DrawerFront.png" id="9_baigs"]
-[ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://random_move_scale.gd" id="9_hal1o"]
+[ext_resource type="Texture2D" uid="uid://c3kb0ld1kvrpc" path="res://Assets/Panels/Drawer/DrawerFront-0.png" id="9_baigs"]
+[ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://Scripts/random_move_scale.gd" id="9_hal1o"]
+[ext_resource type="Texture2D" uid="uid://def0ryop50m0h" path="res://Assets/Panels/ToDo/List-0.png" id="10_0dxia"]
 [ext_resource type="Texture2D" uid="uid://c5q2aubclj8du" path="res://Assets/Panels/Drawer/DrawerTop.png" id="10_o7hcg"]
-[ext_resource type="Texture2D" uid="uid://evgas13tiess" path="res://Assets/Panels/Drawer/Frame.png" id="11_d7l14"]
-[ext_resource type="Script" uid="uid://b77hgga5uo706" path="res://no_button.gd" id="12_baigs"]
-[ext_resource type="Script" uid="uid://m26fvbkrtb4u" path="res://yes_button.gd" id="13_d7l14"]
+[ext_resource type="Texture2D" uid="uid://swcdgevm038g" path="res://Assets/Panels/Drawer/DrawerBack-1.png" id="11_3hehj"]
+[ext_resource type="Texture2D" uid="uid://evgas13tiess" path="res://Assets/Panels/Drawer/Frame-0.png" id="11_d7l14"]
+[ext_resource type="Texture2D" uid="uid://d2rx5uauajke6" path="res://Assets/Panels/ToDo/Frame-0.png" id="11_k2xib"]
+[ext_resource type="Script" uid="uid://b77hgga5uo706" path="res://Scripts/no_button.gd" id="12_baigs"]
+[ext_resource type="Texture2D" uid="uid://cxcmc03gfm53b" path="res://Assets/Panels/ToDo/Frame-1.png" id="12_x5omf"]
+[ext_resource type="Script" uid="uid://m26fvbkrtb4u" path="res://Scripts/yes_button.gd" id="13_d7l14"]
+[ext_resource type="Texture2D" uid="uid://h7dt0aekxxqo" path="res://Assets/Panels/Drawer/DrawerFront-1.png" id="13_gdypv"]
+[ext_resource type="Texture2D" uid="uid://8c1h4qbra15k" path="res://Assets/Panels/Drawer/Frame-1.png" id="18_xw6b5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0dxia"]
+noise_type = 2
+frequency = 0.0182
+fractal_type = 0
+cellular_distance_function = 2
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k2xib"]
+noise = SubResource("FastNoiseLite_0dxia")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5omf"]
+shader = ExtResource("2_p1o8h")
+shader_parameter/expansion = 0.05
+shader_parameter/noiseTexture = SubResource("NoiseTexture2D_k2xib")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_p1o8h"]
+viewport_path = NodePath("SubViewportContainer/ThoughtBubbleInside")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7kriw"]
+noise_type = 2
+frequency = 0.0182
+fractal_type = 0
+cellular_distance_function = 2
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jok68"]
+noise = SubResource("FastNoiseLite_7kriw")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o0t3o"]
+shader = ExtResource("2_p1o8h")
+shader_parameter/expansion = 0.1
+shader_parameter/noiseTexture = SubResource("NoiseTexture2D_jok68")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_cblav"]
+noise_type = 2
+frequency = 0.0182
+fractal_type = 0
+cellular_distance_function = 2
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_raaaa"]
+noise = SubResource("FastNoiseLite_cblav")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ojsk"]
+shader = ExtResource("2_p1o8h")
+shader_parameter/expansion = 0.15
+shader_parameter/noiseTexture = SubResource("NoiseTexture2D_raaaa")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_36rgb"]
 noise_type = 2
@@ -32,35 +86,13 @@ shader = ExtResource("2_p1o8h")
 shader_parameter/expansion = 0.4
 shader_parameter/noiseTexture = SubResource("NoiseTexture2D_yfq1a")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_p1o8h"]
-viewport_path = NodePath("SubViewportContainer/ThoughtBubbleInside")
-
 [sub_resource type="Animation" id="Animation_4wkvg"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parallax2D/Drawer:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(136, -143)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yx2"]
 _data = {
 &"RESET": SubResource("Animation_4wkvg")
 }
-
-[sub_resource type="Animation" id="Animation_yfq1a"]
-resource_name = "Enter"
-length = 0.5
-
-[sub_resource type="Animation" id="Animation_ym4ru"]
-resource_name = "Exit"
 
 [sub_resource type="Animation" id="Animation_54yue"]
 resource_name = "panel_1_idle"
@@ -69,14 +101,46 @@ loop_mode = 1
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4wkvg"]
 _data = {
-&"Enter": SubResource("Animation_yfq1a"),
-&"Exit": SubResource("Animation_ym4ru"),
 &"Idle": SubResource("Animation_54yue")
 }
 
-[sub_resource type="Animation" id="Animation_iwt2b"]
-resource_name = "Enter"
-length = 2.0
+[sub_resource type="Animation" id="Animation_0dxia"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 60), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k2xib"]
+resource_name = "Exit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 60)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2xib"]
+_data = {
+&"Enter": SubResource("Animation_0dxia"),
+&"Exit": SubResource("Animation_k2xib")
+}
+
+[sub_resource type="Animation" id="Animation_x5omf"]
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -84,15 +148,30 @@ tracks/0/path = NodePath("Parallax2D/Drawer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(0.5743491, 0.076946534),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(136, -143), Vector2(-18, -31)]
+"values": [Vector2(136, -143), Vector2(-10, -30)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3hehj"]
+[sub_resource type="Animation" id="Animation_7kriw"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Drawer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-10, -30), Vector2(136, -143)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jok68"]
 _data = {
-&"Enter": SubResource("Animation_iwt2b")
+&"Enter": SubResource("Animation_x5omf"),
+&"Exit": SubResource("Animation_7kriw")
 }
 
 [sub_resource type="Gradient" id="Gradient_o7hcg"]
@@ -143,7 +222,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("YesNoButtons/YesButton:position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
+tracks/0/loop_wrap = false
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
@@ -159,18 +238,6 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_37g3q"]
 length = 2.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parallax2D/Drawer:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(136, -143), Vector2(72, 184)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gdypv"]
 _data = {
@@ -192,91 +259,141 @@ _data = {
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1956719944 node_paths=PackedStringArray("positions")]
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../Panel3"), NodePath("../Panel4")]
+positions = [NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../Drawer"), NodePath("../Panel3"), NodePath("../Panel4")]
 
-[node name="Panel1" type="Node2D" parent="." unique_id=700949410]
+[node name="Thinking" type="Node2D" parent="." unique_id=700949410]
 position = Vector2(2, 0)
 script = ExtResource("2_yfq1a")
 
-[node name="Panel1_clip" type="Polygon2D" parent="Panel1" unique_id=288398562]
+[node name="Panel1_clip" type="Polygon2D" parent="Thinking" unique_id=288398562]
 clip_children = 2
 polygon = PackedVector2Array(197, -192, 192, 193, -229, 196, -230, -193)
 
-[node name="Parallax2D2" type="Parallax2D" parent="Panel1/Panel1_clip" unique_id=1544790955]
+[node name="Parallax2D2" type="Parallax2D" parent="Thinking/Panel1_clip" unique_id=1544790955]
 scroll_scale = Vector2(0.97, 1)
 scroll_offset = Vector2(3, 52)
 
-[node name="Character" type="Sprite2D" parent="Panel1/Panel1_clip/Parallax2D2" unique_id=567648352]
+[node name="Character" type="Sprite2D" parent="Thinking/Panel1_clip/Parallax2D2" unique_id=567648352]
 position = Vector2(-126, 7)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_54yue")
 script = ExtResource("4_4wkvg")
 textures = Array[Texture2D]([ExtResource("5_54yue"), ExtResource("5_o3yx2")])
 
-[node name="Parallax2D" type="Parallax2D" parent="Panel1/Panel1_clip" unique_id=2076317656]
+[node name="Parallax2D" type="Parallax2D" parent="Thinking/Panel1_clip" unique_id=2076317656]
 scroll_scale = Vector2(0.95, 1)
 scroll_offset = Vector2(-13, 6)
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel1/Panel1_clip/Parallax2D" unique_id=1564490849 node_paths=PackedStringArray("ExpandedPosition")]
+[node name="Bubble4" type="Sprite2D" parent="Thinking/Panel1_clip/Parallax2D" unique_id=847798589]
+material = SubResource("ShaderMaterial_x5omf")
+position = Vector2(-57, -69)
+texture = SubResource("ViewportTexture_p1o8h")
+
+[node name="Bubble3" type="Sprite2D" parent="Thinking/Panel1_clip/Parallax2D" unique_id=1772984848]
+material = SubResource("ShaderMaterial_o0t3o")
+position = Vector2(-23, -90)
+texture = SubResource("ViewportTexture_p1o8h")
+
+[node name="Bubble2" type="Sprite2D" parent="Thinking/Panel1_clip/Parallax2D" unique_id=281350457]
+material = SubResource("ShaderMaterial_3ojsk")
+position = Vector2(19, -110)
+texture = SubResource("ViewportTexture_p1o8h")
+
+[node name="Bubble" type="Sprite2D" parent="Thinking/Panel1_clip/Parallax2D" unique_id=1564490849 node_paths=PackedStringArray("ExpandedPosition")]
 material = SubResource("ShaderMaterial_36rgb")
-position = Vector2(132, -145)
+position = Vector2(85, -128)
 texture = SubResource("ViewportTexture_p1o8h")
 script = ExtResource("3_36rgb")
 ExpandedPosition = NodePath("../ExpandedPosition")
 
-[node name="ExpandedPosition" type="Node2D" parent="Panel1/Panel1_clip/Parallax2D" unique_id=1051711503]
+[node name="ExpandedPosition" type="Node2D" parent="Thinking/Panel1_clip/Parallax2D" unique_id=1051711503]
 
-[node name="Frame" type="Sprite2D" parent="Panel1" unique_id=198775965]
+[node name="Frame" type="Sprite2D" parent="Thinking" unique_id=198775965]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_4wkvg")
 script = ExtResource("4_4wkvg")
 textures = Array[Texture2D]([ExtResource("6_4wkvg"), ExtResource("9_37g3q")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel1" unique_id=1573949200]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Thinking" unique_id=1573949200]
 root_node = NodePath("../Panel1_clip")
 libraries/ = SubResource("AnimationLibrary_o3yx2")
-libraries/Panel1 = SubResource("AnimationLibrary_4wkvg")
+libraries/Thinking = SubResource("AnimationLibrary_4wkvg")
 
-[node name="Panel2" type="Node2D" parent="." unique_id=514552427]
-position = Vector2(586, -9)
+[node name="ToDoPanel" type="Node2D" parent="." unique_id=346825283]
+position = Vector2(602, 0)
 script = ExtResource("2_yfq1a")
+can_reverse = true
 
-[node name="Panel2_clip" type="Polygon2D" parent="Panel2" unique_id=2012380897]
+[node name="Panel2_clip" type="Polygon2D" parent="ToDoPanel" unique_id=1715469322]
 clip_children = 2
-polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
+polygon = PackedVector2Array(198, -192, 194, 193, -230, 195, -231, -192)
 
-[node name="Parallax2D" type="Parallax2D" parent="Panel2/Panel2_clip" unique_id=887985046]
+[node name="Parallax2D" type="Parallax2D" parent="ToDoPanel/Panel2_clip" unique_id=1765873016]
 scroll_scale = Vector2(0.95, 1)
 scroll_offset = Vector2(-24, 36)
 
-[node name="Drawer" type="Node2D" parent="Panel2/Panel2_clip/Parallax2D" unique_id=766685208]
+[node name="Sprite2D" type="Sprite2D" parent="ToDoPanel/Panel2_clip/Parallax2D" unique_id=1048736728]
+position = Vector2(0, 60)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_0dxia")
+
+[node name="Frame" type="Sprite2D" parent="ToDoPanel" unique_id=781203103]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_k2xib")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("11_k2xib"), ExtResource("12_x5omf")])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ToDoPanel" unique_id=800828794]
+root_node = NodePath("../Panel2_clip")
+libraries/ = SubResource("AnimationLibrary_o3yx2")
+libraries/ToDoPanel = SubResource("AnimationLibrary_k2xib")
+
+[node name="Drawer" type="Node2D" parent="." unique_id=514552427]
+position = Vector2(1289, -26)
+script = ExtResource("2_yfq1a")
+
+[node name="Panel2_clip" type="Polygon2D" parent="Drawer" unique_id=2012380897]
+clip_children = 2
+polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
+
+[node name="Parallax2D" type="Parallax2D" parent="Drawer/Panel2_clip" unique_id=887985046]
+scroll_scale = Vector2(0.95, 1)
+scroll_offset = Vector2(-24, 36)
+
+[node name="Drawer" type="Node2D" parent="Drawer/Panel2_clip/Parallax2D" unique_id=766685208]
 position = Vector2(136, -143)
 
-[node name="Back" type="Sprite2D" parent="Panel2/Panel2_clip/Parallax2D/Drawer" unique_id=1711089354]
+[node name="Back" type="Sprite2D" parent="Drawer/Panel2_clip/Parallax2D/Drawer" unique_id=1711089354]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_iwt2b")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("8_iwt2b"), ExtResource("11_3hehj")])
 
-[node name="Contents" type="Node2D" parent="Panel2/Panel2_clip/Parallax2D/Drawer" unique_id=820115036]
+[node name="Contents" type="Node2D" parent="Drawer/Panel2_clip/Parallax2D/Drawer" unique_id=820115036]
 
-[node name="Front" type="Sprite2D" parent="Panel2/Panel2_clip/Parallax2D/Drawer" unique_id=1887069026]
+[node name="Front" type="Sprite2D" parent="Drawer/Panel2_clip/Parallax2D/Drawer" unique_id=1887069026]
 scale = Vector2(0.19999999, 0.19999999)
 texture = ExtResource("9_baigs")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("9_baigs"), ExtResource("13_gdypv")])
 
-[node name="Top" type="Sprite2D" parent="Panel2/Panel2_clip/Parallax2D" unique_id=148184820]
+[node name="Top" type="Sprite2D" parent="Drawer/Panel2_clip/Parallax2D" unique_id=148184820]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_o7hcg")
 
-[node name="Frame" type="Sprite2D" parent="Panel2" unique_id=246892659]
+[node name="Frame" type="Sprite2D" parent="Drawer" unique_id=246892659]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_d7l14")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("11_d7l14"), ExtResource("18_xw6b5")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel2" unique_id=40589179]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Drawer" unique_id=40589179]
 root_node = NodePath("../Panel2_clip")
 libraries/ = SubResource("AnimationLibrary_o3yx2")
-libraries/Panel2 = SubResource("AnimationLibrary_3hehj")
+libraries/Drawer = SubResource("AnimationLibrary_jok68")
 
 [node name="Panel3" type="Node2D" parent="." unique_id=2115884526]
-position = Vector2(1203, 11)
+position = Vector2(1906, -6)
 script = ExtResource("2_yfq1a")
 is_blocking = true
 
@@ -299,7 +416,7 @@ textures = Array[Texture2D]([ExtResource("5_54yue")])
 position = Vector2(53, 143)
 
 [node name="YesButton" type="Area2D" parent="Panel3/Panel1_clip/YesNoButtons" unique_id=486236710]
-position = Vector2(33, -1)
+position = Vector2(33, 0)
 script = ExtResource("13_d7l14")
 
 [node name="YesVisual" type="Sprite2D" parent="Panel3/Panel1_clip/YesNoButtons/YesButton" unique_id=1151397881]
@@ -322,6 +439,8 @@ polygon = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 [node name="Frame" type="Sprite2D" parent="Panel3" unique_id=1715997848]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_4wkvg")
+script = ExtResource("4_4wkvg")
+textures = Array[Texture2D]([ExtResource("6_4wkvg"), ExtResource("9_37g3q")])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel3" unique_id=202995176]
 root_node = NodePath("../Panel1_clip")
@@ -329,7 +448,7 @@ libraries/ = SubResource("AnimationLibrary_o3yx2")
 libraries/Panel3 = SubResource("AnimationLibrary_o7hcg")
 
 [node name="Panel4" type="Node2D" parent="." unique_id=138539189]
-position = Vector2(1748, -17)
+position = Vector2(2451, -34)
 script = ExtResource("2_yfq1a")
 
 [node name="Panel2_clip" type="Polygon2D" parent="Panel4" unique_id=2106205851]

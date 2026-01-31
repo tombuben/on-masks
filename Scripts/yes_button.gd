@@ -21,4 +21,6 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 	if event is InputEventMouseButton and event.pressed:
 		parent_panel.player.play("Panel3/YesRunAway")
 		parent_panel.is_blocking = false
+		await parent_panel.player.animation_finished
+		queue_free()
 	

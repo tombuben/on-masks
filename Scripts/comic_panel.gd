@@ -16,6 +16,7 @@ func enter_panel():
 		if (player.has_animation(idle_animation)):
 			player.queue(idle_animation)
 	elif (player.has_animation(idle_animation)):
+		is_active = true
 		player.play(idle_animation)
 
 func exit_panel():

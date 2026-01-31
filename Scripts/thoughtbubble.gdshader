@@ -50,7 +50,7 @@ void fragment() {
 	float c2 = smoothstep(1. - 0.1 * texture(noiseTexture, UV).x, 1., c);
     c = smoothstep(0.98, 0.99, c);
 	
-	float visibility = smoothstep(0.3,0.4,expansion);
+	float visibility = smoothstep(0.4,0.5,expansion);
 	vec3 insideColor = mix(vec3(1.), texture(TEXTURE, UV).xyz, visibility);
 	COLOR = vec4(vec3(c2) * insideColor, c);	
 }

@@ -14,6 +14,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
+	if not positions[current_index].is_active:
+		return
 	if event.is_action_pressed("next"):
 		if not positions[current_index].is_blocking:
 			go_to_panel(current_index + 1)
