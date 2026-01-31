@@ -82,7 +82,7 @@ _data = {
 script = ExtResource("1_bndu5")
 is_blocking = true
 arrow_next = NodePath("ArrowNext")
-player = NodePath("AnimationPlayer")
+player = NodePath("2AnimationPlayer2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2120784309]
 position = Vector2(110, -129)
@@ -345,5 +345,5 @@ textures = Array[Texture2D]([ExtResource("12_1myny"), ExtResource("13_b8q7n")])
 [node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("28_iklda")]
 position = Vector2(250, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=26708682]
+[node name="2AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=1149616029]
 libraries/ = SubResource("AnimationLibrary_h1jap")

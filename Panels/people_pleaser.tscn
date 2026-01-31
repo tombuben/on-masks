@@ -83,7 +83,6 @@ polygon = PackedVector2Array(197, -192, 192, 193, -229, 196, -230, -193)
 
 [node name="Parallax2D2" type="Parallax2D" parent="Panel1_clip" unique_id=79104403]
 scroll_scale = Vector2(0.97, 1)
-scroll_offset = Vector2(3, 52)
 
 [node name="Character" type="Sprite2D" parent="Panel1_clip/Parallax2D2" unique_id=1592312317]
 position = Vector2(-126, 7)

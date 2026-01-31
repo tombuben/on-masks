@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pns3mogt7ved"
-path="res://.godot/imported/Select_2.jpg-6cdb29c7cffc4578b4035bf8ceb89f22.ctex"
+uid="uid://csmca0b1qtodi"
+path="res://.godot/imported/Select_1_2.png-2a2d39eea55d649854bbf593aea1f08b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Panels/Thinking/ConfirmCircles/Select_2.jpg"
-dest_files=["res://.godot/imported/Select_2.jpg-6cdb29c7cffc4578b4035bf8ceb89f22.ctex"]
+source_file="res://Assets/Panels/ToDo/ConfirmCircles/Select_1_2.png"
+dest_files=["res://.godot/imported/Select_1_2.png-2a2d39eea55d649854bbf593aea1f08b.ctex"]
 
 [params]
 

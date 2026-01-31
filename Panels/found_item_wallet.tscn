@@ -7,10 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://1vco0rqiddhx" path="res://Assets/Panels/FoundItems/Wherekeys_question_1.png" id="5_xxqgf"]
 [ext_resource type="Texture2D" uid="uid://cyd2khihwui8s" path="res://Assets/Panels/FoundItems/Founditem_frame_1.png" id="6_el3kx"]
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="7_jh2pd"]
+[ext_resource type="Texture2D" uid="uid://bfv8vf2e005kq" path="res://Assets/Panels/FoundItems/Wherekeys_1.png" id="8_5u6cs"]
 
 [sub_resource type="Animation" id="Animation_jh2pd"]
 resource_name = "RESET"
-length = 1.2
+length = 1.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -47,6 +48,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Parallax2D/Founditem:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_jh2pd"), ExtResource("8_5u6cs")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5u6cs"]
 _data = {
@@ -64,7 +77,6 @@ polygon = PackedVector2Array(117, -211, 131, 218, -145, 203, -132, -200)
 
 [node name="Parallax2D" type="Parallax2D" parent="FoundItemWallet_clip" unique_id=2017223533]
 scroll_scale = Vector2(0.95, 1)
-scroll_offset = Vector2(-53, 44)
 
 [node name="Founditem" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=1542617607]
 scale = Vector2(0.2, 0.2)

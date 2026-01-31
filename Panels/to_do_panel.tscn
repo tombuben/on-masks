@@ -7,16 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://yvx32kowqi21" path="res://Assets/Panels/Thinking/Items/ Dishes-0.png" id="5_1kfa8"]
 [ext_resource type="Texture2D" uid="uid://bk2wyyjk2byxg" path="res://Assets/Panels/ToDo/List-1.png" id="5_ejw7g"]
 [ext_resource type="Script" uid="uid://cvqggm03qnek8" path="res://Scripts/todo_selector.gd" id="6_yrw5r"]
-[ext_resource type="Texture2D" uid="uid://ntuparivaoct" path="res://Assets/Panels/Thinking/ConfirmCircles/Select_1.png" id="7_p41uw"]
 [ext_resource type="Texture2D" uid="uid://2wc0cwoelfre" path="res://Assets/Panels/Thinking/Items/Calendar-0.png" id="8_4quxm"]
+[ext_resource type="Texture2D" uid="uid://b5wq6x6a6hjvg" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_1_1.png" id="9_har2p"]
 [ext_resource type="Texture2D" uid="uid://dp8u0t8032yod" path="res://Assets/Panels/Thinking/Items/ Gift-0.png" id="9_ypv43"]
+[ext_resource type="Texture2D" uid="uid://csmca0b1qtodi" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_1_2.png" id="10_1kfa8"]
 [ext_resource type="Texture2D" uid="uid://c0mqugwwam8y6" path="res://Assets/Panels/Thinking/Items/Box-0.png" id="10_ey3t8"]
 [ext_resource type="Texture2D" uid="uid://dd5uykqhebc84" path="res://Assets/Panels/Thinking/OnlyListItems/Bag-0.png" id="11_gqhch"]
+[ext_resource type="Texture2D" uid="uid://crakrqyd5sihu" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_2_1.png" id="12_4quxm"]
 [ext_resource type="Texture2D" uid="uid://4l82xkdjg3bn" path="res://Assets/Panels/Thinking/OnlyListItems/Dino-0.png" id="12_qbbbn"]
 [ext_resource type="Texture2D" uid="uid://dnsuxv35k8a5a" path="res://Assets/Panels/Thinking/OnlyListItems/Math-0.png" id="13_s32wi"]
+[ext_resource type="Texture2D" uid="uid://bgl8b3jeth2hi" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_2_2.png" id="13_ypv43"]
 [ext_resource type="Texture2D" uid="uid://d3kb3gfdoegcx" path="res://Assets/Panels/Thinking/OnlyListItems/Phone-0.png" id="14_grmj5"]
 [ext_resource type="Texture2D" uid="uid://52vrdsy7tjsn" path="res://Assets/Panels/Thinking/OnlyListItems/Sixseven-0.png" id="15_b6htd"]
+[ext_resource type="Texture2D" uid="uid://c71se62ld7ppk" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_3_1.png" id="15_ey3t8"]
 [ext_resource type="Texture2D" uid="uid://drgbwj126ekll" path="res://Assets/Panels/Thinking/OnlyListItems/Swirlies-0.png" id="16_464ml"]
+[ext_resource type="Texture2D" uid="uid://bs24t5mdh55bi" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_3_2.png" id="16_gqhch"]
 [ext_resource type="Texture2D" uid="uid://cch6dndq2ygk6" path="res://Assets/Panels/Thinking/OnlyListItems/Tornado-0.png" id="17_7tpns"]
 [ext_resource type="Texture2D" uid="uid://d2rx5uauajke6" path="res://Assets/Panels/ToDo/Frame-0.png" id="18_xp3cs"]
 [ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="19_gibwn"]
@@ -80,7 +85,6 @@ polygon = PackedVector2Array(198, -192, 194, 193, -230, 195, -231, -192)
 
 [node name="Parallax2D" type="Parallax2D" parent="Panel2_clip" unique_id=1896457381]
 scroll_scale = Vector2(0.95, 1)
-scroll_offset = Vector2(-24, 36)
 
 [node name="List" type="Node2D" parent="Panel2_clip/Parallax2D" unique_id=1853775999]
 position = Vector2(0, 60)
@@ -108,7 +112,9 @@ correct = true
 [node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Dishes-true/Area2D" unique_id=291037920]
 visible = false
 scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
+texture = ExtResource("9_har2p")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("9_har2p"), ExtResource("10_1kfa8")])
 
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Dishes-true/Area2D" unique_id=303621683]
 shape = SubResource("CircleShape2D_g4h0r")
@@ -126,13 +132,15 @@ texture = ExtResource("8_4quxm")
 script = ExtResource("6_yrw5r")
 correct = true
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Calendar-true/Area2D" unique_id=2120739951]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Calendar-true/Area2D" unique_id=899549193]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Calendar-true/Area2D" unique_id=2114164308]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("12_4quxm")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("12_4quxm"), ExtResource("13_ypv43")])
 
 [node name="Gift-true" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=734881087]
 position = Vector2(-43, 65)
@@ -147,13 +155,15 @@ texture = ExtResource("9_ypv43")
 script = ExtResource("6_yrw5r")
 correct = true
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Gift-true/Area2D" unique_id=1709295800]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Gift-true/Area2D" unique_id=1460990841]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Gift-true/Area2D" unique_id=1287348625]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("15_ey3t8")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("15_ey3t8"), ExtResource("16_gqhch")])
 
 [node name="Box-true" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=610949657]
 position = Vector2(-114, -32)
@@ -168,13 +178,15 @@ texture = ExtResource("10_ey3t8")
 script = ExtResource("6_yrw5r")
 correct = true
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Box-true/Area2D" unique_id=277040171]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Box-true/Area2D" unique_id=1102078558]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Box-true/Area2D" unique_id=1399428379]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("9_har2p")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("9_har2p"), ExtResource("10_1kfa8")])
 
 [node name="Bag" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=690638289]
 position = Vector2(-42, -18)
@@ -188,13 +200,15 @@ texture = ExtResource("11_gqhch")
 [node name="Area2D" type="Area2D" parent="Panel2_clip/Parallax2D/List/Bag" unique_id=1746849105]
 script = ExtResource("6_yrw5r")
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Bag/Area2D" unique_id=294814695]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Bag/Area2D" unique_id=687777758]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Bag/Area2D" unique_id=1427709434]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("12_4quxm")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("12_4quxm"), ExtResource("13_ypv43")])
 
 [node name="Dino" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=1618273386]
 position = Vector2(-29, -93)
@@ -208,13 +222,15 @@ texture = ExtResource("12_qbbbn")
 [node name="Area2D" type="Area2D" parent="Panel2_clip/Parallax2D/List/Dino" unique_id=1831929951]
 script = ExtResource("6_yrw5r")
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Dino/Area2D" unique_id=1437299924]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Dino/Area2D" unique_id=1402004749]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Dino/Area2D" unique_id=1312621642]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("15_ey3t8")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("15_ey3t8"), ExtResource("16_gqhch")])
 
 [node name="MathSprite" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=1969976371]
 position = Vector2(-110, 30)
@@ -228,13 +244,15 @@ texture = ExtResource("13_s32wi")
 [node name="Area2D" type="Area2D" parent="Panel2_clip/Parallax2D/List/MathSprite" unique_id=559912186]
 script = ExtResource("6_yrw5r")
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/MathSprite/Area2D" unique_id=925991390]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/MathSprite/Area2D" unique_id=873157310]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/MathSprite/Area2D" unique_id=2140033424]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("9_har2p")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("9_har2p"), ExtResource("10_1kfa8")])
 
 [node name="Phone" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=2145246704]
 position = Vector2(-148, 73)
@@ -248,13 +266,15 @@ texture = ExtResource("14_grmj5")
 [node name="Area2D" type="Area2D" parent="Panel2_clip/Parallax2D/List/Phone" unique_id=1747777185]
 script = ExtResource("6_yrw5r")
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Phone/Area2D" unique_id=531281076]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Phone/Area2D" unique_id=1380440627]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Phone/Area2D" unique_id=404157309]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("12_4quxm")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("12_4quxm"), ExtResource("13_ypv43")])
 
 [node name="Sixseven" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=1573024889]
 position = Vector2(90, -112)
@@ -268,13 +288,15 @@ texture = ExtResource("15_b6htd")
 [node name="Area2D" type="Area2D" parent="Panel2_clip/Parallax2D/List/Sixseven" unique_id=2040369919]
 script = ExtResource("6_yrw5r")
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Sixseven/Area2D" unique_id=1940856049]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Sixseven/Area2D" unique_id=1352609776]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Sixseven/Area2D" unique_id=2012408887]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("15_ey3t8")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("15_ey3t8"), ExtResource("16_gqhch")])
 
 [node name="Swirlies" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=440236112]
 position = Vector2(70, 82)
@@ -288,13 +310,15 @@ texture = ExtResource("16_464ml")
 [node name="Area2D" type="Area2D" parent="Panel2_clip/Parallax2D/List/Swirlies" unique_id=634780923]
 script = ExtResource("6_yrw5r")
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Swirlies/Area2D" unique_id=1620144168]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Swirlies/Area2D" unique_id=1885422583]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Swirlies/Area2D" unique_id=888713810]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("9_har2p")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("9_har2p"), ExtResource("10_1kfa8")])
 
 [node name="Tornado" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=796534361]
 position = Vector2(-82, -86)
@@ -308,13 +332,15 @@ texture = ExtResource("17_7tpns")
 [node name="Area2D" type="Area2D" parent="Panel2_clip/Parallax2D/List/Tornado" unique_id=1248305197]
 script = ExtResource("6_yrw5r")
 
-[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Tornado/Area2D" unique_id=1010145146]
-visible = false
-scale = Vector2(0.2, 0.217)
-texture = ExtResource("7_p41uw")
-
 [node name="Circle" type="CollisionShape2D" parent="Panel2_clip/Parallax2D/List/Tornado/Area2D" unique_id=1429626067]
 shape = SubResource("CircleShape2D_g4h0r")
+
+[node name="Confirm" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Tornado/Area2D" unique_id=859763577]
+visible = false
+scale = Vector2(0.2, 0.217)
+texture = ExtResource("12_4quxm")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("12_4quxm"), ExtResource("13_ypv43")])
 
 [node name="Frame" type="Sprite2D" parent="." unique_id=1960383961]
 scale = Vector2(0.2, 0.2)

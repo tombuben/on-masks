@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bylcctnhpucyk" path="res://Panels/thinking.tscn" id="2_c020s"]
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="2_yfq1a"]
 [ext_resource type="PackedScene" uid="uid://d4j17csdao8tg" path="res://Panels/to_do_panel.tscn" id="3_k2uku"]
-[ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_keys.tscn" id="4_baigs"]
+[ext_resource type="PackedScene" uid="uid://d0j2xdliwehg" path="res://Panels/before_drawer_panel.tscn" id="4_o7hcg"]
 [ext_resource type="PackedScene" uid="uid://lr4146coji6n" path="res://Panels/found_item_keys.tscn" id="5_kl5c6"]
 [ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
 [ext_resource type="PackedScene" uid="uid://y3xq87j4ki45" path="res://Panels/found_item_wallet.tscn" id="7_tue7c"]
@@ -28,7 +28,7 @@ _data = {
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1956719944 node_paths=PackedStringArray("positions")]
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../PeoplePleaser"), NodePath("../Panel4")]
+positions = [NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../PeoplePleaser"), NodePath("../Panel4")]
 
 [node name="Thinking" parent="." unique_id=847660758 instance=ExtResource("2_c020s")]
 position = Vector2(2, 0)
@@ -36,23 +36,26 @@ position = Vector2(2, 0)
 [node name="ToDoPanel" parent="." unique_id=659362712 instance=ExtResource("3_k2uku")]
 position = Vector2(602, 0)
 
-[node name="DrawerFindKeys" parent="." unique_id=51193233 instance=ExtResource("4_baigs")]
-position = Vector2(1149, 13)
+[node name="BeforeDrawerPanel" parent="." unique_id=1258029886 instance=ExtResource("4_o7hcg")]
+position = Vector2(1168, 4)
 
-[node name="FoundItemKeys" parent="." unique_id=1258029886 instance=ExtResource("5_kl5c6")]
-position = Vector2(1613, 2)
+[node name="DrawerFindKeys" parent="." unique_id=51193233 instance=ExtResource("6_xywil")]
+position = Vector2(1719, 21)
+
+[node name="FoundItemKeys" parent="." unique_id=143022061 instance=ExtResource("5_kl5c6")]
+position = Vector2(2183, 10)
 
 [node name="DrawerFindWallet" parent="." unique_id=844159059 instance=ExtResource("6_xywil")]
-position = Vector2(2057, 5)
+position = Vector2(2627, 13)
 
 [node name="FoundItemWallet" parent="." unique_id=2007034112 instance=ExtResource("7_tue7c")]
-position = Vector2(2509, -34)
+position = Vector2(3079, -26)
 
 [node name="PeoplePleaser" parent="." unique_id=1397193423 instance=ExtResource("8_v8a7c")]
-position = Vector2(3030, -19)
+position = Vector2(3600, -11)
 
 [node name="Panel4" type="Node2D" parent="." unique_id=138539189 node_paths=PackedStringArray("player")]
-position = Vector2(3658, -30)
+position = Vector2(4228, -22)
 script = ExtResource("2_yfq1a")
 player = NodePath("AnimationPlayer")
 

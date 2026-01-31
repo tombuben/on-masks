@@ -115,10 +115,9 @@ polygon = PackedVector2Array(197, -192, 192, 193, -229, 196, -230, -193)
 
 [node name="Parallax2D2" type="Parallax2D" parent="Panel1_clip" unique_id=562191741]
 scroll_scale = Vector2(0.97, 1)
-scroll_offset = Vector2(3, 52)
 
 [node name="Character" type="Sprite2D" parent="Panel1_clip/Parallax2D2" unique_id=1852331377]
-position = Vector2(-126, 7)
+position = Vector2(-133, 43.999996)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_84764")
 script = ExtResource("3_fybqm")
@@ -126,7 +125,6 @@ textures = Array[Texture2D]([ExtResource("2_84764"), ExtResource("4_ge4dw")])
 
 [node name="Parallax2D" type="Parallax2D" parent="Panel1_clip" unique_id=1526357970]
 scroll_scale = Vector2(0.95, 1)
-scroll_offset = Vector2(-13, 6)
 
 [node name="Bubble4" type="Sprite2D" parent="Panel1_clip/Parallax2D" unique_id=681339944]
 material = SubResource("ShaderMaterial_x5omf")
