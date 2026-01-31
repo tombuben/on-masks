@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://def0ryop50m0h" path="res://Assets/Panels/ToDo/List-0.png" id="3_rwvgb"]
 [ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://Scripts/random_move_scale.gd" id="4_har2p"]
 [ext_resource type="Texture2D" uid="uid://yvx32kowqi21" path="res://Assets/Panels/Thinking/Items/ Dishes-0.png" id="5_1kfa8"]
+[ext_resource type="Texture2D" uid="uid://bk2wyyjk2byxg" path="res://Assets/Panels/ToDo/List-1.png" id="5_ejw7g"]
 [ext_resource type="Script" uid="uid://cvqggm03qnek8" path="res://Scripts/todo_selector.gd" id="6_yrw5r"]
 [ext_resource type="Texture2D" uid="uid://ntuparivaoct" path="res://Assets/Panels/Thinking/ConfirmCircles/Select_1.png" id="7_p41uw"]
 [ext_resource type="Texture2D" uid="uid://2wc0cwoelfre" path="res://Assets/Panels/Thinking/Items/Calendar-0.png" id="8_4quxm"]
@@ -91,6 +92,8 @@ script = ExtResource("2_ejw7g")
 [node name="Sprite2D" type="Sprite2D" parent="Panel2_clip/Parallax2D/List" unique_id=1824416628]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_rwvgb")
+script = ExtResource("19_gibwn")
+textures = Array[Texture2D]([ExtResource("3_rwvgb"), ExtResource("5_ejw7g")])
 
 [node name="Dishes-true" type="Node2D" parent="Panel2_clip/Parallax2D/List" unique_id=11230566]
 position = Vector2(51, 39)

@@ -5,22 +5,37 @@
 [ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="3_klvcj"]
 [ext_resource type="Texture2D" uid="uid://swcdgevm038g" path="res://Assets/Panels/Drawer/DrawerBack-1.png" id="4_ygu22"]
 [ext_resource type="Script" uid="uid://vc0p08eyrhdl" path="res://Scripts/object_to_find.gd" id="5_8tub1"]
-[ext_resource type="Texture2D" uid="uid://c4gx6rvrd4ryw" path="res://Assets/Panels/Thinking/Items/ Keys-0.png" id="6_qtx4c"]
+[ext_resource type="Texture2D" uid="uid://hnk87hmne4d1" path="res://Assets/Panels/Drawer/Objects/Keys_drawer_1.png" id="6_qmb0e"]
 [ext_resource type="Script" uid="uid://cbybkwdm4l7ah" path="res://Scripts/pushable_item.gd" id="7_3dw53"]
+[ext_resource type="Texture2D" uid="uid://crx1cm6b44xvh" path="res://Assets/Panels/Drawer/Objects/Diary_1.png" id="8_b54c7"]
 [ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://Scripts/random_move_scale.gd" id="8_j5ylh"]
 [ext_resource type="Texture2D" uid="uid://c3kb0ld1kvrpc" path="res://Assets/Panels/Drawer/DrawerFront-0.png" id="9_a8qb4"]
+[ext_resource type="Texture2D" uid="uid://c3lnbydskr1fy" path="res://Assets/Panels/Drawer/Objects/Card_1.png" id="9_jv67u"]
+[ext_resource type="Texture2D" uid="uid://dslxwm1pr0rr1" path="res://Assets/Panels/Drawer/Objects/Keychain_1.png" id="10_0ayty"]
 [ext_resource type="Texture2D" uid="uid://h7dt0aekxxqo" path="res://Assets/Panels/Drawer/DrawerFront-1.png" id="10_o3qxd"]
+[ext_resource type="Texture2D" uid="uid://sfx43r1fv80l" path="res://Assets/Panels/Drawer/Objects/Letak_1.png" id="11_70uy5"]
 [ext_resource type="Texture2D" uid="uid://c5q2aubclj8du" path="res://Assets/Panels/Drawer/DrawerTop.png" id="11_qjecc"]
 [ext_resource type="Texture2D" uid="uid://evgas13tiess" path="res://Assets/Panels/Drawer/Frame-0.png" id="12_1myny"]
+[ext_resource type="Texture2D" uid="uid://ipypa450a2po" path="res://Assets/Panels/Drawer/Objects/Licence_1.png" id="12_wod7m"]
+[ext_resource type="Texture2D" uid="uid://couh3ngbq03jd" path="res://Assets/Panels/Drawer/Objects/List_1.png" id="13_0411m"]
 [ext_resource type="Texture2D" uid="uid://8c1h4qbra15k" path="res://Assets/Panels/Drawer/Frame-1.png" id="13_b8q7n"]
+[ext_resource type="Texture2D" uid="uid://21lnmrpkhon" path="res://Assets/Panels/Drawer/Objects/Pas_1.png" id="14_a4ebu"]
+[ext_resource type="Texture2D" uid="uid://cjsfqt1ay8or5" path="res://Assets/Panels/Drawer/Objects/Picture_1_1.png" id="15_dukmv"]
+[ext_resource type="Texture2D" uid="uid://dift0c3rxu4ik" path="res://Assets/Panels/Drawer/Objects/Picture_2_1.png" id="16_fbc2h"]
+[ext_resource type="Texture2D" uid="uid://4te5bknluolt" path="res://Assets/Panels/Drawer/Objects/Kirby_1.png" id="17_wrf3b"]
+[ext_resource type="Texture2D" uid="uid://dul7e53jes44y" path="res://Assets/Panels/Drawer/Objects/Switch_1.png" id="18_llc1q"]
+[ext_resource type="Texture2D" uid="uid://5d4evg3rl3kl" path="res://Assets/Panels/Drawer/Objects/Screw_1.png" id="19_1epuf"]
+[ext_resource type="Texture2D" uid="uid://cchmc82gb4w72" path="res://Assets/Panels/Drawer/Objects/Trash_1.png" id="20_kfwsf"]
+[ext_resource type="Texture2D" uid="uid://5wg8tdb6k1w6" path="res://Assets/Panels/Drawer/Objects/Box_1.png" id="21_c30ab"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gkab5"]
-radius = 30.0
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_x5omf"]
+radius = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8u6ld"]
 radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iql3e"]
+radius = 30.0
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_o3yx2"]
 
@@ -70,8 +85,10 @@ _data = {
 script = ExtResource("1_bndu5")
 is_blocking = true
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2120784309]
+position = Vector2(110, -129)
+
 [node name="Drawer_clip" type="Polygon2D" parent="." unique_id=1809139661]
-clip_children = 2
 polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
 
 [node name="Parallax2D" type="Parallax2D" parent="Drawer_clip" unique_id=2039166734]
@@ -90,32 +107,219 @@ textures = Array[Texture2D]([ExtResource("2_0hos0"), ExtResource("4_ygu22")])
 [node name="Contents" type="Node2D" parent="Drawer_clip/Parallax2D/Drawer" unique_id=100307165]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=566935831]
+collision_layer = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/StaticBody2D" unique_id=1770639243]
-polygon = PackedVector2Array(-203, 53, -13, -92, 219, 2, 70, 168, -208, 57, -281, 114, 77, 306, 315, -12, -74, -183, -260, 18, -285, 52, -285, 117)
+polygon = PackedVector2Array(-203, 53, -13, -92, 254, 22, 70, 168, -208, 57, -281, 114, 77, 306, 482, -17, -74, -183, -260, 18, -285, 52, -285, 117)
 
 [node name="KeysToFind" type="Area2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1996723199]
-position = Vector2(-53, 40)
+position = Vector2(6, -24)
 script = ExtResource("5_8tub1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/KeysToFind" unique_id=688477364]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("6_qtx4c")
+texture = ExtResource("6_qmb0e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/KeysToFind" unique_id=1217471810]
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_gkab5")
 
+[node name="Garbage3" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=206544737]
+position = Vector2(62, 94)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage3" unique_id=67056063]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_b54c7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage3" unique_id=303479739]
+polygon = PackedVector2Array(-112, 22, -5, 61, 113, -24, 5, -66)
+
+[node name="Garbage2" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1391284797]
+position = Vector2(-106, 51)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage2" unique_id=1293859398]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_jv67u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage2" unique_id=854065225]
+shape = SubResource("CircleShape2D_8u6ld")
+
+[node name="Garbage4" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1953879911]
+position = Vector2(128, 39)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage4" unique_id=1004109553]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_0ayty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage4" unique_id=577558395]
+position = Vector2(-1, 10)
+shape = SubResource("CircleShape2D_8u6ld")
+
+[node name="Garbage6" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1276255170]
+position = Vector2(-19, 62)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage6" unique_id=354974391]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_70uy5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage6" unique_id=822097699]
+polygon = PackedVector2Array(-66, 21, -22, 45, 73, -20, 23, -37)
+
+[node name="Garbage7" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=869023352]
+position = Vector2(51, 12)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage7" unique_id=775649746]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_wod7m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage7" unique_id=277910112]
+shape = SubResource("CircleShape2D_8u6ld")
+
+[node name="Garbage8" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1709662293]
+position = Vector2(55, 99)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage8" unique_id=967658408]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_0411m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage8" unique_id=508066376]
+polygon = PackedVector2Array(-28, -52, 53, -57, 43, 50, -24, 48, -49, 38)
+
+[node name="Garbage9" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1081369745]
+position = Vector2(-66, 46)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage9" unique_id=1131145350]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_a4ebu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage9" unique_id=200630980]
+polygon = PackedVector2Array(-21, -32, 73, 4, 19, 38, -68, -2)
+
+[node name="Garbage10" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1778217586]
+position = Vector2(80, 47)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage10" unique_id=308602756]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_dukmv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage10" unique_id=260694290]
+polygon = PackedVector2Array(-7, -43, 84, 10, 7, 49, -82, -6)
+
+[node name="Garbage11" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=195618137]
+position = Vector2(65, 12)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=1918796956]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_fbc2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=192636827]
+shape = SubResource("CircleShape2D_8u6ld")
+
+[node name="Garbage5" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=794164378]
+position = Vector2(42, 7)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage5" unique_id=304071195]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("17_wrf3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage5" unique_id=1387758040]
+shape = SubResource("CircleShape2D_8u6ld")
+
+[node name="Garbage13" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=32620062]
+position = Vector2(18, 11)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage13" unique_id=695468877]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_llc1q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage13" unique_id=118254823]
+polygon = PackedVector2Array(-91, 26, 85, 36, 96, -25, -72, -29)
+
+[node name="Garbage12" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=619362374]
+position = Vector2(5, 31)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage12" unique_id=495865112]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_1epuf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage12" unique_id=530300868]
+polygon = PackedVector2Array(-75, 31, 70, -57, 77, -44, -66, 52)
+
+[node name="Garbage14" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=146678159]
+position = Vector2(15, 66)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("7_3dw53")
+
+[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage14" unique_id=1424560736]
+position = Vector2(1.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_kfwsf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage14" unique_id=738711162]
+shape = SubResource("CircleShape2D_8u6ld")
+
 [node name="Garbage1" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=182005862]
+position = Vector2(-2, -22)
+collision_mask = 2
 input_pickable = true
 script = ExtResource("7_3dw53")
 
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage1" unique_id=1574345917]
 position = Vector2(1.5, 0.5)
-scale = Vector2(34.999935, 37.000004)
-texture = SubResource("PlaceholderTexture2D_x5omf")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_c30ab")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage1" unique_id=1373966827]
-shape = SubResource("CircleShape2D_8u6ld")
+shape = SubResource("CircleShape2D_iql3e")
 
 [node name="Keys" type="Node2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1963479928]
 position = Vector2(-42, 51)
@@ -129,7 +333,6 @@ script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("9_a8qb4"), ExtResource("10_o3qxd")])
 
 [node name="Top" type="Sprite2D" parent="Drawer_clip/Parallax2D" unique_id=2139430405]
-visible = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_qjecc")
 
