@@ -37,8 +37,8 @@
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="28_iklda"]
 [ext_resource type="Texture2D" uid="uid://dkaskd4qt7bos" path="res://Assets/Panels/Drawer/objects-final/Screw_1.png" id="28_tr5ld"]
 [ext_resource type="Texture2D" uid="uid://c3kb1rmtunl1p" path="res://Assets/Panels/Drawer/Drawer_walletbubble_1.png" id="29_1shin"]
-[ext_resource type="Texture2D" uid="uid://cnxw41t38hspg" path="res://Assets/Panels/Drawer/Drawer_walletbubble_2.png" id="30_h1jap"]
 [ext_resource type="Texture2D" uid="uid://btjfh4wswvdg3" path="res://Assets/Panels/Drawer/objects-final/Screw_2.png" id="29_juwbu"]
+[ext_resource type="Texture2D" uid="uid://cnxw41t38hspg" path="res://Assets/Panels/Drawer/Drawer_walletbubble_2.png" id="30_h1jap"]
 [ext_resource type="Texture2D" uid="uid://r67h0yqn62ky" path="res://Assets/Panels/Drawer/objects-final/Trash_1.png" id="31_5pb4r"]
 [ext_resource type="Texture2D" uid="uid://b7ux3f5ymbv8c" path="res://Assets/Panels/Drawer/objects-final/Trash_2.png" id="32_5ck3g"]
 [ext_resource type="Texture2D" uid="uid://cox5kacgf2l60" path="res://Assets/Panels/Drawer/objects-final/Box_1.png" id="33_buu7f"]
@@ -145,6 +145,7 @@ _data = {
 }
 
 [node name="DrawerFindWallet" type="Node2D" unique_id=51193233 node_paths=PackedStringArray("arrow_next", "player")]
+clip_children = 2
 script = ExtResource("1_bndu5")
 is_blocking = true
 arrow_next = NodePath("ArrowNext")
@@ -411,7 +412,6 @@ script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("9_a8qb4"), ExtResource("10_o3qxd")])
 
 [node name="Top" type="Sprite2D" parent="Drawer_clip/Parallax2D" unique_id=2139430405]
-visible = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_qjecc")
 
