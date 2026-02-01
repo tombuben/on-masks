@@ -1,10 +1,14 @@
 extends Area2D
 
 @export var action_name : String
+@export var audioplayer : AudioStreamPlayer
 @onready var sprite = $Sprite2D
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
+		if audioplayer:
+			audioplayer.pitch_scale = randf_range(0.85, 1.15)
+			audioplayer.play()
 		if sprite:
 			var tween = get_tree().create_tween()
 			tween.tween_property($Sprite2D, "position", Vector2(0,10), 0.1)
