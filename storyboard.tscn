@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bx6bte5gry2ul"]
 
 [ext_resource type="Script" uid="uid://crljrm3inplte" path="res://Scripts/camera_move.gd" id="1_mexpn"]
-[ext_resource type="PackedScene" uid="uid://bycwl706m8da8" path="res://Panels/screen_1_1.tscn" id="2_3hehj"]
+[ext_resource type="PackedScene" uid="uid://b46whh7tu616d" path="res://Panels/screen_1_1.tscn" id="2_3hehj"]
 [ext_resource type="PackedScene" uid="uid://bylcctnhpucyk" path="res://Panels/thinking.tscn" id="2_c020s"]
-[ext_resource type="PackedScene" uid="uid://bu62cnv54dk1x" path="res://Panels/screen_1_3.tscn" id="3_gdypv"]
+[ext_resource type="PackedScene" path="res://Panels/screen_1_3.tscn" id="3_gdypv"]
 [ext_resource type="PackedScene" uid="uid://d4j17csdao8tg" path="res://Panels/to_do_panel.tscn" id="3_k2uku"]
 [ext_resource type="PackedScene" uid="uid://d0j2xdliwehg" path="res://Panels/before_drawer_panel.tscn" id="4_o7hcg"]
-[ext_resource type="PackedScene" uid="uid://c7lge1fret44f" path="res://Panels/screen_1_2.tscn" id="4_xw6b5"]
+[ext_resource type="PackedScene" path="res://Panels/screen_1_2.tscn" id="4_xw6b5"]
 [ext_resource type="PackedScene" uid="uid://lr4146coji6n" path="res://Panels/found_item_keys.tscn" id="5_kl5c6"]
-[ext_resource type="PackedScene" uid="uid://dh418cr6akxef" path="res://Panels/drawer_find_keys.tscn" id="5_o7hcg"]
+[ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_keys.tscn" id="5_o7hcg"]
 [ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
 [ext_resource type="PackedScene" uid="uid://y3xq87j4ki45" path="res://Panels/found_item_wallet.tscn" id="7_tue7c"]
-[ext_resource type="PackedScene" uid="uid://dlfssot5iixlm" path="res://Panels/endscreen.tscn" id="12_iwt2b"]
+[ext_resource type="PackedScene" path="res://Panels/endscreen.tscn" id="12_iwt2b"]
 
 [node name="Node2D" type="Node2D" unique_id=424297317]
 
