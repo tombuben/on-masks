@@ -4,29 +4,18 @@
 [ext_resource type="Script" uid="uid://iee0b04m4lxh" path="res://Scripts/list_counter.gd" id="2_ejw7g"]
 [ext_resource type="Texture2D" uid="uid://def0ryop50m0h" path="res://Assets/Panels/ToDo/List-0.png" id="3_rwvgb"]
 [ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://Scripts/random_move_scale.gd" id="4_har2p"]
-[ext_resource type="Texture2D" uid="uid://yvx32kowqi21" path="res://Assets/Panels/Thinking/Items/ Dishes-0.png" id="5_1kfa8"]
 [ext_resource type="Texture2D" uid="uid://bk2wyyjk2byxg" path="res://Assets/Panels/ToDo/List-1.png" id="5_ejw7g"]
 [ext_resource type="Script" uid="uid://cvqggm03qnek8" path="res://Scripts/todo_selector.gd" id="6_yrw5r"]
-[ext_resource type="Texture2D" uid="uid://2wc0cwoelfre" path="res://Assets/Panels/Thinking/Items/Calendar-0.png" id="8_4quxm"]
 [ext_resource type="Texture2D" uid="uid://c586oucdw4caf" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Dishes_1.png" id="8_fyqqm"]
 [ext_resource type="Texture2D" uid="uid://b5wq6x6a6hjvg" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_1_1.png" id="9_har2p"]
 [ext_resource type="Texture2D" uid="uid://dmvkhvxq1fa2c" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Dishes_2.png" id="9_ltmeq"]
-[ext_resource type="Texture2D" uid="uid://dp8u0t8032yod" path="res://Assets/Panels/Thinking/Items/ Gift-0.png" id="9_ypv43"]
 [ext_resource type="Texture2D" uid="uid://csmca0b1qtodi" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_1_2.png" id="10_1kfa8"]
-[ext_resource type="Texture2D" uid="uid://c0mqugwwam8y6" path="res://Assets/Panels/Thinking/Items/Box-0.png" id="10_ey3t8"]
-[ext_resource type="Texture2D" uid="uid://dd5uykqhebc84" path="res://Assets/Panels/Thinking/OnlyListItems/Bag-0.png" id="11_gqhch"]
 [ext_resource type="Texture2D" uid="uid://crakrqyd5sihu" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_2_1.png" id="12_4quxm"]
-[ext_resource type="Texture2D" uid="uid://4l82xkdjg3bn" path="res://Assets/Panels/Thinking/OnlyListItems/Dino-0.png" id="12_qbbbn"]
-[ext_resource type="Texture2D" uid="uid://dnsuxv35k8a5a" path="res://Assets/Panels/Thinking/OnlyListItems/Math-0.png" id="13_s32wi"]
 [ext_resource type="Texture2D" uid="uid://bgl8b3jeth2hi" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_2_2.png" id="13_ypv43"]
 [ext_resource type="Texture2D" uid="uid://buig8i0u2g38s" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Calendar_1.png" id="14_4mjxr"]
-[ext_resource type="Texture2D" uid="uid://d3kb3gfdoegcx" path="res://Assets/Panels/Thinking/OnlyListItems/Phone-0.png" id="14_grmj5"]
-[ext_resource type="Texture2D" uid="uid://52vrdsy7tjsn" path="res://Assets/Panels/Thinking/OnlyListItems/Sixseven-0.png" id="15_b6htd"]
 [ext_resource type="Texture2D" uid="uid://c71se62ld7ppk" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_3_1.png" id="15_ey3t8"]
 [ext_resource type="Texture2D" uid="uid://dnq18mo71u8b4" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Calendar_2.png" id="15_tf5e7"]
-[ext_resource type="Texture2D" uid="uid://drgbwj126ekll" path="res://Assets/Panels/Thinking/OnlyListItems/Swirlies-0.png" id="16_464ml"]
 [ext_resource type="Texture2D" uid="uid://bs24t5mdh55bi" path="res://Assets/Panels/ToDo/ConfirmCircles/Select_3_2.png" id="16_gqhch"]
-[ext_resource type="Texture2D" uid="uid://cch6dndq2ygk6" path="res://Assets/Panels/Thinking/OnlyListItems/Tornado-0.png" id="17_7tpns"]
 [ext_resource type="Texture2D" uid="uid://d2rx5uauajke6" path="res://Assets/Panels/ToDo/Frame-0.png" id="18_xp3cs"]
 [ext_resource type="Texture2D" uid="uid://b3ubxe55pbt1i" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Gift_1.png" id="19_fnb6j"]
 [ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="19_gibwn"]
@@ -54,6 +43,12 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4h0r"]
 radius = 35.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gibwn"]
+load_path = "res://.godot/imported/Calendar-0.png-ba36539f893586ad44155e707ddd21d2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bgtnr"]
+load_path = "res://.godot/imported/ Gift-0.png-c1910b25b1a3b484ebca0ea0774ff858.ctex"
 
 [sub_resource type="Animation" id="Animation_rwvgb"]
 resource_name = "Enter"
@@ -125,7 +120,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="DishesSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Dishes-true" unique_id=1339680527]
 scale = Vector2(0.2, 0.217)
-texture = ExtResource("5_1kfa8")
+texture = ExtResource("8_fyqqm")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("8_fyqqm"), ExtResource("9_ltmeq")])
 
@@ -150,7 +145,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="CalendarSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Calendar-true" unique_id=1104596898]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_4quxm")
+texture = SubResource("CompressedTexture2D_gibwn")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("14_4mjxr"), ExtResource("15_tf5e7")])
 
@@ -175,7 +170,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="GiftSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Gift-true" unique_id=2087150810]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_ypv43")
+texture = SubResource("CompressedTexture2D_bgtnr")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("19_fnb6j"), ExtResource("20_84rss")])
 
@@ -200,7 +195,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="BoxSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Box-true" unique_id=1432764069]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_ey3t8")
+texture = ExtResource("24_5t6y0")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("24_5t6y0"), ExtResource("25_fgwme")])
 
@@ -225,7 +220,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="BagSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Bag" unique_id=750156238]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("11_gqhch")
+texture = ExtResource("27_5j21d")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("27_5j21d"), ExtResource("28_dpax4")])
 
@@ -249,7 +244,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="DinoSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Dino" unique_id=1725345277]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("12_qbbbn")
+texture = ExtResource("30_0kgr7")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("30_0kgr7"), ExtResource("31_daqqj")])
 
@@ -273,7 +268,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="MathSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/MathSprite" unique_id=497259973]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("13_s32wi")
+texture = ExtResource("33_myvy7")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("33_myvy7"), ExtResource("34_tt0t0")])
 
@@ -297,7 +292,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="PhoneSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Phone" unique_id=1991077985]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("14_grmj5")
+texture = ExtResource("36_570uj")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("36_570uj"), ExtResource("37_xsbhv")])
 
@@ -321,7 +316,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="SixsevenSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Sixseven" unique_id=680684944]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("15_b6htd")
+texture = ExtResource("39_mp35x")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("39_mp35x"), ExtResource("40_ud7wo")])
 
@@ -345,7 +340,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="SwirliesSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Swirlies" unique_id=2068214121]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("16_464ml")
+texture = ExtResource("42_2xejg")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("42_2xejg"), ExtResource("43_lf7xe")])
 
@@ -369,7 +364,7 @@ noise = SubResource("FastNoiseLite_o3yx2")
 
 [node name="TornadoSprite" type="Sprite2D" parent="Panel2_clip/Parallax2D/List/Tornado" unique_id=1407523008]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("17_7tpns")
+texture = ExtResource("45_p1r7s")
 script = ExtResource("19_gibwn")
 textures = Array[Texture2D]([ExtResource("45_p1r7s"), ExtResource("46_14jc2")])
 

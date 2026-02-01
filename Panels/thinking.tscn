@@ -3,36 +3,22 @@
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_r4ex8"]
 [ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://Scripts/random_move_scale.gd" id="2_5gd8h"]
 [ext_resource type="Texture2D" uid="uid://b3abidg37soql" path="res://Assets/Panels/Thinking/Character-0.png" id="2_84764"]
-[ext_resource type="Texture2D" uid="uid://bujuox8j24hy1" path="res://Assets/Panels/Thinking/Items/ Car-0.png" id="3_bk0jk"]
 [ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="3_fybqm"]
 [ext_resource type="Texture2D" uid="uid://da6cjb4vc4w5o" path="res://Assets/Panels/Thinking/Character-1.png" id="4_ge4dw"]
-[ext_resource type="Texture2D" uid="uid://yvx32kowqi21" path="res://Assets/Panels/Thinking/Items/ Dishes-0.png" id="4_odaf8"]
-[ext_resource type="Texture2D" uid="uid://c3fgjvg35he85" path="res://Assets/Panels/Thinking/Items/ File-0.png" id="5_wk8yh"]
 [ext_resource type="Shader" uid="uid://dnsfwxxe1p04o" path="res://Scripts/thoughtbubble.gdshader" id="5_y0flw"]
 [ext_resource type="Script" uid="uid://cbbgbnrv0e3p6" path="res://Scripts/expanding_bubble.gd" id="6_eit5n"]
-[ext_resource type="Texture2D" uid="uid://dp8u0t8032yod" path="res://Assets/Panels/Thinking/Items/ Gift-0.png" id="6_n12wd"]
 [ext_resource type="Texture2D" uid="uid://c8e1gucacf0ip" path="res://Assets/Panels/Thinking/Frame-0.png" id="7_0yv4m"]
-[ext_resource type="Texture2D" uid="uid://gsvxb5lr3yia" path="res://Assets/Panels/Thinking/Items/ Keyboard-0.png" id="7_076bm"]
 [ext_resource type="Texture2D" uid="uid://bsacfmypj132" path="res://Assets/Panels/Thinking/Frame-1.png" id="8_f6r5q"]
-[ext_resource type="Texture2D" uid="uid://c4gx6rvrd4ryw" path="res://Assets/Panels/Thinking/Items/ Keys-0.png" id="8_vxpwf"]
-[ext_resource type="Texture2D" uid="uid://bawim5fldfruw" path="res://Assets/Panels/Thinking/Items/ Lego-0.png" id="9_qdauk"]
-[ext_resource type="Texture2D" uid="uid://cm1rrchaepngk" path="res://Assets/Panels/Thinking/Items/ Miffy-0.png" id="10_3sf4x"]
-[ext_resource type="Texture2D" uid="uid://bpsa3jqs73joa" path="res://Assets/Panels/Thinking/Items/ Money-0.png" id="11_ebdc1"]
 [ext_resource type="Texture2D" uid="uid://ky2mldrt52tu" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Car_1.png" id="11_wk8yh"]
-[ext_resource type="Texture2D" uid="uid://bd8rriw7xjuqn" path="res://Assets/Panels/Thinking/Items/ Paint-0.png" id="12_hni1n"]
+[ext_resource type="Texture2D" uid="uid://c586oucdw4caf" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Dishes_1.png" id="12_i365a"]
 [ext_resource type="Texture2D" uid="uid://kikruivsdold" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Car_2.png" id="12_n12wd"]
-[ext_resource type="Texture2D" uid="uid://cw4ruavt5ciab" path="res://Assets/Panels/Thinking/Items/ Peak-0.png" id="13_o33bg"]
-[ext_resource type="Texture2D" uid="uid://nrbcj6usmhdj" path="res://Assets/Panels/Thinking/Items/ Shapes-0.png" id="14_utx73"]
-[ext_resource type="Texture2D" uid="uid://crislj2hkoplh" path="res://Assets/Panels/Thinking/Items/ Tic-0.png" id="15_0jxbm"]
+[ext_resource type="Texture2D" uid="uid://dmvkhvxq1fa2c" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Dishes_2.png" id="13_4mdua"]
 [ext_resource type="Texture2D" uid="uid://djm128lo1huc4" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/File_1.png" id="15_076bm"]
-[ext_resource type="Texture2D" uid="uid://bmnjx10e6epma" path="res://Assets/Panels/Thinking/Items/ Tool-0.png" id="16_vm1dp"]
 [ext_resource type="Texture2D" uid="uid://ciaq08vg0klxr" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/File_2.png" id="16_vxpwf"]
-[ext_resource type="Texture2D" uid="uid://dkr0v4b3ikclb" path="res://Assets/Panels/Thinking/Items/ Toot-0.png" id="17_jhcod"]
-[ext_resource type="Texture2D" uid="uid://dr2osrwtf22d6" path="res://Assets/Panels/Thinking/Items/ Writing-0.png" id="18_5dom3"]
-[ext_resource type="Texture2D" uid="uid://c0mqugwwam8y6" path="res://Assets/Panels/Thinking/Items/Box-0.png" id="19_evupk"]
+[ext_resource type="Texture2D" uid="uid://b3ubxe55pbt1i" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Gift_1.png" id="16_xagqf"]
+[ext_resource type="Texture2D" uid="uid://rjqftsyqeiko" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Gift_2.png" id="17_row7f"]
 [ext_resource type="Texture2D" uid="uid://txqykowp2mho" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Keyboard_1.png" id="19_xfk66"]
 [ext_resource type="Texture2D" uid="uid://dl3wbavo11r5" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Keyboard_2.png" id="20_4gybf"]
-[ext_resource type="Texture2D" uid="uid://2wc0cwoelfre" path="res://Assets/Panels/Thinking/Items/Calendar-0.png" id="20_i365a"]
 [ext_resource type="Texture2D" uid="uid://satdsyegenrb" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Keys_1.png" id="22_2wicq"]
 [ext_resource type="Texture2D" uid="uid://bswkamh5ii3lx" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Keys_2.png" id="23_p3lx1"]
 [ext_resource type="Texture2D" uid="uid://dnfuanxpqgmvd" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Lego_1.png" id="25_fcwvg"]
@@ -54,7 +40,6 @@
 [ext_resource type="Texture2D" uid="uid://cnws7mf84wcee" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Tool_2.png" id="47_1ewfb"]
 [ext_resource type="Texture2D" uid="uid://pb3mmb8b12ns" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Toot_1.png" id="49_a3tr4"]
 [ext_resource type="Texture2D" uid="uid://do2cs22q5muvg" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Toot_2.png" id="50_sg2yy"]
-[ext_resource type="Texture2D" uid="uid://bp4s2i5kqr6iu" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Writing_1.png" id="52_c2bxl"]
 [ext_resource type="Texture2D" uid="uid://dnc1aafdb3re" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Writing_2.png" id="53_4au4h"]
 [ext_resource type="Texture2D" uid="uid://curkx60g2dpqo" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Box_1.png" id="55_1qaym"]
 [ext_resource type="Texture2D" uid="uid://bs780l1ujha4l" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Box_2.png" id="56_sjhxn"]
@@ -136,6 +121,9 @@ _data = {
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4mdua"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fu8u7"]
+load_path = "res://.godot/imported/Writing_1.png-d6b8202e69503ef6b9996abf326e7280.ctex"
+
 [node name="Thinking" type="Node2D" unique_id=847660758 node_paths=PackedStringArray("arrow_next", "player")]
 script = ExtResource("1_r4ex8")
 arrow_next = NodePath("ArrowNext")
@@ -214,7 +202,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="CarSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Car" unique_id=1667053142]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_bk0jk")
+texture = ExtResource("11_wk8yh")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("11_wk8yh"), ExtResource("12_n12wd")])
 
@@ -225,9 +213,9 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="DishesSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Dishes" unique_id=1631164907]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_odaf8")
+texture = ExtResource("12_i365a")
 script = ExtResource("3_fybqm")
-textures = Array[Texture2D]([ExtResource("11_wk8yh"), ExtResource("12_n12wd")])
+textures = Array[Texture2D]([ExtResource("12_i365a"), ExtResource("13_4mdua")])
 
 [node name="File" type="Node2D" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1916257437]
 position = Vector2(384, 216)
@@ -236,7 +224,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="FileSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/File" unique_id=848208290]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_wk8yh")
+texture = ExtResource("15_076bm")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("15_076bm"), ExtResource("16_vxpwf")])
 
@@ -247,9 +235,9 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="GiftSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Gift" unique_id=184920512]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("6_n12wd")
+texture = ExtResource("16_xagqf")
 script = ExtResource("3_fybqm")
-textures = Array[Texture2D]([ExtResource("15_076bm"), ExtResource("16_vxpwf")])
+textures = Array[Texture2D]([ExtResource("16_xagqf"), ExtResource("17_row7f")])
 
 [node name="Keyboard" type="Node2D" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=536386818]
 position = Vector2(304, 329)
@@ -258,7 +246,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="KeyboardSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Keyboard" unique_id=35969210]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("7_076bm")
+texture = ExtResource("19_xfk66")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("19_xfk66"), ExtResource("20_4gybf")])
 
@@ -269,7 +257,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="KeysSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Keys" unique_id=1316347897]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_vxpwf")
+texture = ExtResource("22_2wicq")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("22_2wicq"), ExtResource("23_p3lx1")])
 
@@ -280,7 +268,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="LegoSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Lego" unique_id=774388469]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_qdauk")
+texture = ExtResource("25_fcwvg")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("25_fcwvg"), ExtResource("26_7t3f4")])
 
@@ -291,7 +279,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="MiffySprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Miffy" unique_id=1295550072]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_3sf4x")
+texture = ExtResource("28_b4b21")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("28_b4b21"), ExtResource("29_mc1jd")])
 
@@ -302,7 +290,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="MoneySprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Money" unique_id=273595925]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("11_ebdc1")
+texture = ExtResource("31_5mp8l")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("31_5mp8l"), ExtResource("32_aglh0")])
 
@@ -313,7 +301,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="PaintSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Paint" unique_id=504111636]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("12_hni1n")
+texture = ExtResource("34_3u83g")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("34_3u83g"), ExtResource("35_bjyrh")])
 
@@ -324,7 +312,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="PeakSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Peak" unique_id=1698348862]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("13_o33bg")
+texture = ExtResource("37_otmxh")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("37_otmxh"), ExtResource("38_0pk6e")])
 
@@ -335,7 +323,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="ShapesSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Shapes" unique_id=1428927693]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("14_utx73")
+texture = ExtResource("40_o7j2e")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("40_o7j2e"), ExtResource("41_s5sdk")])
 
@@ -346,7 +334,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="TicSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Tic" unique_id=1564116822]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("15_0jxbm")
+texture = ExtResource("43_pgkci")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("43_pgkci"), ExtResource("44_jioyi")])
 
@@ -357,7 +345,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="ToolSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Tool" unique_id=407717247]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("16_vm1dp")
+texture = ExtResource("46_lyn6s")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("46_lyn6s"), ExtResource("47_1ewfb")])
 
@@ -368,7 +356,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="TootSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Toot" unique_id=952058696]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("17_jhcod")
+texture = ExtResource("49_a3tr4")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("49_a3tr4"), ExtResource("50_sg2yy")])
 
@@ -379,9 +367,9 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="WritingSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Writing" unique_id=1067486698]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("18_5dom3")
+texture = SubResource("CompressedTexture2D_fu8u7")
 script = ExtResource("3_fybqm")
-textures = Array[Texture2D]([ExtResource("52_c2bxl"), ExtResource("53_4au4h")])
+textures = Array[Texture2D]([SubResource("CompressedTexture2D_fu8u7"), ExtResource("53_4au4h")])
 
 [node name="Box" type="Node2D" parent="SubViewportContainer/ThoughtBubbleInside" unique_id=1985098848]
 position = Vector2(306, 261)
@@ -390,7 +378,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="BoxSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Box" unique_id=1452614418]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("19_evupk")
+texture = ExtResource("55_1qaym")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("55_1qaym"), ExtResource("56_sjhxn")])
 
@@ -401,7 +389,7 @@ noise = SubResource("FastNoiseLite_4mdua")
 
 [node name="CalendarSprite" type="Sprite2D" parent="SubViewportContainer/ThoughtBubbleInside/Calendar" unique_id=90149715]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("20_i365a")
+texture = ExtResource("58_iu6fl")
 script = ExtResource("3_fybqm")
 textures = Array[Texture2D]([ExtResource("58_iu6fl"), ExtResource("59_31bv2")])
 
