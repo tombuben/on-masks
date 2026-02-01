@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_w7fla"]
 [ext_resource type="Texture2D" uid="uid://deo78fblmb4eh" path="res://Assets/Panels/Screen_2/Prologue2_panel2_char_1.png" id="2_yq2wx"]
+[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="3_ih8el"]
 [ext_resource type="Texture2D" uid="uid://bxnj0g1dspgqe" path="res://Assets/Panels/Screen_2/Prologue2_panel2_frame_1.png" id="3_w7fla"]
+[ext_resource type="Texture2D" uid="uid://bck2x3t6sta13" path="res://Assets/Panels/Screen_2/Prologue2_panel2_char_2.png" id="4_sl648"]
 [ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="5_qdv0n"]
+[ext_resource type="Texture2D" uid="uid://dsrlsan62gcy" path="res://Assets/Panels/Screen_2/Prologue2_panel2_frame_2.png" id="6_sl648"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
 radius = 300.0
@@ -45,10 +48,14 @@ polygon = PackedVector2Array(77, -102, 65, 106, -76, 104, -77, -112)
 position = Vector2(0, 40)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_yq2wx")
+script = ExtResource("3_ih8el")
+textures = Array[Texture2D]([ExtResource("2_yq2wx"), ExtResource("4_sl648")])
 
 [node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_w7fla")
+script = ExtResource("3_ih8el")
+textures = Array[Texture2D]([ExtResource("3_w7fla"), ExtResource("6_sl648")])
 
 [node name="ArrowNext" type="Area2D" parent="." unique_id=341744511]
 position = Vector2(1, 1)

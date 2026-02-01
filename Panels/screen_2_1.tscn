@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_utnty"]
 [ext_resource type="Texture2D" uid="uid://btni10fvwcosq" path="res://Assets/Panels/Screen_2/Prologue2_panel1_mirror_1.png" id="3_7akp3"]
 [ext_resource type="Texture2D" uid="uid://dgas8qg1ra2kp" path="res://Assets/Panels/Screen_2/Prologue2_panel1_char_1.png" id="3_67t1o"]
+[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="4_7b4jd"]
+[ext_resource type="Texture2D" uid="uid://ish4tvbbxh72" path="res://Assets/Panels/Screen_2/Prologue2_panel1_mirror_2.png" id="4_66ctq"]
 [ext_resource type="Texture2D" uid="uid://brje6jct6cq04" path="res://Assets/Panels/Screen_2/Prologue2_panel1_frame_1.png" id="4_utnty"]
+[ext_resource type="Texture2D" uid="uid://nfok08kf7ow" path="res://Assets/Panels/Screen_2/Prologue2_panel1_char_2.png" id="5_66ctq"]
 [ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="7_ej3pm"]
+[ext_resource type="Texture2D" uid="uid://e7c87pfj15cw" path="res://Assets/Panels/Screen_2/Prologue2_panel1_frame_2.png" id="8_66ctq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
 radius = 300.0
@@ -87,15 +91,21 @@ polygon = PackedVector2Array(78, -134, 81, 136, -78, 134, -92, -111)
 position = Vector2(10, 0)
 scale = Vector2(0.19999999, 0.19999999)
 texture = ExtResource("3_7akp3")
+script = ExtResource("4_7b4jd")
+textures = Array[Texture2D]([ExtResource("3_7akp3"), ExtResource("4_66ctq")])
 
 [node name="char" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=751712576]
 position = Vector2(-40, 0)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_67t1o")
+script = ExtResource("4_7b4jd")
+textures = Array[Texture2D]([ExtResource("3_67t1o"), ExtResource("5_66ctq")])
 
 [node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_utnty")
+script = ExtResource("4_7b4jd")
+textures = Array[Texture2D]([ExtResource("4_utnty"), ExtResource("8_66ctq")])
 
 [node name="ArrowNext" type="Area2D" parent="." unique_id=341744511]
 position = Vector2(1, 1)
