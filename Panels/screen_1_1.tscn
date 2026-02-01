@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://bycwl706m8da8"]
+
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_r01cx"]
+[ext_resource type="Texture2D" uid="uid://boyf58mx056mo" path="res://Assets/Panels/Screen_1/Prologue_panel1_clock_1.png" id="2_j7lbg"]
+[ext_resource type="Texture2D" uid="uid://d4ikw2e2r6uyo" path="res://Assets/Panels/Screen_1/Prologue_panel1_speedlines_1.png" id="3_m8cbb"]
+[ext_resource type="Texture2D" uid="uid://bddiior521dtr" path="res://Assets/Panels/Screen_1/Prologue_panel1_table_1.png" id="4_xnnd2"]
+[ext_resource type="Texture2D" uid="uid://63mbvb47e12k" path="res://Assets/Panels/Screen_1/Prologue_panel1_frame_1.png" id="5_e0hnd"]
+[ext_resource type="Texture2D" uid="uid://dybjcgxjafink" path="res://Assets/Panels/Screen_1/Prologue_panel1_noise_1.png" id="6_m85et"]
+[ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="7_j7lbg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
+radius = 300.0
+
+[sub_resource type="Animation" id="Animation_dwsmy"]
+resource_name = "Enter"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("clock:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("clock:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [0.14835298, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("speedlines:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("speedlines:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(0.15, 0.15), Vector2(0.2, 0.2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../noise:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.2, 0.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmim8"]
+_data = {
+&"Enter": SubResource("Animation_dwsmy")
+}
+
+[node name="screen_1_1" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
+script = ExtResource("1_r01cx")
+arrow_next = NodePath("ArrowNext")
+player = NodePath("AnimationPlayer")
+not_fading_out = true
+
+[node name="Content" type="Node2D" parent="." unique_id=1916341640]
+position = Vector2(-141, 25)
+
+[node name="BeforeDrawerPanel_clip" type="Polygon2D" parent="Content" unique_id=83462876]
+clip_children = 2
+polygon = PackedVector2Array(73, -97, 94, 94, -59, 113, -84, -62)
+
+[node name="speedlines" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=966340928]
+position = Vector2(0, 40)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_m8cbb")
+
+[node name="clock" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=751712576]
+position = Vector2(0, 40)
+rotation = 0.14835298
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_j7lbg")
+
+[node name="table" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=17487871]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_xnnd2")
+
+[node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_e0hnd")
+
+[node name="noise" type="Sprite2D" parent="Content" unique_id=1265709080]
+position = Vector2(5, 38)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_m85et")
+
+[node name="ArrowNext" type="Area2D" parent="." unique_id=341744511]
+position = Vector2(1, 1)
+script = ExtResource("7_j7lbg")
+action_name = "next"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowNext" unique_id=961169437]
+shape = SubResource("CircleShape2D_m8cbb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
+root_node = NodePath("../Content/BeforeDrawerPanel_clip")
+libraries/ = SubResource("AnimationLibrary_lmim8")

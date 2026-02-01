@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bu62cnv54dk1x"]
+
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_kw2px"]
+[ext_resource type="Texture2D" uid="uid://br1xfs106m4gc" path="res://Assets/Panels/Screen_1/Prologue_panel3_dizzy_1.png" id="2_s4fku"]
+[ext_resource type="Texture2D" uid="uid://dwe3mu7pdipfx" path="res://Assets/Panels/Screen_1/Prologue_panel3_char_1.png" id="3_kw2px"]
+[ext_resource type="Texture2D" uid="uid://by28i1ni2mpfd" path="res://Assets/Panels/Screen_1/Prologue_panel3_frame_1.png" id="4_qwyc1"]
+[ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="5_rw317"]
+
+[sub_resource type="Animation" id="Animation_dwsmy"]
+resource_name = "Enter"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parallax2D/Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [-0.57595867, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Parallax2D/Node2D/dizzy:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 1.3),
+"transitions": PackedFloat32Array(0.3, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.2, 0.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmim8"]
+_data = {
+&"Enter": SubResource("Animation_dwsmy")
+}
+
+[node name="screen_1_3" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
+script = ExtResource("1_kw2px")
+arrow_next = NodePath("ArrowNext")
+player = NodePath("AnimationPlayer")
+not_fading_out = true
+
+[node name="Content" type="Node2D" parent="." unique_id=1445495250]
+position = Vector2(155, 0)
+
+[node name="BeforeDrawerPanel_clip" type="Polygon2D" parent="Content" unique_id=83462876]
+clip_children = 2
+polygon = PackedVector2Array(85, -137, 70, 148, -79, 137, -80, -118)
+
+[node name="Parallax2D" type="Parallax2D" parent="Content/BeforeDrawerPanel_clip" unique_id=2077772186]
+scroll_scale = Vector2(0.99, 1)
+
+[node name="Node2D" type="Node2D" parent="Content/BeforeDrawerPanel_clip/Parallax2D" unique_id=928577709]
+position = Vector2(0, 300)
+rotation = -0.57595867
+
+[node name="dizzy" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip/Parallax2D/Node2D" unique_id=1049372956]
+position = Vector2(0, -300)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_s4fku")
+
+[node name="char" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip/Parallax2D/Node2D" unique_id=1698242233]
+position = Vector2(0, -300)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_kw2px")
+
+[node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_qwyc1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
+root_node = NodePath("../Content/BeforeDrawerPanel_clip")
+libraries/ = SubResource("AnimationLibrary_lmim8")
+
+[node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("5_rw317")]
+position = Vector2(300, 0)

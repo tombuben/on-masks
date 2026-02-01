@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boigid6ilsfyx"
-path="res://.godot/imported/Wherekeys_bubble_1.png-eb784795a794f09cbc4cf42bf8970f69.ctex"
+uid="uid://ctfn4h7501tgx"
+path="res://.godot/imported/Prologue_panel2_frame_1.png-9e4b94e44856b8a6388c3d98d3733631.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Panels/FoundItems/Wherekeys_bubble_1.png"
-dest_files=["res://.godot/imported/Wherekeys_bubble_1.png-eb784795a794f09cbc4cf42bf8970f69.ctex"]
+source_file="res://Assets/Panels/Screen_1/Prologue_panel2_frame_1.png"
+dest_files=["res://.godot/imported/Prologue_panel2_frame_1.png-9e4b94e44856b8a6388c3d98d3733631.ctex"]
 
 [params]
 

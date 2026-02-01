@@ -28,7 +28,8 @@ func go_to_panel(panel_index):
 	await positions[current_index].exit_panel()
 	var tween = get_tree().create_tween().set_parallel(true)
 	#tween the current panel visibility out
-	tween.tween_property(positions[current_index], "modulate", Color(1,1,1,0), 0.5)
+	if not positions[current_index].not_fading_out:
+		tween.tween_property(positions[current_index], "modulate", Color(1,1,1,0), 0.5)
 	current_index = panel_index
 	current_index = current_index % len(positions)
 	var next_position = positions[current_index].global_position
