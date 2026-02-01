@@ -8,6 +8,10 @@ class_name ComicPanel extends Node2D
 
 var is_active : bool = false
 
+func _ready() -> void:
+	if self != get_tree().get_current_scene():
+		modulate = Color	(1,1,1,0)
+
 func enter_panel():
 	var enter_animation = "Enter"
 	var idle_animation = "Idle"
