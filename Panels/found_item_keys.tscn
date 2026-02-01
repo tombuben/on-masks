@@ -52,7 +52,7 @@ clip_children = 2
 polygon = PackedVector2Array(117, -211, 131, 218, -145, 203, -132, -200)
 
 [node name="Parallax2D" type="Parallax2D" parent="FoundItemKeys_clip" unique_id=2077772186]
-scroll_scale = Vector2(0.98, 1)
+scroll_scale = Vector2(0.99, 1)
 
 [node name="Founditem" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=1045048857]
 scale = Vector2(0.2, 0.2)

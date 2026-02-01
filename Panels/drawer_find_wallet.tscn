@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://5wg8tdb6k1w6" path="res://Assets/Panels/Drawer/Objects/Box_1.png" id="21_c30ab"]
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="28_iklda"]
 [ext_resource type="Texture2D" uid="uid://c3kb1rmtunl1p" path="res://Assets/Panels/Drawer/Drawer_walletbubble_1.png" id="29_1shin"]
+[ext_resource type="Texture2D" uid="uid://cnxw41t38hspg" path="res://Assets/Panels/Drawer/Drawer_walletbubble_2.png" id="30_h1jap"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gkab5"]
 radius = 45.46
@@ -58,7 +59,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/path = NodePath("WalletPopUp:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -70,7 +71,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/path = NodePath("WalletPopUp:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -101,7 +102,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/path = NodePath("WalletPopUp:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -113,7 +114,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/path = NodePath("WalletPopUp:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -147,7 +148,7 @@ polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
 scroll_scale = Vector2(0.98, 1)
 
 [node name="Drawer" type="Node2D" parent="Drawer_clip/Parallax2D" unique_id=536471016]
-position = Vector2(-4, -43)
+position = Vector2(131, -143)
 
 [node name="Back" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer" unique_id=201889608]
 scale = Vector2(0.2, 0.2)
@@ -400,9 +401,11 @@ position = Vector2(250, 0)
 [node name="2AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=1149616029]
 libraries/ = SubResource("AnimationLibrary_h1jap")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=317300473]
+[node name="WalletPopUp" type="Sprite2D" parent="." unique_id=317300473]
 visible = false
 position = Vector2(139.99998, 161.99998)
 rotation = -0.08726646
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("29_1shin")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("29_1shin"), ExtResource("30_h1jap")])
