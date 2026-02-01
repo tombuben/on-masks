@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cgyg3o0f1c468"]
+
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_hktpc"]
+[ext_resource type="Texture2D" uid="uid://ushi2001f5vu" path="res://Assets/Panels/menu/name_1.png" id="2_flhuk"]
+[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="3_hoynb"]
+[ext_resource type="Texture2D" uid="uid://bcgv2lrm3b8u7" path="res://Assets/Panels/menu/name_2.png" id="4_ke1gw"]
+[ext_resource type="Texture2D" uid="uid://dus0n3qdgwvql" path="res://Assets/Panels/menu/name_3.png" id="5_rcqax"]
+[ext_resource type="Texture2D" uid="uid://dc2aopimsm1dm" path="res://Assets/Panels/menu/play_1.png" id="7_p5c6l"]
+[ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="7_vrpt3"]
+[ext_resource type="Texture2D" uid="uid://d2rpqa7nh1vl8" path="res://Assets/Panels/menu/play_2.png" id="8_vrpt3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
+radius = 100.0
+
+[node name="startpanel" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
+script = ExtResource("1_hktpc")
+arrow_next = NodePath("ArrowNext")
+player = NodePath("AnimationPlayer")
+not_fading_out = true
+
+[node name="Title" type="Sprite2D" parent="." unique_id=688611879]
+position = Vector2(0, -133)
+texture = ExtResource("2_flhuk")
+script = ExtResource("3_hoynb")
+textures = Array[Texture2D]([ExtResource("2_flhuk"), ExtResource("4_ke1gw"), ExtResource("5_rcqax")])
+
+[node name="ArrowNext" type="Area2D" parent="." unique_id=341744511]
+position = Vector2(1, 132)
+script = ExtResource("7_vrpt3")
+action_name = "next"
+
+[node name="play" type="Sprite2D" parent="ArrowNext" unique_id=584705069]
+texture = ExtResource("7_p5c6l")
+script = ExtResource("3_hoynb")
+textures = Array[Texture2D]([ExtResource("7_p5c6l"), ExtResource("8_vrpt3")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowNext" unique_id=961169437]
+shape = SubResource("CircleShape2D_m8cbb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
