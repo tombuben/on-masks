@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_kw2px"]
 [ext_resource type="Texture2D" uid="uid://br1xfs106m4gc" path="res://Assets/Panels/Screen_1/Prologue_panel3_dizzy_1.png" id="2_s4fku"]
 [ext_resource type="Texture2D" uid="uid://dwe3mu7pdipfx" path="res://Assets/Panels/Screen_1/Prologue_panel3_char_1.png" id="3_kw2px"]
+[ext_resource type="Texture2D" uid="uid://c182xifrqob64" path="res://Assets/Panels/Screen_1/Prologue_panel3_dizzy_2.png" id="4_lgcsh"]
 [ext_resource type="Texture2D" uid="uid://by28i1ni2mpfd" path="res://Assets/Panels/Screen_1/Prologue_panel3_frame_1.png" id="4_qwyc1"]
 [ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="5_lgcsh"]
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="5_rw317"]
 [ext_resource type="Texture2D" uid="uid://clqul8vhki5ry" path="res://Assets/Panels/Screen_1/Prologue_panel3_frame_2.png" id="6_8txj6"]
 [ext_resource type="AudioStream" uid="uid://u0icellmumg" path="res://music/sfx/whoosh wake up.mp3" id="6_kw2px"]
+[ext_resource type="Texture2D" uid="uid://cwvjlpve36148" path="res://Assets/Panels/Screen_1/Prologue_panel3_char_2.png" id="6_wa1r5"]
 
 [sub_resource type="Animation" id="Animation_dwsmy"]
 resource_name = "Enter"
@@ -78,11 +80,15 @@ rotation = -0.57595867
 position = Vector2(0, -300)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_s4fku")
+script = ExtResource("5_lgcsh")
+textures = Array[Texture2D]([ExtResource("2_s4fku"), ExtResource("4_lgcsh")])
 
 [node name="char" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip/Parallax2D/Node2D" unique_id=1698242233]
 position = Vector2(0, -300)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_kw2px")
+script = ExtResource("5_lgcsh")
+textures = Array[Texture2D]([ExtResource("3_kw2px"), ExtResource("6_wa1r5")])
 
 [node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
 scale = Vector2(0.2, 0.2)

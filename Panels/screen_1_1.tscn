@@ -12,8 +12,7 @@
 [ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="7_j7lbg"]
 [ext_resource type="Texture2D" uid="uid://bd87qwsubr0ux" path="res://Assets/Panels/Screen_1/Prologue_panel1_table_2.png" id="8_gebg5"]
 [ext_resource type="AudioStream" uid="uid://c23f2ydylniqk" path="res://music/sfx/alarm-clock-90867-5beats.wav" id="8_mosj1"]
-[ext_resource type="Texture2D" uid="uid://ctfn4h7501tgx" path="res://Assets/Panels/Screen_1/Prologue_panel2_frame_1.png" id="10_uxao6"]
-[ext_resource type="Texture2D" uid="uid://quc5icoisehf" path="res://Assets/Panels/Screen_1/Prologue_panel2_frame_2.png" id="11_gebg5"]
+[ext_resource type="Texture2D" uid="uid://cjyganofixqo4" path="res://Assets/Panels/Screen_1/Prologue_panel1_frame_2.png" id="10_ogwu1"]
 [ext_resource type="Texture2D" uid="uid://bqnf7ht3u1v3c" path="res://Assets/Panels/Screen_1/Prologue_panel1_noise_2.png" id="12_75u7r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
@@ -139,7 +138,7 @@ position = Vector2(1, 0)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_e0hnd")
 script = ExtResource("6_cvr4a")
-textures = Array[Texture2D]([ExtResource("10_uxao6"), ExtResource("11_gebg5")])
+textures = Array[Texture2D]([ExtResource("5_e0hnd"), ExtResource("10_ogwu1")])
 
 [node name="noise" type="Sprite2D" parent="Content" unique_id=1265709080]
 position = Vector2(5, 38)
