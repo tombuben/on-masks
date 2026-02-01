@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bvnw3k31go08b"]
+[gd_scene format=3 uid="uid://btay7rl34df5t"]
 
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_x75gw"]
 [ext_resource type="Texture2D" uid="uid://yuj4wifbafhm" path="res://Assets/Panels/Screen_2/Prologue2_panel3_bowl_1.png" id="2_2hcg0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="5_2hcg0"]
 [ext_resource type="Texture2D" uid="uid://dmuxfpwefyykl" path="res://Assets/Panels/Screen_2/Prologue2_panel3_spoon_2.png" id="6_cxpwn"]
 [ext_resource type="Texture2D" uid="uid://d22y5efn6xufv" path="res://Assets/Panels/Screen_2/Prologue2_panel3_frame_2.png" id="8_npub1"]
+[ext_resource type="AudioStream" uid="uid://erdh6kvufojo" path="res://music/sfx/crunchy-bite-95979.wav" id="9_a7v10"]
 
 [sub_resource type="Animation" id="Animation_dwsmy"]
 resource_name = "Enter"
@@ -48,6 +49,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.1972222, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../AnimationPlayer/AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_2hcg0"]
@@ -132,6 +145,9 @@ textures = Array[Texture2D]([ExtResource("4_cxpwn"), ExtResource("8_npub1")])
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
 root_node = NodePath("../Content/BeforeDrawerPanel_clip")
 libraries/ = SubResource("AnimationLibrary_lmim8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimationPlayer" unique_id=1131881191]
+stream = ExtResource("9_a7v10")
 
 [node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("5_2hcg0")]
 position = Vector2(272, 0)

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cvjxb7yo1uifq"]
+[gd_scene format=3 uid="uid://b3dhp4tkscoka"]
 
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_w7fla"]
 [ext_resource type="Texture2D" uid="uid://deo78fblmb4eh" path="res://Assets/Panels/Screen_2/Prologue2_panel2_char_1.png" id="2_yq2wx"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bck2x3t6sta13" path="res://Assets/Panels/Screen_2/Prologue2_panel2_char_2.png" id="4_sl648"]
 [ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="5_qdv0n"]
 [ext_resource type="Texture2D" uid="uid://dsrlsan62gcy" path="res://Assets/Panels/Screen_2/Prologue2_panel2_frame_2.png" id="6_sl648"]
+[ext_resource type="AudioStream" uid="uid://bvj6nlcykcgq3" path="res://music/sfx/brushing-hair-sfx-425028.wav" id="8_ajh6y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
 radius = 300.0
@@ -25,6 +26,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 40), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../AnimationPlayer/AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lmim8"]
@@ -45,7 +58,6 @@ clip_children = 2
 polygon = PackedVector2Array(77, -102, 65, 106, -76, 104, -77, -112)
 
 [node name="char" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=751712576]
-position = Vector2(0, 40)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_yq2wx")
 script = ExtResource("3_ih8el")
@@ -68,3 +80,7 @@ shape = SubResource("CircleShape2D_m8cbb")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
 root_node = NodePath("../Content/BeforeDrawerPanel_clip")
 libraries/ = SubResource("AnimationLibrary_lmim8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimationPlayer" unique_id=2056223997]
+stream = ExtResource("8_ajh6y")
+autoplay = true
