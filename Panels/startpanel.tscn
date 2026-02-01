@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dc2aopimsm1dm" path="res://Assets/Panels/menu/play_1.png" id="7_p5c6l"]
 [ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="7_vrpt3"]
 [ext_resource type="Texture2D" uid="uid://d2rpqa7nh1vl8" path="res://Assets/Panels/menu/play_2.png" id="8_vrpt3"]
+[ext_resource type="AudioStream" uid="uid://chvtr4kreadpg" path="res://music/sfx/small-page.wav" id="9_hoynb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
 radius = 100.0
@@ -24,10 +25,11 @@ texture = ExtResource("2_flhuk")
 script = ExtResource("3_hoynb")
 textures = Array[Texture2D]([ExtResource("2_flhuk"), ExtResource("4_ke1gw"), ExtResource("5_rcqax")])
 
-[node name="ArrowNext" type="Area2D" parent="." unique_id=341744511]
+[node name="ArrowNext" type="Area2D" parent="." unique_id=341744511 node_paths=PackedStringArray("audioplayer")]
 position = Vector2(1, 132)
 script = ExtResource("7_vrpt3")
 action_name = "next"
+audioplayer = NodePath("AudioStreamPlayer")
 
 [node name="play" type="Sprite2D" parent="ArrowNext" unique_id=584705069]
 texture = ExtResource("7_p5c6l")
@@ -36,5 +38,10 @@ textures = Array[Texture2D]([ExtResource("7_p5c6l"), ExtResource("8_vrpt3")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowNext" unique_id=961169437]
 shape = SubResource("CircleShape2D_m8cbb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ArrowNext" unique_id=593559064]
+stream = ExtResource("9_hoynb")
+volume_db = -15.0
+pitch_scale = 0.85
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
