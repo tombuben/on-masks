@@ -67,6 +67,7 @@ clip_children = 2
 polygon = PackedVector2Array(147, -193, 125, 196, -122, 195, -146, -193)
 
 [node name="Prepare_char" type="Sprite2D" parent="BeforeDrawerPanel_clip" unique_id=1045048857]
+position = Vector2(0, 50)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_5qbtq")
 
@@ -75,6 +76,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_7ldkk")
 
 [node name="Prepare_wallet" type="Sprite2D" parent="." unique_id=1945435612]
+visible = false
 position = Vector2(117, -209)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_3tiak")
@@ -86,6 +88,7 @@ script = ExtResource("8_0s30x")
 textures = Array[Texture2D]([ExtResource("5_6eg3s"), ExtResource("7_0s30x")])
 
 [node name="Prepare_keys" type="Sprite2D" parent="." unique_id=155463718]
+visible = false
 position = Vector2(-120, -217)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_paguk")

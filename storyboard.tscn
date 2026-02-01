@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_keys.tscn" id="5_o7hcg"]
 [ext_resource type="PackedScene" uid="uid://byyuiu6inn06o" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
 [ext_resource type="PackedScene" uid="uid://y3xq87j4ki45" path="res://Panels/found_item_wallet.tscn" id="7_tue7c"]
+[ext_resource type="PackedScene" uid="uid://dlfssot5iixlm" path="res://Panels/endscreen.tscn" id="12_iwt2b"]
 
 [node name="Node2D" type="Node2D" unique_id=424297317]
 
@@ -18,7 +19,7 @@
 position = Vector2(0, -900)
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../Screen1_content/screen_1_1"), NodePath("../Screen1_content/screen_1_2"), NodePath("../Screen1_content/screen_1_3"), NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath(""), NodePath("")]
+positions = [NodePath("../Screen1_content/screen_1_1"), NodePath("../Screen1_content/screen_1_2"), NodePath("../Screen1_content/screen_1_3"), NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../EndScreen")]
 
 [node name="Screen1_content" type="Node2D" parent="." unique_id=674888714]
 position = Vector2(0, -900)
@@ -49,3 +50,6 @@ position = Vector2(2627, 13)
 
 [node name="FoundItemWallet" parent="." unique_id=2007034112 instance=ExtResource("7_tue7c")]
 position = Vector2(3079, -26)
+
+[node name="EndScreen" parent="." unique_id=891703095 instance=ExtResource("12_iwt2b")]
+position = Vector2(3080, -2)

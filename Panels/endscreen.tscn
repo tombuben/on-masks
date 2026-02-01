@@ -1,104 +1,166 @@
 [gd_scene format=3 uid="uid://dlfssot5iixlm"]
 
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_0bhou"]
-[ext_resource type="Texture2D" uid="uid://bivhsmran1dsv" path="res://Assets/Panels/BeforeDrawer/Prepare_char_1.png" id="2_1td1a"]
-[ext_resource type="Texture2D" uid="uid://ewf5ajgk331c" path="res://Assets/Panels/BeforeDrawer/Prepare_frame_1.png" id="3_8oqwv"]
-[ext_resource type="Texture2D" uid="uid://cd218bqmbfstn" path="res://Assets/Panels/BeforeDrawer/Preparewallet_1.png" id="4_opa4m"]
-[ext_resource type="Texture2D" uid="uid://dg3jyvdrd46r6" path="res://Assets/Panels/Drawer/Wallet_1.png" id="5_4o7d2"]
+[ext_resource type="Texture2D" uid="uid://cbg6hcp4kwaqn" path="res://Assets/Panels/endscene/end_1_1.png" id="2_wl3yp"]
+[ext_resource type="Texture2D" uid="uid://cmtriomfd334h" path="res://Assets/Panels/endscene/end_1_2.png" id="4_tyeh7"]
+[ext_resource type="Texture2D" uid="uid://66x20dhg4n3r" path="res://Assets/Panels/endscene/end_2_1.png" id="5_gsyil"]
+[ext_resource type="Texture2D" uid="uid://dc60wc1f316gr" path="res://Assets/Panels/endscene/credits_1.png" id="5_l88qt"]
+[ext_resource type="Texture2D" uid="uid://2e1mw1hiylm" path="res://Assets/Panels/endscene/credits_2.png" id="6_4fpmq"]
 [ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="6_fd8y8"]
-[ext_resource type="Texture2D" uid="uid://c6hciglll655x" path="res://Assets/Panels/Drawer/Wallet_2.png" id="7_ggfkp"]
-[ext_resource type="Texture2D" uid="uid://cgfe6am20iqd2" path="res://Assets/Panels/BeforeDrawer/Preparekeys_1.png" id="8_v8xfu"]
-[ext_resource type="Texture2D" uid="uid://satdsyegenrb" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Keys_1.png" id="9_ii3fu"]
-[ext_resource type="Texture2D" uid="uid://bswkamh5ii3lx" path="res://Assets/Panels/Thinking/Bubble_and_list_assets/Keys_2.png" id="10_6ykfp"]
-[ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="11_o8yaa"]
+[ext_resource type="Texture2D" uid="uid://dx7wrlcgdgyqs" path="res://Assets/Panels/endscene/end_2_2.png" id="6_l88qt"]
 
 [sub_resource type="Animation" id="Animation_dwsmy"]
 resource_name = "Enter"
-length = 1.3
+length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Prepare_keys:visible")
+tracks/0/path = NodePath("Scroller/WAIT:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(0.35, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Prepare_wallet:visible")
+tracks/1/path = NodePath("Scroller/WAIT2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.86),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(0.35, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Prepare_char:position")
+tracks/2/path = NodePath("Scroller/WAIT:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.76666665),
-"transitions": PackedFloat32Array(0.28717452, 1),
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(0.35, 1),
 "update": 0,
-"values": [Vector2(0, 50), Vector2(0, 0)]
+"values": [Vector2(-74, -20), Vector2(-74, -12.999999)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scroller/WAIT2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12, -7), Vector2(12.000006, 13)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scroller:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4, 14.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1000)]
+}
+
+[sub_resource type="Animation" id="Animation_gsyil"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scroller/WAIT:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scroller/WAIT2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scroller/WAIT:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-74, -12.999999)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scroller:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1000)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lmim8"]
 _data = {
-&"Enter": SubResource("Animation_dwsmy")
+&"Enter": SubResource("Animation_dwsmy"),
+&"RESET": SubResource("Animation_gsyil")
 }
 
-[node name="BeforeDrawerPanel" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
+[node name="EndScreen" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("player")]
 script = ExtResource("1_0bhou")
-arrow_next = NodePath("ArrowNext")
 player = NodePath("AnimationPlayer")
 
-[node name="BeforeDrawerPanel_clip" type="Polygon2D" parent="." unique_id=83462876]
-clip_children = 2
-polygon = PackedVector2Array(147, -193, 125, 196, -122, 195, -146, -193)
+[node name="Scroller" type="Node2D" parent="." unique_id=205094001]
+position = Vector2(0, -1000)
+scale = Vector2(2, 2)
 
-[node name="Prepare_char" type="Sprite2D" parent="BeforeDrawerPanel_clip" unique_id=1045048857]
+[node name="WAIT" type="Sprite2D" parent="Scroller" unique_id=1945435612]
+position = Vector2(-74, -12.999999)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_1td1a")
-
-[node name="Frame" type="Sprite2D" parent="." unique_id=1716252841]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_8oqwv")
-
-[node name="Prepare_wallet" type="Sprite2D" parent="." unique_id=1945435612]
-position = Vector2(117, -209)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_opa4m")
-
-[node name="wallet" type="Sprite2D" parent="Prepare_wallet" unique_id=1333684689]
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_4o7d2")
+texture = ExtResource("2_wl3yp")
 script = ExtResource("6_fd8y8")
-textures = Array[Texture2D]([ExtResource("5_4o7d2"), ExtResource("7_ggfkp")])
+textures = Array[Texture2D]([ExtResource("2_wl3yp"), ExtResource("4_tyeh7")])
 
-[node name="Prepare_keys" type="Sprite2D" parent="." unique_id=155463718]
-position = Vector2(-120, -217)
+[node name="WAIT2" type="Sprite2D" parent="Scroller" unique_id=841257732]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(12, -7)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_v8xfu")
-
-[node name="keys" type="Sprite2D" parent="Prepare_keys" unique_id=656177980]
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("9_ii3fu")
+texture = ExtResource("5_gsyil")
 script = ExtResource("6_fd8y8")
-textures = Array[Texture2D]([ExtResource("9_ii3fu"), ExtResource("10_6ykfp")])
+textures = Array[Texture2D]([ExtResource("5_gsyil"), ExtResource("6_l88qt")])
 
-[node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("11_o8yaa")]
-position = Vector2(197, 0)
+[node name="Credits" type="Node2D" parent="Scroller" unique_id=1444113978]
+
+[node name="CreditsHeader" type="Sprite2D" parent="Scroller/Credits" unique_id=1399982495]
+position = Vector2(0, 230.50002)
+scale = Vector2(0.19999999, 0.19999999)
+texture = ExtResource("5_l88qt")
+script = ExtResource("6_fd8y8")
+textures = Array[Texture2D]([ExtResource("5_l88qt"), ExtResource("6_4fpmq")])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
-root_node = NodePath("../BeforeDrawerPanel_clip")
 libraries/ = SubResource("AnimationLibrary_lmim8")
