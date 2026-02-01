@@ -5,8 +5,8 @@ extends Sprite2D
 
 @onready var expansion : float = initial_size
 
-@onready var orig_position = global_position
-@onready var target_position = ExpandedPosition.global_position
+@onready var orig_position = position
+@onready var target_position = ExpandedPosition.position
 
 
 var tween : Tween
@@ -34,4 +34,4 @@ func _process(delta: float) -> void:
 	expansion = clamp(expansion, initial_size, 1.0)
 	material.set_shader_parameter("expansion", expansion)	
 	var progress = remap(expansion, initial_size, 1.0, 0.0, 1.0)
-	global_position = lerp(orig_position, target_position, progress)
+	position = lerp(orig_position, target_position, progress)
