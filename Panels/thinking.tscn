@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b3abidg37soql" path="res://Assets/Panels/Thinking/Character-0.png" id="2_84764"]
 [ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="3_fybqm"]
 [ext_resource type="Texture2D" uid="uid://da6cjb4vc4w5o" path="res://Assets/Panels/Thinking/Character-1.png" id="4_ge4dw"]
+[ext_resource type="Script" uid="uid://c6femsvl2m2wr" path="res://Scripts/subpixel_jump.gd" id="5_4mdua"]
 [ext_resource type="Shader" uid="uid://dnsfwxxe1p04o" path="res://Scripts/thoughtbubble.gdshader" id="5_y0flw"]
 [ext_resource type="Script" uid="uid://cbbgbnrv0e3p6" path="res://Scripts/expanding_bubble.gd" id="6_eit5n"]
 [ext_resource type="Texture2D" uid="uid://c8e1gucacf0ip" path="res://Assets/Panels/Thinking/Frame-0.png" id="7_0yv4m"]
@@ -146,6 +147,7 @@ textures = Array[Texture2D]([ExtResource("2_84764"), ExtResource("4_ge4dw")])
 
 [node name="Parallax2D" type="Parallax2D" parent="Panel1_clip" unique_id=1526357970]
 scroll_scale = Vector2(0.95, 1)
+script = ExtResource("5_4mdua")
 
 [node name="Bubble4" type="Sprite2D" parent="Panel1_clip/Parallax2D" unique_id=681339944]
 material = SubResource("ShaderMaterial_x5omf")
@@ -164,7 +166,7 @@ texture = SubResource("ViewportTexture_p1o8h")
 
 [node name="Bubble" type="Sprite2D" parent="Panel1_clip/Parallax2D" unique_id=414095468 node_paths=PackedStringArray("ExpandedPosition")]
 material = SubResource("ShaderMaterial_36rgb")
-position = Vector2(68, -129)
+position = Vector2(97, -134)
 texture = SubResource("ViewportTexture_p1o8h")
 script = ExtResource("6_eit5n")
 ExpandedPosition = NodePath("../ExpandedPosition")
