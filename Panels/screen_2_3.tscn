@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://bvnw3k31go08b"]
+
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_x75gw"]
+[ext_resource type="Texture2D" uid="uid://yuj4wifbafhm" path="res://Assets/Panels/Screen_2/Prologue2_panel3_bowl_1.png" id="2_2hcg0"]
+[ext_resource type="Texture2D" uid="uid://cv6teddpikjww" path="res://Assets/Panels/Screen_2/Prologue2_panel3_spoon_1.png" id="3_b01gg"]
+[ext_resource type="Texture2D" uid="uid://dfbjat8qewtw7" path="res://Assets/Panels/Screen_2/Prologue2_panel3_frame_1.png" id="4_cxpwn"]
+[ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="5_2hcg0"]
+
+[sub_resource type="Animation" id="Animation_dwsmy"]
+resource_name = "Enter"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bowl:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 9.999999), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("spoon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-25.999998, 26.999998), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("spoon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.1972222, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2hcg0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bowl:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 9.999999)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("spoon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25.999998, 26.999998)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("spoon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1972222]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmim8"]
+_data = {
+&"Enter": SubResource("Animation_dwsmy"),
+&"RESET": SubResource("Animation_2hcg0")
+}
+
+[node name="screen_2_3" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
+script = ExtResource("1_x75gw")
+arrow_next = NodePath("")
+player = NodePath("AnimationPlayer")
+not_fading_out = true
+
+[node name="Content" type="Node2D" parent="." unique_id=1916341640]
+position = Vector2(146, -6)
+
+[node name="BeforeDrawerPanel_clip" type="Polygon2D" parent="Content" unique_id=83462876]
+clip_children = 2
+polygon = PackedVector2Array(70, -104, 73, 94, -74, 97, -60, -98)
+
+[node name="bowl" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=751712576]
+position = Vector2(0, 9.999999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_2hcg0")
+
+[node name="spoon" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=212924576]
+position = Vector2(-25.999998, 26.999998)
+rotation = 0.1972222
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_b01gg")
+
+[node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_cxpwn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
+root_node = NodePath("../Content/BeforeDrawerPanel_clip")
+libraries/ = SubResource("AnimationLibrary_lmim8")
+
+[node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("5_2hcg0")]
+position = Vector2(272, 0)

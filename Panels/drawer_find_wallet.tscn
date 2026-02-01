@@ -179,7 +179,7 @@ collision_layer = 3
 polygon = PackedVector2Array(-203, 53, -13, -92, 254, 22, 70, 168, -208, 57, -281, 114, 77, 306, 482, -17, -74, -183, -260, 18, -285, 52, -285, 117)
 
 [node name="WalletToFind" type="Area2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1996723199]
-position = Vector2(118, 33)
+position = Vector2(87, 43)
 collision_mask = 3
 script = ExtResource("5_8tub1")
 
