@@ -93,7 +93,7 @@ _data = {
 
 [node name="screen_2_3" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
 script = ExtResource("1_x75gw")
-arrow_next = NodePath("")
+arrow_next = NodePath("ArrowNext")
 player = NodePath("AnimationPlayer")
 not_fading_out = true
 

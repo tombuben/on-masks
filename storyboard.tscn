@@ -15,22 +15,24 @@
 [ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
 [ext_resource type="PackedScene" uid="uid://bvnw3k31go08b" path="res://Panels/screen_2_3.tscn" id="7_3hehj"]
 [ext_resource type="PackedScene" uid="uid://y3xq87j4ki45" path="res://Panels/found_item_wallet.tscn" id="7_tue7c"]
+[ext_resource type="PackedScene" uid="uid://ib6clxx5r1pg" path="res://Panels/screen_3_1.tscn" id="9_gdypv"]
+[ext_resource type="PackedScene" uid="uid://c7mltf43bqjge" path="res://Panels/screen_3_2.tscn" id="10_xw6b5"]
 [ext_resource type="PackedScene" uid="uid://dlfssot5iixlm" path="res://Panels/endscreen.tscn" id="12_iwt2b"]
 
 [node name="Node2D" type="Node2D" unique_id=424297317]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1956719944 node_paths=PackedStringArray("positions")]
-position = Vector2(0, -1545)
+position = Vector2(0, -1981)
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../startpanel"), NodePath("../Screen1_content/screen_1_1"), NodePath("../Screen1_content/screen_1_2"), NodePath("../Screen1_content/screen_1_3"), NodePath("../Screen2_content/screen_2_1"), NodePath("../Screen2_content/screen_2_2"), NodePath("../Screen2_content/screen_2_3"), NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../EndScreen")]
+positions = [NodePath("../startpanel"), NodePath("../Screen1_content/screen_1_1"), NodePath("../Screen1_content/screen_1_2"), NodePath("../Screen1_content/screen_1_3"), NodePath("../Screen2_content/screen_2_1"), NodePath("../Screen2_content/screen_2_2"), NodePath("../Screen2_content/screen_2_3"), NodePath("../Screen3_content/screen_3_1"), NodePath("../Screen3_content/screen_3_2"), NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../EndScreen")]
 
 [node name="startpanel" parent="." unique_id=1258029886 instance=ExtResource("2_37g3q")]
-position = Vector2(0, -1545)
+position = Vector2(0, -1981)
 not_fading_out = false
 
 [node name="Screen1_content" type="Node2D" parent="." unique_id=674888714]
-position = Vector2(0, -1000)
+position = Vector2(0, -1436)
 
 [node name="screen_1_1" parent="Screen1_content" unique_id=308067669 instance=ExtResource("2_3hehj")]
 
@@ -39,13 +41,20 @@ position = Vector2(0, -1000)
 [node name="screen_1_2" parent="Screen1_content" unique_id=1148503189 instance=ExtResource("4_xw6b5")]
 
 [node name="Screen2_content" type="Node2D" parent="." unique_id=1240115641]
-position = Vector2(0, -494)
+position = Vector2(0, -930)
 
 [node name="screen_2_1" parent="Screen2_content" unique_id=1360765099 instance=ExtResource("5_d7l14")]
 
 [node name="screen_2_2" parent="Screen2_content" unique_id=1797862158 instance=ExtResource("6_37g3q")]
 
 [node name="screen_2_3" parent="Screen2_content" unique_id=357847243 instance=ExtResource("7_3hehj")]
+
+[node name="Screen3_content" type="Node2D" parent="." unique_id=538554151]
+position = Vector2(0, -500)
+
+[node name="screen_3_1" parent="Screen3_content" unique_id=194301183 instance=ExtResource("9_gdypv")]
+
+[node name="screen_3_2" parent="Screen3_content" unique_id=330657348 instance=ExtResource("10_xw6b5")]
 
 [node name="Thinking" parent="." unique_id=847660758 instance=ExtResource("2_c020s")]
 position = Vector2(2, 0)
