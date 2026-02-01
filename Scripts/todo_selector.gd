@@ -20,6 +20,8 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		selected = true
 		confirm_sprite.visible = true
 		
+		list_counter.parent_panel.can_reverse = true
+		
 		list_counter.number_selected += 1
 		if correct:
 			list_counter.number_correct_selected += 1

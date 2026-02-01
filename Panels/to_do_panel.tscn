@@ -92,7 +92,6 @@ _data = {
 script = ExtResource("1_o44jb")
 is_blocking = true
 arrow_next = NodePath("ArrowNext")
-can_reverse = true
 arrow_back = NodePath("ArrowBack")
 player = NodePath("AnimationPlayer")
 
