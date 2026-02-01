@@ -3,9 +3,13 @@
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_1q3r3"]
 [ext_resource type="Texture2D" uid="uid://cld5rlh3n56i2" path="res://Assets/Panels/Screen_3/Prologue3_panel1_char_1.png" id="2_701ub"]
 [ext_resource type="Texture2D" uid="uid://crtxck42vpllw" path="res://Assets/Panels/Screen_3/Prologue3_panel1_Emo_1.png" id="3_4u4ea"]
+[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="3_d8bj1"]
 [ext_resource type="Texture2D" uid="uid://b6q1n3pu4t8w5" path="res://Assets/Panels/Screen_3/Prologue3_panel1_paper1.png" id="4_c6c3p"]
+[ext_resource type="Texture2D" uid="uid://d0bfehegg4l4y" path="res://Assets/Panels/Screen_3/Prologue3_panel1_char_2.png" id="4_cold3"]
 [ext_resource type="Texture2D" uid="uid://by7o3271sfih2" path="res://Assets/Panels/Screen_3/Prologue3_panel1_frame_1.png" id="5_6qbea"]
 [ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="5_bbmuq"]
+[ext_resource type="Texture2D" uid="uid://odp2kmyoyogl" path="res://Assets/Panels/Screen_3/Prologue3_panel1_Emo_2.png" id="6_qpo1p"]
+[ext_resource type="Texture2D" uid="uid://bcckbfki3jl4c" path="res://Assets/Panels/Screen_3/Prologue3_panel1_paper2.png" id="8_tj1l5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
 radius = 300.0
@@ -83,17 +87,23 @@ polygon = PackedVector2Array(83, -135, 84, 139, -69, 131, -85, -127)
 position = Vector2(0, 5)
 scale = Vector2(0.19999999, 0.19999999)
 texture = ExtResource("2_701ub")
+script = ExtResource("3_d8bj1")
+textures = Array[Texture2D]([ExtResource("2_701ub"), ExtResource("4_cold3")])
 
 [node name="emo" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=751712576]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(0, -30)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_4u4ea")
+script = ExtResource("3_d8bj1")
+textures = Array[Texture2D]([ExtResource("3_4u4ea"), ExtResource("6_qpo1p")])
 
 [node name="paper" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=594360023]
 position = Vector2(0, 40)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_c6c3p")
+script = ExtResource("3_d8bj1")
+textures = Array[Texture2D]([ExtResource("4_c6c3p"), ExtResource("8_tj1l5")])
 
 [node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
 scale = Vector2(0.2, 0.2)
