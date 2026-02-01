@@ -73,7 +73,7 @@ player = NodePath("AnimationPlayer")
 not_fading_out = true
 
 [node name="Content" type="Node2D" parent="." unique_id=1916341640]
-position = Vector2(-97, 37)
+position = Vector2(-92, -33)
 
 [node name="BeforeDrawerPanel_clip" type="Polygon2D" parent="Content" unique_id=83462876]
 clip_children = 2

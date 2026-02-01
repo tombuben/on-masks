@@ -47,10 +47,7 @@
 radius = 22.92
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8u6ld"]
-radius = 20.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_iql3e"]
-radius = 30.0
+radius = 25.0
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_o3yx2"]
 
@@ -160,7 +157,7 @@ textures = Array[Texture2D]([ExtResource("8_meaqg"), ExtResource("9_gfjrx")])
 polygon = PackedVector2Array(-112, 22, -5, 61, 113, -24, 5, -66)
 
 [node name="Garbage2" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1391284797]
-position = Vector2(-37, 33)
+position = Vector2(-12, 5)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("7_3dw53")
@@ -172,8 +169,8 @@ texture = ExtResource("8_meaqg")
 script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("8_meaqg"), ExtResource("9_gfjrx")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage2" unique_id=854065225]
-shape = SubResource("CircleShape2D_8u6ld")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage2" unique_id=1864125036]
+polygon = PackedVector2Array(-116, 21, 6, -64, 112, -29, -7, 64)
 
 [node name="Garbage4" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1953879911]
 position = Vector2(68, 90)
@@ -209,7 +206,7 @@ textures = Array[Texture2D]([ExtResource("13_cifcg"), ExtResource("14_n8w6r")])
 polygon = PackedVector2Array(-66, 21, -22, 45, 73, -20, 23, -37)
 
 [node name="Garbage7" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=869023352]
-position = Vector2(36, 72)
+position = Vector2(20, 85)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("7_3dw53")
@@ -221,8 +218,8 @@ texture = ExtResource("15_yx503")
 script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("15_yx503"), ExtResource("16_bodv4")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage7" unique_id=277910112]
-shape = SubResource("CircleShape2D_8u6ld")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage7" unique_id=535599543]
+polygon = PackedVector2Array(-35, -4, 6, 29, 38, 8, -4, -24)
 
 [node name="Garbage8" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1709662293]
 position = Vector2(-14, 21)
@@ -273,7 +270,7 @@ textures = Array[Texture2D]([ExtResource("22_dxp0k"), ExtResource("23_urk7u")])
 polygon = PackedVector2Array(-7, -43, 84, 10, 7, 49, -82, -6)
 
 [node name="Garbage11" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=195618137]
-position = Vector2(61, 76)
+position = Vector2(74, 65)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("7_3dw53")
@@ -285,8 +282,8 @@ texture = ExtResource("24_0anbo")
 script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("24_0anbo"), ExtResource("25_7nwbh")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=192636827]
-shape = SubResource("CircleShape2D_8u6ld")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=1453953905]
+polygon = PackedVector2Array(-45, -10, -2, 32, 54, 14, 5, -30)
 
 [node name="Garbage5" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=794164378]
 position = Vector2(31, -27)
@@ -337,7 +334,7 @@ textures = Array[Texture2D]([ExtResource("31_oorxj"), ExtResource("32_cyw8d")])
 shape = SubResource("CircleShape2D_8u6ld")
 
 [node name="Garbage1" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=182005862]
-position = Vector2(-32, 32)
+position = Vector2(50, 60)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("7_3dw53")
@@ -349,8 +346,8 @@ texture = ExtResource("33_6aur4")
 script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("33_6aur4"), ExtResource("34_k7p88")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage1" unique_id=1373966827]
-shape = SubResource("CircleShape2D_iql3e")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage1" unique_id=801507051]
+polygon = PackedVector2Array(-47, 5, 8, 42, 50, 19, 47, -7, -2, -36, -46, -19)
 
 [node name="Keys" type="Node2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=1963479928]
 position = Vector2(-42, 51)
