@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://d0j2xdliwehg" path="res://Panels/before_drawer_panel.tscn" id="4_o7hcg"]
 [ext_resource type="PackedScene" uid="uid://c7lge1fret44f" path="res://Panels/screen_1_2.tscn" id="4_xw6b5"]
 [ext_resource type="PackedScene" uid="uid://lr4146coji6n" path="res://Panels/found_item_keys.tscn" id="5_kl5c6"]
-[ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_keys.tscn" id="5_o7hcg"]
-[ext_resource type="PackedScene" uid="uid://byyuiu6inn06o" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
+[ext_resource type="PackedScene" uid="uid://dh418cr6akxef" path="res://Panels/drawer_find_keys.tscn" id="5_o7hcg"]
+[ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
 [ext_resource type="PackedScene" uid="uid://y3xq87j4ki45" path="res://Panels/found_item_wallet.tscn" id="7_tue7c"]
 [ext_resource type="PackedScene" uid="uid://dlfssot5iixlm" path="res://Panels/endscreen.tscn" id="12_iwt2b"]
 
@@ -19,7 +19,7 @@
 position = Vector2(0, -900)
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../Screen1_content/screen_1_1"), NodePath("../Screen1_content/screen_1_2"), NodePath("../Screen1_content/screen_1_3"), NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../EndScreen")]
+positions = [NodePath("../Screen1_content/screen_1_1"), NodePath("../Screen1_content/screen_1_2"), NodePath("../Screen1_content/screen_1_3"), NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), null, NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../EndScreen")]
 
 [node name="Screen1_content" type="Node2D" parent="." unique_id=674888714]
 position = Vector2(0, -900)
@@ -40,7 +40,7 @@ position = Vector2(602, 0)
 position = Vector2(1087, 1)
 
 [node name="DrawerFindKeys" parent="." unique_id=51193233 instance=ExtResource("5_o7hcg")]
-position = Vector2(1550, 2)
+position = Vector2(1544, -2)
 
 [node name="FoundItemKeys" parent="." unique_id=143022061 instance=ExtResource("5_kl5c6")]
 position = Vector2(2002, 8)

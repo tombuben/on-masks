@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://vc0p08eyrhdl" path="res://Scripts/object_to_find.gd" id="5_8tub1"]
 [ext_resource type="Texture2D" uid="uid://dg3jyvdrd46r6" path="res://Assets/Panels/Drawer/Wallet_1.png" id="6_iklda"]
 [ext_resource type="Script" uid="uid://cbybkwdm4l7ah" path="res://Scripts/pushable_item.gd" id="7_3dw53"]
+[ext_resource type="Texture2D" uid="uid://c6hciglll655x" path="res://Assets/Panels/Drawer/Wallet_2.png" id="7_elwv0"]
 [ext_resource type="Texture2D" uid="uid://jxkl8o1xit5e" path="res://Assets/Panels/Drawer/objects-final/Diary_1.png" id="8_ac2xs"]
 [ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://Scripts/random_move_scale.gd" id="8_j5ylh"]
 [ext_resource type="Texture2D" uid="uid://c3kb0ld1kvrpc" path="res://Assets/Panels/Drawer/DrawerFront-0.png" id="9_a8qb4"]
@@ -185,6 +186,8 @@ script = ExtResource("5_8tub1")
 [node name="Sprite2D" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/WalletToFind" unique_id=688477364]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_iklda")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("6_iklda"), ExtResource("7_elwv0")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/WalletToFind" unique_id=1217471810]
 position = Vector2(0, -1)
@@ -320,7 +323,7 @@ textures = Array[Texture2D]([ExtResource("22_m0str"), ExtResource("23_c5ioi")])
 polygon = PackedVector2Array(-7, -43, 84, 10, 7, 49, -82, -6)
 
 [node name="Garbage11" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=195618137]
-position = Vector2(142, 27)
+position = Vector2(-16, 30)
 collision_mask = 2
 input_pickable = true
 script = ExtResource("7_3dw53")
@@ -332,8 +335,8 @@ texture = ExtResource("24_5olh8")
 script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("24_5olh8"), ExtResource("25_tub4p")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=192636827]
-shape = SubResource("CircleShape2D_8u6ld")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=1999082919]
+polygon = PackedVector2Array(-2, 32, -49, -12, 6, -30, 54, 13)
 
 [node name="Garbage5" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=794164378]
 position = Vector2(99, 1)
