@@ -58,7 +58,7 @@ player = NodePath("AnimationPlayer")
 not_fading_out = true
 
 [node name="Content" type="Node2D" parent="." unique_id=1916341640]
-position = Vector2(103, -5)
+position = Vector2(96, 24)
 
 [node name="BeforeDrawerPanel_clip" type="Polygon2D" parent="Content" unique_id=83462876]
 clip_children = 2
@@ -70,10 +70,13 @@ scale = Vector2(0.19999999, 0.19999999)
 texture = ExtResource("2_701ub")
 
 [node name="emo" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=751712576]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -30)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_4u4ea")
 
 [node name="paper" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=594360023]
+position = Vector2(0, 40)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_c6c3p")
 
@@ -86,4 +89,4 @@ root_node = NodePath("../Content/BeforeDrawerPanel_clip")
 libraries/ = SubResource("AnimationLibrary_lmim8")
 
 [node name="ArrowNext" parent="." unique_id=341744511 instance=ExtResource("6_tfji7")]
-position = Vector2(247, 0)
+position = Vector2(224, 0)
