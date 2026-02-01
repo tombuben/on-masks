@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_pgcbk"]
 [ext_resource type="Texture2D" uid="uid://dfqk8h2qtiedw" path="res://Assets/Panels/FoundItems/Founditem_1.png" id="2_jh2pd"]
 [ext_resource type="Texture2D" uid="uid://dpaapryoyncvh" path="res://Assets/Panels/FoundItems/foundwallet_hand_1.png" id="3_5u6cs"]
-[ext_resource type="Texture2D" uid="uid://boigid6ilsfyx" path="res://Assets/Panels/FoundItems/Wherekeys_bubble_1.png" id="4_httnq"]
 [ext_resource type="Texture2D" uid="uid://1vco0rqiddhx" path="res://Assets/Panels/FoundItems/Wherekeys_question_1.png" id="5_xxqgf"]
 [ext_resource type="Texture2D" uid="uid://cyd2khihwui8s" path="res://Assets/Panels/FoundItems/Founditem_frame_1.png" id="6_el3kx"]
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="7_jh2pd"]
@@ -27,11 +26,11 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Parallax2D/Wherekeys_bubble_1:visible")
+tracks/1/path = NodePath("Parallax2D/Wherekeys_question_1:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.75),
+"times": PackedFloat32Array(0, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -39,22 +38,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Parallax2D/Wherekeys_question_1:visible")
+tracks/2/path = NodePath("Parallax2D/Founditem:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Parallax2D/Founditem:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 1.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -80,20 +67,13 @@ scroll_scale = Vector2(0.98, 1)
 
 [node name="Founditem" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=1542617607]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_jh2pd")
+texture = ExtResource("8_5u6cs")
 
 [node name="Foundwallet_hand" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=76382490]
-position = Vector2(0, 60)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_5u6cs")
 
-[node name="Wherekeys_bubble_1" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=293127961]
-visible = false
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_httnq")
-
 [node name="Wherekeys_question_1" type="Sprite2D" parent="FoundItemWallet_clip/Parallax2D" unique_id=987387295]
-visible = false
 position = Vector2(49.999996, -42.999996)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_xxqgf")

@@ -1,35 +1,33 @@
 [gd_scene format=3 uid="uid://bx6bte5gry2ul"]
 
 [ext_resource type="Script" uid="uid://crljrm3inplte" path="res://Scripts/camera_move.gd" id="1_mexpn"]
+[ext_resource type="PackedScene" uid="uid://bycwl706m8da8" path="res://Panels/screen_1_1.tscn" id="2_3hehj"]
 [ext_resource type="PackedScene" uid="uid://bylcctnhpucyk" path="res://Panels/thinking.tscn" id="2_c020s"]
-[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="2_yfq1a"]
+[ext_resource type="PackedScene" uid="uid://bu62cnv54dk1x" path="res://Panels/screen_1_3.tscn" id="3_gdypv"]
 [ext_resource type="PackedScene" uid="uid://d4j17csdao8tg" path="res://Panels/to_do_panel.tscn" id="3_k2uku"]
 [ext_resource type="PackedScene" uid="uid://d0j2xdliwehg" path="res://Panels/before_drawer_panel.tscn" id="4_o7hcg"]
+[ext_resource type="PackedScene" uid="uid://c7lge1fret44f" path="res://Panels/screen_1_2.tscn" id="4_xw6b5"]
 [ext_resource type="PackedScene" uid="uid://lr4146coji6n" path="res://Panels/found_item_keys.tscn" id="5_kl5c6"]
 [ext_resource type="PackedScene" uid="uid://bnre75xodfjcg" path="res://Panels/drawer_find_keys.tscn" id="5_o7hcg"]
 [ext_resource type="PackedScene" uid="uid://byyuiu6inn06o" path="res://Panels/drawer_find_wallet.tscn" id="6_xywil"]
 [ext_resource type="PackedScene" uid="uid://y3xq87j4ki45" path="res://Panels/found_item_wallet.tscn" id="7_tue7c"]
-[ext_resource type="Texture2D" uid="uid://d3bd27cqb4vxo" path="res://Assets/Panels/Drawer/DrawerBack-0.png" id="8_iwt2b"]
-[ext_resource type="PackedScene" uid="uid://boopyvm3e7xie" path="res://Panels/people_pleaser.tscn" id="8_v8a7c"]
-[ext_resource type="Texture2D" uid="uid://c3kb0ld1kvrpc" path="res://Assets/Panels/Drawer/DrawerFront-0.png" id="9_baigs"]
-[ext_resource type="Texture2D" uid="uid://c5q2aubclj8du" path="res://Assets/Panels/Drawer/DrawerTop-0.png" id="10_o7hcg"]
-[ext_resource type="Texture2D" uid="uid://evgas13tiess" path="res://Assets/Panels/Drawer/Frame-0.png" id="11_d7l14"]
-
-[sub_resource type="Animation" id="Animation_baigs"]
-resource_name = "Enter"
-length = 2.8
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7hcg"]
-_data = {
-&"Enter": SubResource("Animation_baigs")
-}
 
 [node name="Node2D" type="Node2D" unique_id=424297317]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1956719944 node_paths=PackedStringArray("positions")]
+position = Vector2(0, -900)
 position_smoothing_enabled = true
 script = ExtResource("1_mexpn")
-positions = [NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath("../PeoplePleaser"), NodePath("../Panel4")]
+positions = [NodePath("../Screen1_content/screen_1_1"), NodePath("../Screen1_content/screen_1_2"), NodePath("../Screen1_content/screen_1_3"), NodePath("../Thinking"), NodePath("../ToDoPanel"), NodePath("../BeforeDrawerPanel"), NodePath("../DrawerFindKeys"), NodePath("../FoundItemKeys"), NodePath("../DrawerFindWallet"), NodePath("../FoundItemWallet"), NodePath(""), NodePath("")]
+
+[node name="Screen1_content" type="Node2D" parent="." unique_id=674888714]
+position = Vector2(0, -900)
+
+[node name="screen_1_1" parent="Screen1_content" unique_id=1258029886 instance=ExtResource("2_3hehj")]
+
+[node name="screen_1_3" parent="Screen1_content" unique_id=1228024361 instance=ExtResource("3_gdypv")]
+
+[node name="screen_1_2" parent="Screen1_content" unique_id=1148503189 instance=ExtResource("4_xw6b5")]
 
 [node name="Thinking" parent="." unique_id=847660758 instance=ExtResource("2_c020s")]
 position = Vector2(2, 0)
@@ -37,58 +35,17 @@ position = Vector2(2, 0)
 [node name="ToDoPanel" parent="." unique_id=659362712 instance=ExtResource("3_k2uku")]
 position = Vector2(602, 0)
 
-[node name="BeforeDrawerPanel" parent="." unique_id=1258029886 instance=ExtResource("4_o7hcg")]
-position = Vector2(1168, 4)
+[node name="BeforeDrawerPanel" parent="." unique_id=1038925670 instance=ExtResource("4_o7hcg")]
+position = Vector2(1087, 1)
 
 [node name="DrawerFindKeys" parent="." unique_id=51193233 instance=ExtResource("5_o7hcg")]
-position = Vector2(1718, 12)
+position = Vector2(1550, 2)
 
 [node name="FoundItemKeys" parent="." unique_id=143022061 instance=ExtResource("5_kl5c6")]
-position = Vector2(2183, 10)
+position = Vector2(2002, 8)
 
 [node name="DrawerFindWallet" parent="." unique_id=844159059 instance=ExtResource("6_xywil")]
 position = Vector2(2627, 13)
 
 [node name="FoundItemWallet" parent="." unique_id=2007034112 instance=ExtResource("7_tue7c")]
 position = Vector2(3079, -26)
-
-[node name="PeoplePleaser" parent="." unique_id=1397193423 instance=ExtResource("8_v8a7c")]
-position = Vector2(3600, -11)
-
-[node name="Panel4" type="Node2D" parent="." unique_id=138539189 node_paths=PackedStringArray("player")]
-position = Vector2(4228, -22)
-script = ExtResource("2_yfq1a")
-player = NodePath("AnimationPlayer")
-
-[node name="Panel2_clip" type="Polygon2D" parent="Panel4" unique_id=2106205851]
-clip_children = 2
-polygon = PackedVector2Array(152, -168, 152, 173, -189, 173, -190, -169)
-
-[node name="Parallax2D" type="Parallax2D" parent="Panel4/Panel2_clip" unique_id=710667651]
-scroll_scale = Vector2(0.95, 1)
-scroll_offset = Vector2(-24, 36)
-
-[node name="Drawer" type="Node2D" parent="Panel4/Panel2_clip/Parallax2D" unique_id=1415863216]
-position = Vector2(136, -143)
-
-[node name="Back" type="Sprite2D" parent="Panel4/Panel2_clip/Parallax2D/Drawer" unique_id=1798923493]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_iwt2b")
-
-[node name="Contents" type="Node2D" parent="Panel4/Panel2_clip/Parallax2D/Drawer" unique_id=154712066]
-
-[node name="Front" type="Sprite2D" parent="Panel4/Panel2_clip/Parallax2D/Drawer" unique_id=1582641639]
-scale = Vector2(0.19999999, 0.19999999)
-texture = ExtResource("9_baigs")
-
-[node name="Top" type="Sprite2D" parent="Panel4/Panel2_clip/Parallax2D" unique_id=273059972]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_o7hcg")
-
-[node name="Frame" type="Sprite2D" parent="Panel4" unique_id=1361572627]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("11_d7l14")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel4" unique_id=1225967196]
-root_node = NodePath("../Panel2_clip")
-libraries/ = SubResource("AnimationLibrary_o7hcg")

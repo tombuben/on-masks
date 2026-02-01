@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_gwo17"]
 [ext_resource type="Texture2D" uid="uid://dfqk8h2qtiedw" path="res://Assets/Panels/FoundItems/Founditem_1.png" id="2_dwsmy"]
+[ext_resource type="Script" uid="uid://ces2y3o1wpx1k" path="res://Scripts/sprite_cycle.gd" id="3_k71nv"]
 [ext_resource type="Texture2D" uid="uid://dvaxtp5e7wyk0" path="res://Assets/Panels/FoundItems/foundkeys_hand_1.png" id="3_lmim8"]
+[ext_resource type="Texture2D" uid="uid://cuhj5wbudc2ox" path="res://Assets/Panels/FoundItems/Founditem_2.png" id="4_0ure2"]
 [ext_resource type="Texture2D" uid="uid://1vco0rqiddhx" path="res://Assets/Panels/FoundItems/Wherekeys_question_1.png" id="4_k71nv"]
 [ext_resource type="Texture2D" uid="uid://cyd2khihwui8s" path="res://Assets/Panels/FoundItems/Founditem_frame_1.png" id="5_0ure2"]
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="6_dwsmy"]
@@ -50,11 +52,13 @@ clip_children = 2
 polygon = PackedVector2Array(117, -211, 131, 218, -145, 203, -132, -200)
 
 [node name="Parallax2D" type="Parallax2D" parent="FoundItemKeys_clip" unique_id=2077772186]
-scroll_scale = Vector2(0.98, 1)
+scroll_scale = Vector2(0.99, 1)
 
 [node name="Founditem" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=1045048857]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_dwsmy")
+script = ExtResource("3_k71nv")
+textures = Array[Texture2D]([ExtResource("2_dwsmy"), ExtResource("4_0ure2")])
 
 [node name="Founditem_hand" type="Sprite2D" parent="FoundItemKeys_clip/Parallax2D" unique_id=155463718]
 position = Vector2(0, 60)

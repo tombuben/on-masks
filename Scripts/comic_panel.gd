@@ -5,6 +5,7 @@ class_name ComicPanel extends Node2D
 @export var can_reverse : bool = false
 @export var arrow_back : Node2D
 @export var player : AnimationPlayer
+@export var not_fading_out : bool
 
 var is_active : bool = false
 

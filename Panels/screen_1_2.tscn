@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://c7lge1fret44f"]
+
+[ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_0urkx"]
+[ext_resource type="Texture2D" uid="uid://dw4jgkfg1gqtd" path="res://Assets/Panels/Screen_1/Prologue_panel2_clock_1.png" id="2_nk4if"]
+[ext_resource type="Texture2D" uid="uid://ci7g77laosgd5" path="res://Assets/Panels/Screen_1/Prologue_panel2_speedlines_1.png" id="3_0urkx"]
+[ext_resource type="Texture2D" uid="uid://pqsdtdg7lort" path="res://Assets/Panels/Screen_1/Prologue_panel2_table_1.png" id="4_p1swi"]
+[ext_resource type="Texture2D" uid="uid://ctfn4h7501tgx" path="res://Assets/Panels/Screen_1/Prologue_panel2_frame_1.png" id="5_kmfmo"]
+[ext_resource type="Script" uid="uid://lp4qm6c1qe6l" path="res://Scripts/button_emit_action.gd" id="7_v6vby"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m8cbb"]
+radius = 300.0
+
+[sub_resource type="Animation" id="Animation_dwsmy"]
+resource_name = "Enter"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("clock:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.1, 1),
+"update": 0,
+"values": [Vector2(-45, -55), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("clock:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.1, 1),
+"update": 0,
+"values": [-0.34906584, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("speedlines:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.5),
+"transitions": PackedFloat32Array(0.1, 1),
+"update": 0,
+"values": [Vector2(-29.999998, -64.99999), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmim8"]
+_data = {
+&"Enter": SubResource("Animation_dwsmy")
+}
+
+[node name="screen_1_2" type="Node2D" unique_id=1258029886 node_paths=PackedStringArray("arrow_next", "player")]
+script = ExtResource("1_0urkx")
+arrow_next = NodePath("ArrowNext")
+player = NodePath("AnimationPlayer")
+not_fading_out = true
+
+[node name="Content" type="Node2D" parent="." unique_id=765917807]
+
+[node name="BeforeDrawerPanel_clip" type="Polygon2D" parent="Content" unique_id=83462876]
+clip_children = 2
+polygon = PackedVector2Array(79, -116, 83, 121, -43, 130, -89, -96)
+
+[node name="clock" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=277757958]
+position = Vector2(-45, -55)
+rotation = -0.34906584
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_nk4if")
+
+[node name="speedlines" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=2118270125]
+position = Vector2(-29.999998, -64.99999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0urkx")
+
+[node name="table" type="Sprite2D" parent="Content/BeforeDrawerPanel_clip" unique_id=319370822]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_p1swi")
+
+[node name="Frame" type="Sprite2D" parent="Content" unique_id=1716252841]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_kmfmo")
+
+[node name="ArrowNext" type="Area2D" parent="." unique_id=341744511]
+position = Vector2(1, 1)
+script = ExtResource("7_v6vby")
+action_name = "next"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowNext" unique_id=961169437]
+shape = SubResource("CircleShape2D_m8cbb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=328133291]
+root_node = NodePath("../Content/BeforeDrawerPanel_clip")
+libraries/ = SubResource("AnimationLibrary_lmim8")
