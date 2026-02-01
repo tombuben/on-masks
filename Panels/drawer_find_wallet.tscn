@@ -145,7 +145,6 @@ _data = {
 }
 
 [node name="DrawerFindWallet" type="Node2D" unique_id=51193233 node_paths=PackedStringArray("arrow_next", "player")]
-clip_children = 2
 script = ExtResource("1_bndu5")
 is_blocking = true
 arrow_next = NodePath("ArrowNext")
