@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://byyuiu6inn06o"]
+[gd_scene format=3 uid="uid://bnre75xodfjcg"]
 
 [ext_resource type="Script" uid="uid://b6iw5dphfexob" path="res://Scripts/comic_panel.gd" id="1_bndu5"]
 [ext_resource type="Texture2D" uid="uid://d3bd27cqb4vxo" path="res://Assets/Panels/Drawer/DrawerBack-0.png" id="2_0hos0"]
@@ -7,28 +7,41 @@
 [ext_resource type="Script" uid="uid://vc0p08eyrhdl" path="res://Scripts/object_to_find.gd" id="5_8tub1"]
 [ext_resource type="Texture2D" uid="uid://dg3jyvdrd46r6" path="res://Assets/Panels/Drawer/Wallet_1.png" id="6_iklda"]
 [ext_resource type="Script" uid="uid://cbybkwdm4l7ah" path="res://Scripts/pushable_item.gd" id="7_3dw53"]
-[ext_resource type="Texture2D" uid="uid://crx1cm6b44xvh" path="res://Assets/Panels/Drawer/Objects/Diary_1.png" id="8_b54c7"]
+[ext_resource type="Texture2D" uid="uid://jxkl8o1xit5e" path="res://Assets/Panels/Drawer/objects-final/Diary_1.png" id="8_ac2xs"]
 [ext_resource type="Script" uid="uid://d3y8422ue4f8l" path="res://Scripts/random_move_scale.gd" id="8_j5ylh"]
 [ext_resource type="Texture2D" uid="uid://c3kb0ld1kvrpc" path="res://Assets/Panels/Drawer/DrawerFront-0.png" id="9_a8qb4"]
-[ext_resource type="Texture2D" uid="uid://c3lnbydskr1fy" path="res://Assets/Panels/Drawer/Objects/Card_1.png" id="9_jv67u"]
-[ext_resource type="Texture2D" uid="uid://dslxwm1pr0rr1" path="res://Assets/Panels/Drawer/Objects/Keychain_1.png" id="10_0ayty"]
+[ext_resource type="Texture2D" uid="uid://dpn6l0o2ip0qv" path="res://Assets/Panels/Drawer/objects-final/Diary_2.png" id="9_c8jf4"]
+[ext_resource type="Texture2D" uid="uid://dikkyd5snk2pv" path="res://Assets/Panels/Drawer/objects-final/Keychain_1.png" id="10_elwv0"]
 [ext_resource type="Texture2D" uid="uid://h7dt0aekxxqo" path="res://Assets/Panels/Drawer/DrawerFront-1.png" id="10_o3qxd"]
+[ext_resource type="Texture2D" uid="uid://dfxnhc145pmnr" path="res://Assets/Panels/Drawer/objects-final/Keychain_2.png" id="11_8frss"]
 [ext_resource type="Texture2D" uid="uid://sfx43r1fv80l" path="res://Assets/Panels/Drawer/Objects/Letak_1.png" id="11_70uy5"]
 [ext_resource type="Texture2D" uid="uid://c5q2aubclj8du" path="res://Assets/Panels/Drawer/DrawerTop-0.png" id="11_qjecc"]
 [ext_resource type="Texture2D" uid="uid://evgas13tiess" path="res://Assets/Panels/Drawer/Frame-0.png" id="12_1myny"]
-[ext_resource type="Texture2D" uid="uid://ipypa450a2po" path="res://Assets/Panels/Drawer/Objects/Licence_1.png" id="12_wod7m"]
+[ext_resource type="Texture2D" uid="uid://cvhh7jtm66ntb" path="res://Assets/Panels/Drawer/objects-final/Letak_1.png" id="13_4a2b3"]
 [ext_resource type="Texture2D" uid="uid://couh3ngbq03jd" path="res://Assets/Panels/Drawer/Objects/List_1.png" id="13_0411m"]
 [ext_resource type="Texture2D" uid="uid://8c1h4qbra15k" path="res://Assets/Panels/Drawer/Frame-1.png" id="13_b8q7n"]
-[ext_resource type="Texture2D" uid="uid://21lnmrpkhon" path="res://Assets/Panels/Drawer/Objects/Pas_1.png" id="14_a4ebu"]
-[ext_resource type="Texture2D" uid="uid://cjsfqt1ay8or5" path="res://Assets/Panels/Drawer/Objects/Picture_1_1.png" id="15_dukmv"]
-[ext_resource type="Texture2D" uid="uid://dift0c3rxu4ik" path="res://Assets/Panels/Drawer/Objects/Picture_2_1.png" id="16_fbc2h"]
-[ext_resource type="Texture2D" uid="uid://4te5bknluolt" path="res://Assets/Panels/Drawer/Objects/Kirby_1.png" id="17_wrf3b"]
-[ext_resource type="Texture2D" uid="uid://dul7e53jes44y" path="res://Assets/Panels/Drawer/Objects/Switch_1.png" id="18_llc1q"]
-[ext_resource type="Texture2D" uid="uid://5d4evg3rl3kl" path="res://Assets/Panels/Drawer/Objects/Screw_1.png" id="19_1epuf"]
+[ext_resource type="Texture2D" uid="uid://dn0oha1gvfhlc" path="res://Assets/Panels/Drawer/objects-final/Letak_2.png" id="14_gtt12"]
+[ext_resource type="Texture2D" uid="uid://doueekqg6ok1h" path="res://Assets/Panels/Drawer/objects-final/Licence_1.png" id="15_c0lkv"]
+[ext_resource type="Texture2D" uid="uid://dwm2c8niyfian" path="res://Assets/Panels/Drawer/objects-final/Licence_2.png" id="16_wbeom"]
+[ext_resource type="Texture2D" uid="uid://bvl4ne1h0es86" path="res://Assets/Panels/Drawer/objects-final/List_1.png" id="18_k7xw1"]
+[ext_resource type="Texture2D" uid="uid://c846vexd71l04" path="res://Assets/Panels/Drawer/objects-final/List_2.png" id="19_wuy8l"]
+[ext_resource type="Texture2D" uid="uid://elw1nmgc2eqv" path="res://Assets/Panels/Drawer/objects-final/Pas_1.png" id="20_iamww"]
 [ext_resource type="Texture2D" uid="uid://cchmc82gb4w72" path="res://Assets/Panels/Drawer/Objects/Trash_1.png" id="20_kfwsf"]
-[ext_resource type="Texture2D" uid="uid://5wg8tdb6k1w6" path="res://Assets/Panels/Drawer/Objects/Box_1.png" id="21_c30ab"]
+[ext_resource type="Texture2D" uid="uid://duwviu4utx7m1" path="res://Assets/Panels/Drawer/objects-final/Pas_2.png" id="21_20wnl"]
+[ext_resource type="Texture2D" uid="uid://bt6io5muhq0aw" path="res://Assets/Panels/Drawer/objects-final/Picture_1_1.png" id="22_m0str"]
+[ext_resource type="Texture2D" uid="uid://bkobs85dsvlic" path="res://Assets/Panels/Drawer/objects-final/Picture_1_2.png" id="23_c5ioi"]
+[ext_resource type="Texture2D" uid="uid://dqj4h4pspei8m" path="res://Assets/Panels/Drawer/objects-final/Picture_2_1.png" id="24_5olh8"]
+[ext_resource type="Texture2D" uid="uid://2are156sjqt3" path="res://Assets/Panels/Drawer/objects-final/Picture_2_2.png" id="25_tub4p"]
+[ext_resource type="Texture2D" uid="uid://dvwmpem5r6v2" path="res://Assets/Panels/Drawer/objects-final/Kirby_1.png" id="26_bnndp"]
+[ext_resource type="Texture2D" uid="uid://gha5f3da0ixt" path="res://Assets/Panels/Drawer/objects-final/Kirby_2.png" id="27_odsei"]
 [ext_resource type="PackedScene" uid="uid://cqpuqbqkg6vng" path="res://arrow.tscn" id="28_iklda"]
+[ext_resource type="Texture2D" uid="uid://dkaskd4qt7bos" path="res://Assets/Panels/Drawer/objects-final/Screw_1.png" id="28_tr5ld"]
 [ext_resource type="Texture2D" uid="uid://c3kb1rmtunl1p" path="res://Assets/Panels/Drawer/Drawer_walletbubble_1.png" id="29_1shin"]
+[ext_resource type="Texture2D" uid="uid://btjfh4wswvdg3" path="res://Assets/Panels/Drawer/objects-final/Screw_2.png" id="29_juwbu"]
+[ext_resource type="Texture2D" uid="uid://r67h0yqn62ky" path="res://Assets/Panels/Drawer/objects-final/Trash_1.png" id="31_5pb4r"]
+[ext_resource type="Texture2D" uid="uid://b7ux3f5ymbv8c" path="res://Assets/Panels/Drawer/objects-final/Trash_2.png" id="32_5ck3g"]
+[ext_resource type="Texture2D" uid="uid://cox5kacgf2l60" path="res://Assets/Panels/Drawer/objects-final/Box_1.png" id="33_buu7f"]
+[ext_resource type="Texture2D" uid="uid://chud45bj85mcf" path="res://Assets/Panels/Drawer/objects-final/Box_2.png" id="34_nful2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gkab5"]
 radius = 45.46
@@ -185,7 +198,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage3" unique_id=67056063]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_b54c7")
+texture = ExtResource("8_ac2xs")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("8_ac2xs"), ExtResource("9_c8jf4")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage3" unique_id=303479739]
 polygon = PackedVector2Array(-112, 22, -5, 61, 113, -24, 5, -66)
@@ -199,7 +214,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage2" unique_id=1293859398]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_jv67u")
+texture = ExtResource("8_ac2xs")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("8_ac2xs"), ExtResource("9_c8jf4")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage2" unique_id=854065225]
 shape = SubResource("CircleShape2D_8u6ld")
@@ -213,7 +230,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage4" unique_id=1004109553]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_0ayty")
+texture = ExtResource("10_elwv0")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("10_elwv0"), ExtResource("11_8frss")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage4" unique_id=577558395]
 position = Vector2(-1, 10)
@@ -229,6 +248,8 @@ script = ExtResource("7_3dw53")
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_70uy5")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("13_4a2b3"), ExtResource("14_gtt12")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage6" unique_id=822097699]
 polygon = PackedVector2Array(-66, 21, -22, 45, 73, -20, 23, -37)
@@ -242,7 +263,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage7" unique_id=775649746]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("12_wod7m")
+texture = ExtResource("15_c0lkv")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("15_c0lkv"), ExtResource("16_wbeom")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage7" unique_id=277910112]
 shape = SubResource("CircleShape2D_8u6ld")
@@ -257,6 +280,8 @@ script = ExtResource("7_3dw53")
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("13_0411m")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("18_k7xw1"), ExtResource("19_wuy8l")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage8" unique_id=508066376]
 polygon = PackedVector2Array(-28, -52, 53, -57, 43, 50, -24, 48, -49, 38)
@@ -270,7 +295,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage9" unique_id=1131145350]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("14_a4ebu")
+texture = ExtResource("20_iamww")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("20_iamww"), ExtResource("21_20wnl")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage9" unique_id=200630980]
 polygon = PackedVector2Array(-21, -32, 73, 4, 19, 38, -68, -2)
@@ -284,7 +311,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage10" unique_id=308602756]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("15_dukmv")
+texture = ExtResource("22_m0str")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("22_m0str"), ExtResource("23_c5ioi")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage10" unique_id=260694290]
 polygon = PackedVector2Array(-7, -43, 84, 10, 7, 49, -82, -6)
@@ -298,7 +327,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=1918796956]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("16_fbc2h")
+texture = ExtResource("24_5olh8")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("24_5olh8"), ExtResource("25_tub4p")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage11" unique_id=192636827]
 shape = SubResource("CircleShape2D_8u6ld")
@@ -312,24 +343,12 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage5" unique_id=304071195]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("17_wrf3b")
+texture = ExtResource("26_bnndp")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("26_bnndp"), ExtResource("27_odsei")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage5" unique_id=1387758040]
 shape = SubResource("CircleShape2D_8u6ld")
-
-[node name="Garbage13" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=32620062]
-position = Vector2(-39, 40)
-collision_mask = 2
-input_pickable = true
-script = ExtResource("7_3dw53")
-
-[node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage13" unique_id=695468877]
-position = Vector2(1.5, 0.5)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("18_llc1q")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage13" unique_id=118254823]
-polygon = PackedVector2Array(-91, 26, 85, 36, 96, -25, -72, -29)
 
 [node name="Garbage12" type="CharacterBody2D" parent="Drawer_clip/Parallax2D/Drawer/Contents" unique_id=619362374]
 position = Vector2(-54, 12)
@@ -340,7 +359,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage12" unique_id=495865112]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("19_1epuf")
+texture = ExtResource("28_tr5ld")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("28_tr5ld"), ExtResource("29_juwbu")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage12" unique_id=530300868]
 polygon = PackedVector2Array(-75, 31, 70, -57, 77, -44, -66, 52)
@@ -355,6 +376,8 @@ script = ExtResource("7_3dw53")
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("20_kfwsf")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("31_5pb4r"), ExtResource("32_5ck3g")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage14" unique_id=738711162]
 shape = SubResource("CircleShape2D_8u6ld")
@@ -368,7 +391,9 @@ script = ExtResource("7_3dw53")
 [node name="Garbage1" type="Sprite2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage1" unique_id=1574345917]
 position = Vector2(1.5, 0.5)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("21_c30ab")
+texture = ExtResource("33_buu7f")
+script = ExtResource("3_klvcj")
+textures = Array[Texture2D]([ExtResource("33_buu7f"), ExtResource("34_nful2")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer_clip/Parallax2D/Drawer/Contents/Garbage1" unique_id=1373966827]
 shape = SubResource("CircleShape2D_iql3e")
@@ -385,6 +410,7 @@ script = ExtResource("3_klvcj")
 textures = Array[Texture2D]([ExtResource("9_a8qb4"), ExtResource("10_o3qxd")])
 
 [node name="Top" type="Sprite2D" parent="Drawer_clip/Parallax2D" unique_id=2139430405]
+visible = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_qjecc")
 
