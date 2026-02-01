@@ -27,6 +27,9 @@ func _process(delta: float) -> void:
 		expansion += delta * 0.5
 	else:
 		expansion -= delta * 0.5
+		
+	if expansion > 0.9:
+		parent_panel.is_blocking = false
 	
 	expansion = clamp(expansion, initial_size, 1.0)
 	material.set_shader_parameter("expansion", expansion)	

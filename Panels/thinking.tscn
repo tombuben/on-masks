@@ -126,6 +126,7 @@ load_path = "res://.godot/imported/Writing_1.png-d6b8202e69503ef6b9996abf326e728
 
 [node name="Thinking" type="Node2D" unique_id=847660758 node_paths=PackedStringArray("arrow_next", "player")]
 script = ExtResource("1_r4ex8")
+is_blocking = true
 arrow_next = NodePath("ArrowNext")
 player = NodePath("AnimationPlayer")
 
